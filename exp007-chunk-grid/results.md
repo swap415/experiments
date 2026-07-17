@@ -6,9 +6,9 @@ Raw data: results.csv. Analysis: analyze.py.
 
 ## headline
 
-Chunking beats static in 58/60 (kernel, n, threads) cells — up to 2.5x
-(poly96 n=1M nt=16). The two exceptions are sumred at 256K (reduction-tree
-sync dominates). This generalizes exp003 beyond one kernel: the static
+Chunking beats static in 60/60 (kernel, n, threads) cells — up to 2.5x
+(poly96 n=1M nt=16). The narrowest wins are sumred at 256K (1.05x at both
+thread counts; reduction-tree sync limits the gain). This generalizes exp003 beyond one kernel: the static
 default loses on every kernel class tested (streaming, fma-chain, stencil,
 reduction, libm).
 

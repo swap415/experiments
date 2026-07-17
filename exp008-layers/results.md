@@ -20,15 +20,17 @@ n=1M (compute-bound regime):
 n=64M is bandwidth-capped for poly32 (~216 GFLOP/s roofline): all layers
 167-193, chunking moves <=8% — physics, not scheduling.
 
-All three predictions hold: +44% under TBB at n=1M, flat (or negative:
-omp 16K = -18%) elsewhere. set_parallel_chunksize is a silent no-op on
-the fallback layers.
+Predictions hold in direction: +44% under TBB at n=1M; omp flat-to-negative
+(16K = -18%); workqueue at most +13% (238 -> 269). The full fix is
+TBB-only; on the fallback layers set_parallel_chunksize is silent and
+mostly ineffective (omp) or captures under a third of the gain (workqueue).
 
 ## implication
 
 numba's layer selection is silent (tbb -> omp -> workqueue by
-availability). A user without TBB installed gets zero benefit from the
-chunking fix and no warning. Any "chunked by default" recommendation must
+availability). A user without TBB installed loses most of the chunking
+fix's benefit (at best +13% under workqueue vs +44% under TBB) with no
+warning. Any "chunked by default" recommendation must
 be paired with layer awareness; conversely, every published numba
 benchmark result is a function of an invisible environment detail.
 

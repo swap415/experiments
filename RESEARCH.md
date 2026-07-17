@@ -30,16 +30,23 @@ CPUs, evidence-first.
 - exp004 DONE (negative): Python-thread weighted dispatch fails below ~1ms
   regions (GIL wakeup stagger). Policy is sound (calibrated weights track
   physics); mechanism must live in the numba runtime.
-- exp005 DONE: LLVM full-unroll cliff at trip count 96->100: 4.5x, asm-
-  confirmed. Cost-model exhibit for thread 2.
-- NEXT exp006: patch numba's workqueue/parfor scheduler (local checkout
-  ~/dev/numba) for per-worker weighted chunks; target the sub-ms regime
-  where no current mechanism works.
-- NEXT exp007: does the 16K chunk sweet spot generalize? kernel x size x
-  intensity grid, counter-verified; produce the "recommended defaults"
-  table that a numba PR would need.
+- exp005 DONE: LLVM full-unroll cliff at trip count 96->100: 4.1x, asm-
+  confirmed (4.5x by chain 112). Cost-model exhibit for thread 2.
+- exp006 DONE: guided scheduling is anti-optimal on hybrid (head chunks
+  are E-core traps, 2.8x worse); hybrid-safe rule c* ~ eps*N*(r_slow/
+  r_total) predicts mid-size optima; sub-ms works down to ~0.15ms with
+  fine uniform chunks. User-level unequal decomposition needs chunksize=1.
+- exp007 DONE: 300-config grid; chunking beats static 60/60 cells (to
+  2.5x); 16K default worst-case -24.6% at nt=28; unpinned+chunked beats
+  pinned+static (396.8 vs 364 GFLOP/s).
+- exp008 DONE: full fix is TBB-only; omp/workqueue dispatch pre-assigns
+  divisions (verified in source, then measured): omp flat-to-negative,
+  workqueue +13% max vs TBB's +44%. Layer fallback is silent.
+- NEXT: in-runtime weighted/hybrid-aware scheduling (C++ gufunc_scheduler
+  patch, needs rebuild); OpenMP schedule(guided) hybrid validation;
+  counter-based chunk auto-tuner (perfcnt-driven, closes thread-2 loop).
 - paper target: "static chunking considered harmful on hybrid CPUs" —
-  workshop-length (LCTES/CGO workshop class). Evidence largely in hand.
+  workshop-length. Evidence in hand through exp008; draft in paper/.
 
 ## thread 2 — perf-grounded cost models for e-graph extraction
 

@@ -1,4 +1,4 @@
-# exp005: LLVM full-unroll cliff — 4.5x from a 4-iteration change
+# exp005: LLVM full-unroll cliff — 4.1x from a 4-iteration change
 
 Single pinned P-core, poly kernel, inner loop = `chain` sequential fmas on
 a loop-invariant x. Trip count is a compile-time constant.
@@ -16,8 +16,8 @@ Mechanism, confirmed by inspect_asm(): at chain <= 96 LLVM fully unrolls the
 inner loop, which lets it vectorize the *outer* loop 4-wide (ymm packed
 fmas). At chain >= 100 the full-unroll threshold trips, the inner loop stays
 rolled, outer-loop vectorization becomes impossible, and the kernel drops to
-a scalar latency-bound fma chain. 96 -> 100 fmas per element: 4.5x
-throughput cliff.
+a scalar latency-bound fma chain. 96 -> 100 fmas per element: 4.1x
+throughput cliff (31.8 -> 7.8 GFLOP/s; 4.5x by chain 112).
 
 Even in the "good" regime throughput decays smoothly (48 -> 32 GFLOP/s from
 32 to 96) as the sequential chain grows relative to the OoO window's ability

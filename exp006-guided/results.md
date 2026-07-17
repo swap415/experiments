@@ -20,8 +20,8 @@ Two lessons, one per bug:
    into 28 equal divisions, so the big head ranges land together in one
    thread's division — guided dropped to 55-106 GFLOP/s. Any user-level
    unequal decomposition MUST pin one range per division (chunksize=1).
-2. Even fixed, guided loses up to 1.9x vs uniform chunking, with huge
-   variance. Mechanism: guided's head ranges are N/(2*nt) elements; if an
+2. Even fixed, guided loses up to 2.8x vs uniform chunking (4M: 136 vs
+   382 GFLOP/s for chunk2K), with huge variance. Mechanism: guided's head ranges are N/(2*nt) elements; if an
    E-core steals one (it is exactly as likely to as a P-core), that range
    alone takes ~20ms at the E-core's ~7 GFLOP/s — comparable to the whole
    24ms region. Guided's taper assumes homogeneous consumers; on hybrid
