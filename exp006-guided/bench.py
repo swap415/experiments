@@ -102,8 +102,11 @@ def main():
             ("static", poly, (a, b), 0),
             ("chunk16K", poly, (a, b), 16384),
             ("chunk2K", poly, (a, b), 2048),
-            ("equalK", poly_ranges, (a, b, es, ee), 0),
-            ("guided", poly_ranges, (a, b, gs, ge), 0),
+            # chunksize=1: each range is its own division, so TBB steals
+            # individual ranges and the guided ordering survives (chunk=0
+            # would group the big head ranges into one thread's division)
+            ("equalK", poly_ranges, (a, b, es, ee), 1),
+            ("guided", poly_ranges, (a, b, gs, ge), 1),
         ]
         print(f"--- n={n} ({n*8/1e6:.0f} MB/array, K={len(gs)} ranges) ---")
         for label, fn, call, chunk in configs:
