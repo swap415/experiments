@@ -55,3 +55,13 @@ oscillating around 1.0-1.35x.
 - theoretical DDR5 peak here is ~80-90 GB/s; sustained 60 GB/s (~70%) is
   typical. Worth one STREAM run to confirm numba isn't leaving bandwidth on
   the table.
+
+## correction (exp003)
+
+The 24 B/element accounting above ignores write-allocate (RFO): the store
+to `a` first reads the cacheline, so physical traffic is 32 B/element.
+The measured wall is therefore **~81 GB/s physical = 90% of dual-channel
+DDR5-5600 peak** — numba's triad is near-optimal, and the "60 GB/s" figure
+elsewhere in this repo is nominal (RFO-free) traffic, not bus traffic.
+Kernel arithmetic-intensity math must use 24 B/element (8 read + 16
+RFO+writeback) for a read-modify-write stream like poly.

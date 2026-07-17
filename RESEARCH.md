@@ -23,13 +23,23 @@ since JPDC 2022 (arXiv:2102.05297). Deliverable: characterization + a
 scheduling/chunking policy for JIT-compiled data-parallel loops on hybrid
 CPUs, evidence-first.
 
-- exp003: affinity (taskset) x threads x parallel_chunksize x threading
-  layer sweep. Resolve the 8-thread anomaly (HT siblings? AVX clocks?
-  sleeping barriers?). Quantify recoverable headroom.
-- exp004: counter-driven chunk-size search — use per-PMU cycle/insn split
-  from perfcnt to choose P:E work ratios, vs oracle static split.
+- exp003 DONE: numba defaults lose 1.8x on hybrid (placement lottery +
+  static chunking); set_parallel_chunksize(16K) recovers it; chunked
+  scheduler reaches 98% of P+E sum when compute-bound. Three falsified
+  hypotheses documented (bandwidth, fork/join, power).
+- exp004 DONE (negative): Python-thread weighted dispatch fails below ~1ms
+  regions (GIL wakeup stagger). Policy is sound (calibrated weights track
+  physics); mechanism must live in the numba runtime.
+- exp005 DONE: LLVM full-unroll cliff at trip count 96->100: 4.5x, asm-
+  confirmed. Cost-model exhibit for thread 2.
+- NEXT exp006: patch numba's workqueue/parfor scheduler (local checkout
+  ~/dev/numba) for per-worker weighted chunks; target the sub-ms regime
+  where no current mechanism works.
+- NEXT exp007: does the 16K chunk sweet spot generalize? kernel x size x
+  intensity grid, counter-verified; produce the "recommended defaults"
+  table that a numba PR would need.
 - paper target: "static chunking considered harmful on hybrid CPUs" —
-  workshop-length (LCTES/CGO workshop class).
+  workshop-length (LCTES/CGO workshop class). Evidence largely in hand.
 
 ## thread 2 — perf-grounded cost models for e-graph extraction
 
