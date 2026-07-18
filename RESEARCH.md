@@ -7,8 +7,8 @@ measurements outrank literature when they disagree.
 
 ## machine physics (measured, exp001/exp002)
 
-- Memory wall: ~60 GB/s sustained, saturated by 4 threads. Any memory-bound
-  kernel is done there.
+- Memory wall: ~81 GB/s physical (90% of DDR5 peak; RFO-corrected, exp001),
+  saturated by 4 threads. Any memory-bound kernel is done there.
 - P-cores: ~5 IPC capable, ~0.9-0.95 on vectorized FMA chains.
   E-cores: flat 0.23 IPC on the same kernel — a 4x per-cycle gap.
 - numba prange static chunking + OS thread placement leave ~2x compute
@@ -42,11 +42,18 @@ CPUs, evidence-first.
 - exp008 DONE: full fix is TBB-only; omp/workqueue dispatch pre-assigns
   divisions (verified in source, then measured): omp flat-to-negative,
   workqueue +13% max vs TBB's +44%. Layer fallback is silent.
-- NEXT: in-runtime weighted/hybrid-aware scheduling (C++ gufunc_scheduler
-  patch, needs rebuild); OpenMP schedule(guided) hybrid validation;
-  counter-based chunk auto-tuner (perfcnt-driven, closes thread-2 loop).
+- exp009 DONE: 30-line gufunc_scheduler patch (weighted static divisions
+  + measured division->TID pinning): workqueue beats TBB best — 409.9
+  GFLOP/s at 4M (93% of P+E sum, project record), 255.7 at 0.13ms region.
+  Loses only at bandwidth-bound 64M (stealing adapts, static can't).
+  Sub-ms regime RESOLVED. Three methodology scars documented.
+- exp010 DONE: guided pathology confirmed on real OpenMP/libgomp — at 64M
+  guided 82.7 ~ static 79.7 vs dynamic 123.8; onset tracks absolute
+  head-chunk time as the exp006 mechanism predicts.
+- NEXT: weight auto-calibration; weight-sensitivity sweep; upstream API
+  proposal (set_thread_weights); counter-based chunk auto-tuner.
 - paper target: "static chunking considered harmful on hybrid CPUs" —
-  workshop-length. Evidence in hand through exp008; draft in paper/.
+  workshop-length. Evidence in hand through exp010; draft + figures in paper/.
 
 ## thread 2 — perf-grounded cost models for e-graph extraction
 
@@ -71,9 +78,9 @@ Scout-harness: no published token-efficiency measurements for Kilo-class
 harnesses; prefix-cache hit rate is the dominant local lever; KV-quant
 stability has zero rigorous data. Requires llama.cpp + a Qwen3-Coder-class
 model on this box (CPU decode ~10-15 tok/s for 8B Q4 — slow but measurable).
-- exp010: llama.cpp server instrumentation — per-turn n_past reuse, prefill
+- exp011: llama.cpp server instrumentation — per-turn n_past reuse, prefill
   tokens recomputed, RAPL joules/turn, while a harness solves fixed tasks.
-- exp011: KV-cache quantization stability across multi-turn agent sessions.
+- exp012: KV-cache quantization stability across multi-turn agent sessions.
 - metrics: tokens-per-resolved-task, prefix-cache hit rate, joules/task.
 
 ## priority

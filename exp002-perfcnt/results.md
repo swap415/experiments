@@ -34,8 +34,8 @@ clean. Findings:
 
 1. **E-core IPC is a flat 0.23-0.24** on this AVX2 FMA kernel in every
    config — Gracemont cracks 256b ops and this kernel is latency-chained.
-   At 28 threads E-cores burn 8.7 Gcycles to retire 2.0 Ginsn (17% of the
-   work) — 12 cores contributing ~25% speedup.
+   At 28 threads E-cores burn 8.7 Gcycles to retire 2.0 Ginsn (~35% of the
+   work: 2.03 of 5.83 Ginsn) — 12 cores contributing ~25% speedup.
 2. **Anomaly: 8 threads ≈ 4 threads** (154 vs 144 GFLOP/s) despite 8
    P-cores being available. Cycle accounting shows per-thread effective
    clock dropping from ~5.1 GHz (4t) to ~2.7 GHz (8t). Same total insn.

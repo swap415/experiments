@@ -1,20 +1,24 @@
 # workshop paper skeleton — thread 1 (hybrid-aware scheduling)
 
-Target: LCTES/CGO-workshop length (~6 pages). Evidence sources: exp001-008
+Target: LCTES/CGO-workshop length (~6 pages). Evidence sources: exp001-010
 results.md; literature anchors: research/scout-compilers.md. Every number
 below is copied from a results.md; nothing is invented.
 
 ## candidate titles
 
-1. **Static Chunking Considered Harmful on Hybrid CPUs** (working title)
-2. One Line, 1.8x: Measuring and Fixing JIT Parallel-Loop Defaults on
+1. **One Line Loses 2x, Thirty Lines Win It Back: Parallel-Loop
+   Scheduling on Hybrid CPUs** (new leading candidate — foregrounds the
+   exp009 headline)
+2. Static Chunking Considered Harmful on Hybrid CPUs (previous working
+   title)
+3. One Line, 1.8x: Measuring and Fixing JIT Parallel-Loop Defaults on
    Hybrid x86
-3. Equal Chunks, Unequal Cores: A Counter-Grounded Characterization of
+4. Equal Chunks, Unequal Cores: A Counter-Grounded Characterization of
    numba Parallel Loops on P/E-Core CPUs
-4. **Guided Scheduling Considered Harmful on Hybrid CPUs** (alternative —
+5. Guided Scheduling Considered Harmful on Hybrid CPUs (alternative —
    foregrounds the exp006 negative result)
 
-## abstract (~200 words)
+## abstract (~250 words)
 
 Intel's hybrid CPUs pair performance and efficiency cores with a measured
 3-4x per-cycle throughput gap, yet JIT compilers still split parallel loops
@@ -27,17 +31,24 @@ explanations — memory bandwidth, fork/join overhead, and frequency
 throttling — isolating static chunking plus placement as the cause. A
 one-line fix, `set_parallel_chunksize(16384)`, recovers the loss, and a
 300-config grid shows it generalizes: chunking beats static in 60/60
-kernel/size/thread cells, up to 2.5x, across streaming, fma-chain,
-stencil, reduction, and libm kernels. The full fix is TBB-only —
-set_parallel_chunksize is flat-to-negative under numba's omp fallback
-layer and gains at most +13% (vs TBB's +44%) under workqueue, all three
-behaviors predicted from dispatch source before measurement. The textbook alternative fails in the opposite
+kernel/size/thread cells, up to 2.5x. But the one-line fix is TBB-only —
+flat-to-negative under numba's omp fallback layer, at most +13% under
+workqueue, all three behaviors predicted from dispatch source before
+measurement — and the textbook alternative fails in the opposite
 direction: guided scheduling is anti-optimal on hybrid cores — its
 geometric head chunks are E-core traps, up to 2.8x worse than uniform
-chunking with high variance, a structure OpenMP schedule(guided) shares.
-When bandwidth-bound, an 81 GB/s physical wall (90% of DDR5 peak) caps
-every schedule; fine uniform chunks extend the fix down to ~0.15 ms
-regions, below which per-division dispatch dominates.
+chunking — a pathology we confirm on pure C + libgomp, where guided
+collapses to static at 64M (82.7 vs 79.7 GFLOP/s) while dynamic wins
+1.5x. So we patch the runtime: ~30 lines in numba's gufunc_scheduler —
+weighted static division sizing (weights calibrated P=1.0/E=0.34) plus
+1:1 pinning via a measured division->TID mapping — make the workqueue
+fallback outperform TBB's work-stealing best: 409.9 GFLOP/s at n=4M (93%
+of the 439 P+E compute sum) and 255.7 at a 0.13 ms region where TBB
+manages 245 and stock workqueue 107.6, resolving the sub-ms regime down
+to a cond-var wakeup floor. The honest scope: at bandwidth-bound n=64M
+stealing still wins (357 vs 331) — weighted static is a compute-regime
+tool, and an 81 GB/s physical wall (90% of DDR5 peak) caps every
+schedule.
 
 ## outline
 
@@ -47,19 +58,29 @@ The pitch: hybrid P/E cores are now the default desktop x86 topology, but
 the parallel-runtime layer of Python's dominant JIT (numba parfors) still
 assumes homogeneous cores. We show the defaults cost 1.8x, a one-line
 setting recovers it — but only under one of numba's three threading
-layers — and the textbook alternative (guided) makes hybrid worse.
-Contributions list: (a) counter-grounded characterization across three
-regimes, (b) falsification of three folk explanations, (c) a methodology
-for trustworthy in-process per-PMU measurement of JIT code, (d) the
-one-line fix generalizes: chunking beats static in 60/60
+layers — the textbook alternative (guided) makes hybrid worse, and
+thirty lines of weighted static scheduling inside the runtime make the
+weakest layer beat the best.
+Contributions list: (a) headline — a ~30-line gufunc_scheduler patch
+(weighted static division sizing + 1:1 pinning via a measured
+division->TID mapping, weights calibrated P=1.0/E=0.34) that makes the
+workqueue fallback layer outperform TBB's work-stealing best: 409.9
+GFLOP/s at n=4M (93% of the 439 P+E compute sum, project record) and
+255.7 at a 0.13 ms region, resolving the sub-ms regime; honest scope:
+loses bandwidth-bound at 64M (331 vs 357) — weighted static is a
+compute-regime tool (exp009), (b) counter-grounded characterization
+across three regimes, (c) falsification of three folk explanations, (d)
+a methodology for trustworthy in-process per-PMU measurement of JIT
+code, (e) the one-line fix generalizes: chunking beats static in 60/60
 kernel/size/thread cells, up to 2.5x, across streaming, fma-chain,
-stencil, reduction, and libm kernels (exp007), (e) the fix is
+stencil, reduction, and libm kernels (exp007), (f) the fix is
 layer-dependent — +44% under TBB vs flat-to-negative under the omp
 fallback layer and at most +13% under workqueue, all three behaviors
-predicted from dispatch source before measurement (exp008), (f) a novel negative result: guided
+predicted from dispatch source before measurement (exp008), (g) a novel negative result: guided
 scheduling is anti-optimal on hybrid cores — geometric head chunks are
-E-core traps, up to 2.8x worse than uniform with high variance, and
-OpenMP schedule(guided) shares the structure (exp006).
+E-core traps, up to 2.8x worse than uniform with high variance (exp006)
+— confirmed cross-runtime on pure C + libgomp, where the onset tracks
+absolute head-chunk time (exp010).
 
 - **Table 1** (headline): unpinned 28t static 198 GFLOP/s vs P+HT 16t
   pinned 363.9 vs 28t chunk-16384 356.9 — from exp003-hybrid-sched/results.md.
@@ -97,7 +118,8 @@ were measured under TBB (verified via threading_layer()). Note also the
 observed obstacles to user-level workarounds: prange iteration-to-worker
 mapping is not 1:1 and thread-to-CPU placement is random per run, so
 weighted partitioning cannot be expressed with prange indices alone — from
-exp004-weighted-sched/results.md.
+exp004-weighted-sched/results.md. This is exactly the obstacle the
+section 7 runtime patch removes.
 
 ### 3. measurement methodology (contribution)
 
@@ -114,6 +136,20 @@ caught both; wall-clock alone would not have. Also documents the
 exec-time counter-attribution failure (20-80% PMU multiplexing coverage
 through `uv run` + thread pools) that motivates the in-process design.
 
+Hot-swapping a patched extension into a live venv has its own traps
+(exp009's three methodology scars, each of which cost real debugging
+time): (1) uv hardlinks venv files to its cache, so `cp` over a .so
+writes through the shared inode and corrupts the cache copy, and `uv
+run` may re-sync mid-experiment — rm-then-cp, and invoke .venv/bin/python
+directly; (2) a relative path in a bash EXIT trap resolved after a `cd`
+and silently "restored" a different venv's workqueue.so — absolute paths
+in traps, always; (3) the workqueue pool spawns at parfor compile time
+(lowering registers threading symbols) and OpenBLAS adds ~27 threads of
+its own, so /proc/self/task snapshot diffs cannot identify workers —
+measure the division->TID mapping in-kernel (gettid per division)
+instead. Reusable warnings for anyone hot-swapping patched extensions —
+from exp009-weighted-runtime/results.md.
+
 - **Table 3**: validation — expected vs measured insn/iter, plus the two
   elision traps — from exp002-perfcnt/results.md.
 - Attribution caveat — from exp001-roofline/results.md (methodology
@@ -127,8 +163,12 @@ Triad saturates at 4 threads; more threads slightly hurt. With
 write-allocate (RFO) accounted, physical traffic is 32 B/element and the
 measured wall is ~81 GB/s physical = 90% of dual-channel DDR5-5600 peak —
 numba's codegen is near-optimal here and no schedule can help. This regime
-also explains why DRAM-resident poly caps at P-only throughput: P+E's
-combined ~430 GFLOP/s would demand ~81 GB/s, the wall.
+also explains why DRAM-resident poly caps at P-only throughput: the P+E
+sum measured DRAM-resident (P+HT 363.9 + E-only 90.1 = 454 GFLOP/s,
+Table 6) would demand ~85 GB/s at poly's ~5.3 flops/byte — above the
+wall. (This DRAM-co-limited 454 is distinct from the 439 compute-regime
+sum used in sections 6-7; exp003's prose rounds it to "~430 demands
+~81".)
 
 - **Table 4**: triad threads-vs-GB/s (1t 31.1 → 4t 60.6, flat after) —
   from exp001-roofline/results.md, including the RFO correction.
@@ -144,7 +184,8 @@ contribute their full (small) share.
 - **Table 5**: compute-bound control table — from
   exp003-hybrid-sched/results.md.
 - Supporting: at 28 threads E-cores burn 8.7 Gcycles to retire 2.0 Ginsn
-  (17% of the work) — from exp002-perfcnt/results.md.
+  (~35% of the work: 2.03 of 5.83 Ginsn retired) — from
+  exp002-perfcnt/results.md.
 
 #### 4.3 the placement lottery and three falsified hypotheses
 
@@ -192,8 +233,10 @@ every published numba benchmark.
 
 A 6-kernel x 5-size x 5-chunk x {16, 28}-thread grid (300 configs,
 unpinned, TBB): chunking beats static in 60/60 (kernel, n, threads) cells
-— up to 2.5x (poly96 n=1M nt=16). The narrowest wins are sumred at 256K
-(1.05x at both thread counts), where reduction-tree sync limits the gain.
+— up to 2.5x (poly96 n=1M nt=16). The narrowest wins are at nt=28: triad
+n=64M (1.02x — the bandwidth wall leaves little for any schedule) and,
+among compute kernels, sumred n=1M (1.02x), where reduction-tree sync
+limits the gain.
 The static default loses on every
 kernel class tested: streaming, fma-chain, stencil, reduction, libm.
 Recommended single default: chunk=16384 at nt=28 has worst-case regression
@@ -212,13 +255,16 @@ GFLOP/s — beating every pinned exp003 config (364 max). Unpinned + chunked
 Measured (poly32, nt=28, n=1M, GFLOP/s): tbb 275 static → 396 at chunk 4K
 (+44%); omp is flat-to-negative (16K = -18%); workqueue gains at most +13%
 (238 → 269). At n=64M
-poly32 is bandwidth-capped (~216 GFLOP/s roofline): all layers 167-193 and
+poly32 is bandwidth-capped (~216 GFLOP/s roofline): all layers 166-193 and
 chunking moves <=8% — physics, not scheduling. All three layer behaviors
 were predicted from dispatch source before running (section 2.2).
 Implication: layer selection is silent, so a user without TBB installed
 loses most of the chunking fix's benefit (at best +13% under workqueue vs
 +44% under TBB) with no warning; any "chunked by
-default" recommendation must be paired with layer awareness.
+default" recommendation must be paired with layer awareness. Section 7
+inverts this ranking: the same workqueue layer, patched with weighted
+divisions, beats TBB outright — the +13% cap is a property of stock
+equal division groups, not of the layer.
 
 - **Table 12**: layer x chunk matrix — from exp008-layers/results.md.
 
@@ -235,22 +281,39 @@ head ranges are N/(2*nt) elements; an E-core is exactly as likely to steal
 one as a P-core, and that one range then takes ~20 ms at the E-core's ~7
 GFLOP/s — comparable to the whole 24 ms region. Guided's taper assumes
 homogeneous consumers; on hybrid cores the head chunks are E-core traps.
-OpenMP schedule(guided) has the same structure and should inherit the same
-pathology (untested here — future work). A secondary trap: with chunk=0
+A secondary trap: with chunk=0
 numba re-chunks the K-loop into 28 equal divisions, landing the big head
 ranges in one thread's division (guided drops to 55-106 GFLOP/s) — any
 user-level unequal decomposition must pin one range per division.
 
+OpenMP schedule(guided) has the same structure, and exp010 confirms it
+inherits the pathology on real OpenMP: pure C + libgomp (gcc 13.3, -O3
+-march=native -ffast-math -fopenmp), poly chain=64, 28 threads pinned
+(OMP_PROC_BIND=spread OMP_PLACES=cores). At 64M guided collapses to
+static (82.7 vs 79.7 GFLOP/s) while dynamic,2048 wins 1.5x (123.8). At
+256K-1M guided is fine — even best (79.8 at 256K, 81.8 at 1M) — because
+the head chunks (~N/nthreads) are absolutely small: an E-core finishes
+one in well under the region time. The onset tracks absolute head-chunk
+time exactly as the exp006 mechanism predicts. Cross-runtime
+confirmation: the E-core trap is a property of the guided algorithm on
+hybrid cores, not a numba artifact — and it is invisible in
+small-problem benchmarks. Caveat: GCC's codegen is ~3x below numba's on
+this kernel (no multi-accumulator interleave), so schedules are compared
+within-runtime only.
+
 - **Table 13**: static / chunk16K / chunk2K / equalK / guided across sizes
   — from exp006-guided/results.md.
+- **Table 14**: libgomp static / dynamic,2048 / dynamic,16384 / guided /
+  guided,2048 across sizes — from exp010-omp-guided/results.md.
 
-### 6. the sub-ms regime, revisited
+### 6. the sub-ms regime, revisited — and resolved
 
 exp003 framed sub-ms as a dilemma with no answer. exp006 revises that:
 TBB + fine uniform chunks work down to ~0.15 ms regions — chunk2K at
 n=256K (a 0.14 ms region) gives 245 GFLOP/s = 1.5x static. Below that,
 per-division dispatch (~microseconds x hundreds of divisions) dominates
-and no current mechanism helps.
+and no user-level mechanism helps — the opening the exp009 runtime patch
+walks through with 28 weighted divisions (section 7).
 
 The winning policy compresses into a hybrid-safe chunk rule: uniform
 chunks small enough that the slowest core finishes any one chunk in a
@@ -268,7 +331,12 @@ P-only throughput DRAM-resident (299.8 vs 298.5 GFLOP/s — confirming the
 policy is sound and the bandwidth co-limit is real), but are unusable
 cache-resident: 204 us dispatch on a 370 us region plus ~50 us/thread
 GIL-staggered wakeup inflate the region 4-6x. Conclusion: anything finer
-than ~0.15 ms must live inside the GIL-free runtime.
+than ~0.15 ms must live inside the GIL-free runtime — no longer a
+conjecture. Section 7's exp009 patch does exactly that and wins the
+regime: 255.7 GFLOP/s at a 0.13 ms region, vs 245 for TBB's best fine
+chunking and 107.6 for stock workqueue static. The residual floor is
+cond-var wakeup cost — the achieved 255.7 is ~58% of the 439 P+E compute
+sum at 0.13 ms, and no amount of weighting recovers the wakeup latency.
 
 - **Table 9**: equal vs calibrated weighted partitioning (166.9 → 299.8
   GFLOP/s, DRAM) — from exp004-weighted-sched/results.md.
@@ -276,7 +344,45 @@ than ~0.15 ms must live inside the GIL-free runtime.
   vs dispatch-dominated below — from exp006-guided/results.md; dispatch/
   GIL overheads from exp004-weighted-sched/results.md.
 
-### 7. related work
+### 7. thirty lines in the runtime: weighted static beats work stealing
+
+The headline result (exp009). A ~30-line patch to numba's
+gufunc_scheduler.cpp (compiled into workqueue.so, ABI preserved,
+sha-verified drop-in/restore): a new `set_thread_weights(double*, int)`
+export plus a weighted split in create_schedule's 1D path, active only
+when weight count == division count. Division i is pre-assigned to
+worker i — a verified property of the workqueue layer (section 2.2) — so
+workers are pinned 1:1 to CPUs via a measured division->TID mapping
+(in-kernel gettid through ll.add_symbol/ExternalFunction), with weights
+[1.0]x16 P + [0.34]x12 E from the exp004 calibration. This turns the
+layer that exp008 showed gains at most +13% from chunking into the
+fastest configuration in the project:
+
+- 409.9 GFLOP/s at n=4M — the highest throughput measured in this
+  project (previous best 396.8, TBB chunk4K at 1M) — 93% of the 439 P+E
+  compute sum, from 28 divisions, no stealing. (439 = 350.8 P+HT-16 +
+  87.7 E-only-12 GFLOP/s measured cache-resident, now tabulated in
+  exp003-hybrid-sched/results.md. The DRAM-resident sum 363.9 + 90.1 =
+  454 is the bandwidth-co-limited variant; under it this figure is 90%
+  and section 6's 58% becomes 56%.)
+- Sub-ms regime win: 255.7 at a 0.13 ms region, vs 245 for TBB's best
+  fine chunking and 107.6 for stock workqueue static (section 6).
+- Decomposition: pinning alone (equal weights) is worth +12-37% at
+  n<=1M (~0% at n>=4M); the weights add +74-109% over pinned-equal in
+  the compute regime (256K-4M), and +66% at bandwidth-bound 64M.
+- Honest loss at n=64M: 331.2 vs TBB's 357 — bandwidth-bound, TBB's
+  fine-grained stealing adapts to DRAM-contention jitter and no static
+  split (equal or compute-weighted) can. Weighted static is a
+  compute-regime tool.
+
+The result inverts the exp008 layer ranking: once the regime is
+compute-bound and the split matches the silicon, the mechanism (weighted
+sizing + placement) matters more than the dispatch machinery (stealing).
+
+- **Table 15**: wq-static / wq-pinned-equal / wq-weighted / TBB best
+  across sizes — from exp009-weighted-runtime/results.md.
+
+### 8. related work
 
 Anchors from research/scout-compilers.md:
 
@@ -297,16 +403,18 @@ Anchors from research/scout-compilers.md:
   roofline/PMU lines continue; our in-process per-PMU bracketing for JIT
   code is a small methodological addition there.
 
-### 8. future work
+### 9. future work
 
-- **in-runtime weighted scheduling**: per-worker chunk-size scaling by a
-  calibration vector (P:E ~ 3:1) as a C++ gufunc_scheduler patch,
-  targeting the <0.15 ms regime where no current mechanism works.
-  Requires per-thread CPU identity in the runtime (exp004 finding).
-- **OpenMP schedule(guided) validation on hybrid**: exp006 predicts the
-  same E-core-trap pathology from shared structure; untested.
+- **auto-calibration of weights**: equal-split probe -> per-worker rates
+  -> weights, closing the exp004 calibration loop inside the runtime
+  instead of the hand-set 0.34; weight-sensitivity sweep.
+- **upstream API shape**: a `set_thread_weights` beside
+  set_parallel_chunksize, or scheduler-internal calibration.
+- **bandwidth-regime adaptive hybrid**: stealing + weights — the 64M
+  loss (331 vs TBB's 357) shows no static split absorbs DRAM-contention
+  jitter; a weighted-stealing hybrid could cover both regimes.
 - **second hybrid SKU**: different P:E ratios (Meteor/Arrow Lake) to test
-  whether the 1.8x figure and the chunk rule transfer.
+  whether the 1.8x figure, the chunk rule, and the 0.34 weight transfer.
 - **energy measurements**: joules/task for E-core participation; power was
   measured only as a frequency non-throttling check.
 
@@ -334,8 +442,9 @@ Anchors from research/scout-compilers.md:
       elision that wall-clock misses — exp002.
 - [x] the one-line fix generalizes: chunking beats static in 60/60
       (kernel, n, threads) cells, up to 2.5x (poly96 n=1M nt=16), across
-      streaming/fma/stencil/reduction/libm; the narrowest wins are sumred
-      at 256K (1.05x at both thread counts) — exp007, results.csv.
+      streaming/fma/stencil/reduction/libm; the narrowest wins are triad
+      n=64M nt=28 (1.02x, bandwidth-bound) and sumred n=1M nt=28 (1.02x)
+      — exp007, results.csv.
 - [x] chunk=16384 at nt=28 is a sound single default: worst-case
       regression 24.6% vs per-config best, typical gain 1.1-2.2x over
       static; at nt=16 worst case is 46.9%, favoring a size-scaled
@@ -355,20 +464,42 @@ Anchors from research/scout-compilers.md:
       predicts the measured mid-size optima (1M → ~4K, 4M → ~16K) —
       exp006 + exp007; at 64M the 16K-256K plateau is within ~10%, so
       the rule is not discriminating there.
+- [x] a ~30-line gufunc_scheduler patch (weighted static division sizing
+      + 1:1 pinning via measured division->TID mapping, weights
+      P=1.0/E=0.34) makes workqueue beat TBB's work-stealing best:
+      409.9 GFLOP/s at 4M (93% of the 439 P+E sum; project record,
+      prior best 396.8) and 255.7 at a 0.13 ms region (vs 245 for TBB's
+      best fine chunking, 107.6 for stock static) — exp009, `run.sh`.
+- [x] the exp009 gain decomposes: pinning alone (equal weights) is worth
+      +12-37% at n<=1M (~0% at n>=4M); the weights add +74-109% over
+      pinned-equal at 256K-4M, +66% at bandwidth-bound 64M — exp009.
+- [x] weighted static loses bandwidth-bound: 331.2 vs TBB's 357 at 64M —
+      stealing adapts to DRAM-contention jitter, no static split can;
+      compute-regime tool — exp009.
+- [x] the sub-ms residual floor is cond-var wakeup cost: 255.7 is ~58%
+      of the 439 compute sum at 0.13 ms — exp009.
+- [x] OpenMP schedule(guided) exhibits the E-core trap on real libgomp:
+      at 64M pinned, guided 82.7 ~ static 79.7 while dynamic,2048 gets
+      123.8 (1.5x); at 256K-1M guided is fine (even best: 79.8 at 256K,
+      81.8 at 1M); onset tracks absolute head-chunk time as the exp006
+      mechanism predicts; within-runtime comparison only (GCC codegen
+      ~3x below numba's here) — exp010, `run.sh`.
 
 ## claims needing more data
 
-- [ ] Weighted per-worker chunking beats uniform chunking below ~0.15 ms
-      — the in-runtime gufunc_scheduler patch has not been run; currently
-      only the exp004 negative result and a policy argument.
-- [ ] OpenMP schedule(guided) exhibits the same E-core-trap pathology —
-      predicted from shared structure (exp006), untested.
-- [ ] The 1.8x figure generalizes to other hybrid SKUs (different P:E
-      ratios, Meteor/Arrow Lake) — single-machine study; state as a
-      limitation, or borrow a second box.
+- [ ] Auto-calibrated weights (equal-split probe -> rates -> weights)
+      match or beat the hand-set 0.34 — the calibration loop exists
+      (exp004) but is not yet wired into the runtime; needs a
+      weight-sensitivity sweep.
+- [ ] A stealing + weights hybrid recovers the bandwidth-regime loss
+      (331.2 vs 357 at 64M) — proposed, unbuilt.
+- [ ] The 1.8x figure and the 0.34 weight generalize to other hybrid
+      SKUs (different P:E ratios, Meteor/Arrow Lake) — single-machine
+      study; state as a limitation, or borrow a second box.
 - [ ] "Should be the numba default" — exp007 covers kernel/size/thread
       generality on this machine, but a PR-strength claim still needs
       no-regression evidence on non-hybrid CPUs plus layer-aware
-      handling of the exp008 finding.
+      handling of the exp008 finding; same bar applies to a
+      `set_thread_weights` upstream API.
 - [ ] Any energy/efficiency claim about E-cores — power was measured only
       as a frequency non-throttling check, not joules/task.

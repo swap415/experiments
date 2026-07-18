@@ -24,6 +24,10 @@ Hardware: Intel i7-14700 (8 P-cores + 12 E-cores), DDR5, Linux 6.8.
   static in 60/60 cells; chunk=16K default worst-case -24.6% at nt=28.
 - `exp008-layers/` — the chunking fix is TBB-only; omp flat, workqueue +13% max under
   the fallback layers (predicted from source, then measured).
+- `exp009-weighted-runtime/` — 30-line weighted-scheduler patch: workqueue
+  beats TBB's best (409.9 GFLOP/s record at 4M; sub-ms win at 0.13ms).
+- `exp010-omp-guided/` — E-core trap confirmed on real OpenMP: guided ~
+  static at 64M while dynamic wins 1.5x.
 
 Roadmap: `RESEARCH.md`. Literature: `research/scout-*.md`.
 Shared tool: `perfcnt.py` (per-PMU in-process counters).

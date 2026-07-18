@@ -26,8 +26,11 @@ ll.add_symbol/ExternalFunction), weights = [1.0]x16 P + [0.34]x12 E
   chunking, 107.6 for stock workqueue static). The residual gap to the
   compute sum (~58% of 439) is cond-var wakeup cost — the floor of this
   approach.
-- Pinning alone (equal weights) is worth +10-37% at small n; the weights
-  deliver the rest (+74-109% over pinned-equal).
+- Pinning alone (equal weights) is worth +12-37% at n<=1M (~0% at >=4M);
+  the weights add +74-109% over pinned-equal in the compute regime
+  (256K-4M) and +66% at bandwidth-bound 64M.
+- Denominator provenance: 439 = 350.8 (P+HT 16t) + 87.7 (E-only 12t)
+  GFLOP/s, cache-resident, exp003-hybrid-sched/results.md.
 - Honest loss at 64M: bandwidth-bound, TBB's fine-grained stealing adapts
   to DRAM-contention jitter; no static split (equal or compute-weighted)
   can. Weighted static is a compute-regime tool.

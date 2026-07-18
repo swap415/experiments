@@ -23,7 +23,10 @@ Sweet spot is broad (4K-64K all ≥347); ≥1M degrades toward static.
 
 ## why no config beats P-only 364 here (three falsified hypotheses)
 
-1. ~~Memory bandwidth~~ — cache-resident (N=1M) shows the same cap.
+1. ~~Memory bandwidth~~ — cache-resident (N=1M, 8 MB/array, LLC-resident)
+   shows the same cap: P+HT 16t 350.8, E-only 12t 87.7, all-28 chunk16K
+   364.9 GFLOP/s. (350.8 + 87.7 = 438.5 ~ 439 is the compute-regime P+E
+   sum used as the denominator in exp009.)
 2. ~~Fork/join overhead~~ — measured 4.5us (16t P) vs 7.0us (28t): 0.6% of region.
 3. ~~Power/frequency throttling~~ — P-cores hold 5300 MHz with E-cores loaded.
 
