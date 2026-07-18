@@ -1,0 +1,4 @@
+chain,accs,dtype,n,time_ms,time_std_ms,gflops,packed_fma,scalar_fma,simd_regs,asm_lines,ipc,ginsn
+96,1,float64,4194304,26.312,0.647,30.61,95,95,6,425,0.747,0.1061
+112,1,float64,4194304,132.17,0.148,7.11,0,16,4,230,0.8,0.559
+64,2,float32,4194304,2.578,0.055,208.22,31,31,6,297,1.339,0.0194

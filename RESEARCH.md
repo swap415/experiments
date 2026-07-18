@@ -72,7 +72,12 @@ a small suite of numerical kernels + reference numba implementations,
 scored as %-of-roofline, then use it as the fitness function for
 LLM-generated/e-graph-extracted kernel variants (thread 2 synergy).
 
-## thread 4 — agent-harness x local-inference efficiency
+## thread 4 — agent-harness x local-inference efficiency (BLOCKED: disk)
+
+2026-07-18: disk at 100% (1.8 GB free of 295 GB) — cannot download a
+GGUF model (~5-10 GB needed). Largest reclaimable candidates (user's
+call, not touching them): ~/dev/archive 23 GB, ~/dev/lean_options_trader
+8.8 GB. Unblock, then start exp011.
 
 Scout-harness: no published token-efficiency measurements for Kilo-class
 harnesses; prefix-cache hit rate is the dominant local lever; KV-quant
