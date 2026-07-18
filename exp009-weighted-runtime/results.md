@@ -49,10 +49,26 @@ ll.add_symbol/ExternalFunction), weights = [1.0]x16 P + [0.34]x12 E
    /proc/self/task snapshot diffs are the wrong tool. Measure the
    division->TID map in-kernel instead (ext_gettid per division).
 
+## weight sensitivity (second run; run-to-run ~3-5%)
+
+| E-weight | 1M | 4M |
+|---:|---:|---:|
+| 0.20 | 359.6 | 397.9 |
+| 0.27 | 371.4 | **418.1** |
+| 0.34 (calib) | 369.3 | 397.8 |
+| 0.41 | 329.3 | 343.6 |
+| 0.50 | 290.6 | 313.3 |
+
+418.1 GFLOP/s at E=0.27 is the new project record (95% of the 439 sum).
+The curve is asymmetric: under-weighting E is nearly free (0.20-0.34
+within ~5% of best — P-cores absorb the slack cheaply) while
+over-weighting costs 15-25% (excess E-share gates the region at ~3x).
+Calibration precision is not critical; round it DOWN.
+
 ## next
 
 - auto-calibration (equal-split probe -> rates -> weights, exp004 loop)
-  instead of hand-set 0.34; weight-sensitivity sweep.
+  instead of hand-set values.
 - upstream shape: a `set_thread_weights` API next to
   set_parallel_chunksize, or scheduler-internal calibration.
 

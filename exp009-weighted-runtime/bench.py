@@ -98,6 +98,12 @@ def main():
     set_weights([1.0] * 16 + [0.34] * 12)
     for n, reps in sizes:
         run("wq-weighted", n, reps)
+
+    # weight sensitivity: is the calibrated 0.34 special?
+    for ew in (0.20, 0.27, 0.41, 0.50):
+        set_weights([1.0] * 16 + [ew] * 12)
+        for n, reps in ((1048576, 400), (4194304, 100)):
+            run(f"wq-w-E{ew:.2f}", n, reps)
     clear_weights()
 
 
