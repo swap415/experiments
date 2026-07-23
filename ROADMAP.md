@@ -22,8 +22,12 @@ counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts 
    (shared-base recurrence CSE, exact 0.5 ratio) — distinct multipliers fixed
    it. **now**: llvm-mca / TTI predictions vs measured for numba-emitted code
    shapes — quantify where static assumptions break (cliff rows first).
-2. **parallel — S3 profiling**: where do cold-start ms go (type inference /
-   lowering / LLVM opt / codegen / linking). Per-pass timing. No S1 dependency.
+2. **S3 phase 1 — DONE 2026-07-23** (exp014): cold start = import 94ms +
+   one-time init 64ms + pipeline (35ms simple → 130ms arrayexpr/parfors).
+   82% of simple-kernel cold start is fixed overhead; typing is 3.6% of
+   pipeline (folk theory false); LLVM 25-46%. Caching ceiling for simple
+   kernels is 18%. **now**: import-time profile, decompose the 64ms init,
+   NUMBA_LLVM_PASS_TIMINGS per-pass table for the big kernels.
 3. **gate(S1 mca-validation) → S2**: pick layer (numba IR vs llvmlite new-PM
    plugin) from evidence, ship one pass justified by measured cost deltas.
    gate(S1+S3) → benefit-per-ms pass pruning.

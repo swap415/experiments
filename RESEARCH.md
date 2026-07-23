@@ -75,6 +75,16 @@ directly (local checkouts: ~/dev/numba, ~/dev/numbacc).
   (exact 0.5 ratio) and constant-fold absorption (deficit = accs-1).
   Next: llvm-mca/TTI predictions vs this corpus.
 
+## thread 5 — compile-time attack (S3, ACTIVE)
+
+Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
+- exp014 phase 1 DONE (2026-07-23): fresh-process breakdown, 8 kernels.
+  Cold start = import 94ms + one-time context init 64ms (verified one-time
+  via same-process control: 66.5 -> 1.1ms) + pipeline. 82% of simple-kernel
+  cold start is fixed overhead — import/init beats pass-pruning as the
+  lever; typing only 3.6% of pipeline; LLVM 25-46%; parfor lowering
+  105.6ms is the biggest single pass after native_lowering.
+
 ## thread 3 — KernelBench-for-CPU (roofline-scored)
 
 kernelbench.com scores GPU kernels against hardware ceilings; no CPU
