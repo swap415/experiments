@@ -64,6 +64,17 @@ numba kernel variants (unroll/tile/fastmath/layout), measure counters,
 fit/learn a cost model, test extraction quality. Feeds upstream numba
 directly (local checkouts: ~/dev/numba, ~/dev/numbacc).
 
+- exp013 v1 DONE (superseded): param-only models near-useless, one-probe
+  0.994 — but corpus was CSE-contaminated (counters caught it).
+- exp013 v2 DONE (2026-07-23, clean corpus, all 66 rows counter-verified
+  within 5% executed-vs-nominal): params 0.52/10x/cliff-FAIL, asm 0.938
+  but saturates within-group (top1 23%), one-probe uniformly strong
+  (0.988 global / 0.977 group / 95% top1). Unroll cliff position is
+  accs-dependent (96/112/128 for accs 1/2/4) — no static threshold fits.
+  Two elision mechanisms documented: shared-base linear-recurrence CSE
+  (exact 0.5 ratio) and constant-fold absorption (deficit = accs-1).
+  Next: llvm-mca/TTI predictions vs this corpus.
+
 ## thread 3 — KernelBench-for-CPU (roofline-scored)
 
 kernelbench.com scores GPU kernels against hardware ceilings; no CPU

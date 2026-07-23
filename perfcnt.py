@@ -29,12 +29,14 @@ def _pmu_type(name):
         return int(f.read())
 
 
-def _perf_event_open(config, inherit=True):
+def _perf_event_open(config, type_=PERF_TYPE_HARDWARE, inherit=True):
     # struct perf_event_attr: type u32, size u32, config u64, then
     # sample_period u64, sample_type u64, read_format u64, flags u64, ...
+    # read_format 3 = TOTAL_TIME_ENABLED|TOTAL_TIME_RUNNING: lets us detect
+    # and scale counter multiplexing (running < enabled).
     size = 136
     flags = (1 << 0) | (1 << 1) if inherit else (1 << 0)  # disabled | inherit
-    attr = struct.pack("IIQQQQQ", PERF_TYPE_HARDWARE, size, config, 0, 0, 0, flags)
+    attr = struct.pack("IIQQQQQ", type_, size, config, 0, 0, 3, flags)
     attr += b"\x00" * (size - len(attr))
     buf = ctypes.create_string_buffer(attr, size)
     fd = _libc.syscall(298, buf, 0, -1, -1, 0)  # pid=0, cpu=-1(any), group=-1
@@ -48,13 +50,26 @@ class PerfGroup:
 
     EVENTS = {"cycles": PERF_COUNT_HW_CPU_CYCLES,
               "instructions": PERF_COUNT_HW_INSTRUCTIONS}
+    # fp_arith_inst_retired.* raw configs (umask<<8 | 0xC7), cpu_core only.
+    # Counts retired FP instructions; FMA increments by 2 per instruction,
+    # so count * lanes = flops directly for FMA-dominated code.
+    FP_EVENTS = {"fp_scalar_double": 0x01C7, "fp_scalar_single": 0x02C7,
+                 "fp_128_double": 0x04C7, "fp_128_single": 0x08C7,
+                 "fp_256_double": 0x10C7, "fp_256_single": 0x20C7}
+    FP_LANES = {"fp_scalar_double": 1, "fp_scalar_single": 1,
+                "fp_128_double": 2, "fp_128_single": 4,
+                "fp_256_double": 4, "fp_256_single": 8}
 
-    def __init__(self):
+    def __init__(self, fp=False):
         self.fds = {}
         for pmu in ("cpu_core", "cpu_atom"):
             t = _pmu_type(pmu)
             for ev, code in self.EVENTS.items():
                 self.fds[f"{pmu}/{ev}"] = _perf_event_open((t << 32) | code)
+        if fp:
+            t = _pmu_type("cpu_core")
+            for ev, cfg in self.FP_EVENTS.items():
+                self.fds[f"cpu_core/{ev}"] = _perf_event_open(cfg, type_=t)
 
     def __enter__(self):
         for fd in self.fds.values():
@@ -65,9 +80,19 @@ class PerfGroup:
     def __exit__(self, *exc):
         for fd in self.fds.values():
             _libc.ioctl(fd, PERF_EVENT_IOC_DISABLE, 0)
-        self.counts = {k: struct.unpack("q", os.read(fd, 8))[0]
-                       for k, fd in self.fds.items()}
+        self.counts, self.multiplexed = {}, False
+        for k, fd in self.fds.items():
+            val, enabled, running = struct.unpack("qqq", os.read(fd, 24))
+            if running and running < enabled:  # multiplexed: scale estimate
+                val = round(val * enabled / running)
+                self.multiplexed = True
+            self.counts[k] = val
         return False
+
+    def flops(self):
+        """Executed flops from fp_arith counters (requires fp=True)."""
+        return sum(self.counts[f"cpu_core/{ev}"] * lanes
+                   for ev, lanes in self.FP_LANES.items())
 
     def close(self):
         for fd in self.fds.values():

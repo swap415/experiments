@@ -110,14 +110,42 @@ def cliff(rows, model):
     return "PASS" if pick[96] > pick[112] else "FAIL"
 
 
+def within_groups(rows, model):
+    """Rank accs variants within each (chain, dtype) group — the extraction
+    scenario: same computation, competing implementations. Returns mean
+    Spearman across groups and top-1 hit rate (model picks measured best)."""
+    groups = {}
+    for r in rows:
+        groups.setdefault((r["chain"], r["dtype"]), []).append(r)
+    rhos, hits, n = [], 0, 0
+    for g in groups.values():
+        pred = [model(r) for r in g]
+        meas = [r["gflops"] for r in g]
+        if len(g) < 2 or None in pred:
+            continue
+        rhos.append(spearman(pred, meas))
+        hits += pred.index(max(pred)) == meas.index(max(meas))
+        n += 1
+    if not n:
+        return None, None, 0
+    return sum(rhos) / n, hits / n, n
+
+
 def main():
     path = Path(sys.argv[1]) if len(sys.argv) > 1 else \
         Path(__file__).resolve().parent / "results.csv"
     rows = load(path)
     meas = [r["gflops"] for r in rows]
     print(f"{len(rows)} variants from {path.name}")
+    bad = [r for r in rows if r.get("flops_ratio")
+           and abs(float(r["flops_ratio"]) - 1.0) > 0.05]
+    if bad:
+        print(f"WARNING: {len(bad)} rows with >5% executed-vs-nominal flops "
+              f"deviation (corpus contaminated)")
+    elif any(r.get("flops_ratio") for r in rows):
+        print("corpus clean: all rows within 5% executed-vs-nominal flops")
     print(f"{'model':<20} {'spearman':>8} {'geo-err':>8} {'max-err':>8}  "
-          f"cliff 96>112 (accs=1 f64)")
+          f"{'grp-rho':>7} {'top1':>5}  cliff 96>112 (accs=1 f64)")
     for name, model in MODELS:
         pred = [model(r) for r in rows]
         if None in pred:
@@ -125,8 +153,9 @@ def main():
             continue
         rho = spearman(pred, meas)
         gerr, merr = ratio_errors(pred, meas)
+        grho, top1, ngrp = within_groups(rows, model)
         print(f"{name:<20} {rho:8.3f} {gerr:8.2f} {merr:8.2f}  "
-              f"{cliff(rows, model)}")
+              f"{grho:7.3f} {top1:5.0%}  {cliff(rows, model)}")
 
 
 if __name__ == "__main__":

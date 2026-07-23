@@ -16,10 +16,12 @@ counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts 
 
 ## phases
 
-1. **now — S1 corpus v2** (exp013 continuation): distinct accumulator constants
-   (defeat CSE), fp_arith_inst_retired events in perfcnt.py, executed-vs-nominal
-   flops check on every sample. Then: llvm-mca / TTI predictions vs measured for
-   numba-emitted code shapes — quantify where static assumptions break.
+1. **S1 corpus v2 — DONE 2026-07-23** (exp013): clean 66-variant corpus, all
+   rows counter-verified within 5% executed-vs-nominal; one-probe 0.988/0.977
+   grp/95% top1; params 0.52 + cliff-FAIL. Distinct constants were NOT enough
+   (shared-base recurrence CSE, exact 0.5 ratio) — distinct multipliers fixed
+   it. **now**: llvm-mca / TTI predictions vs measured for numba-emitted code
+   shapes — quantify where static assumptions break (cliff rows first).
 2. **parallel — S3 profiling**: where do cold-start ms go (type inference /
    lowering / LLVM opt / codegen / linking). Per-pass timing. No S1 dependency.
 3. **gate(S1 mca-validation) → S2**: pick layer (numba IR vs llvmlite new-PM
