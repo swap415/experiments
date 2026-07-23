@@ -85,6 +85,15 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   lever; typing only 3.6% of pipeline; LLVM 25-46%; parfor lowering
   105.6ms is the biggest single pass after native_lowering.
 
+## thread 6 — learned cost models / S4a (SCOPED)
+
+- exp015 DONE (2026-07-23): ridge + LOGO-CV on exp013 v2 corpus. Learned
+  params+asm 0.975 global out-of-sample (hand params 0.517); within-group
+  feature ceiling 0.795/82% (all learners+features identical; missed
+  groups statically indistinguishable, 2-4% spread); regret 1.011x geo vs
+  probe 1.000x. Verdict: hybrid learned-shortlist + probe-on-disagreement.
+  Gate to proceed: corpus with >=3 kernel families.
+
 ## thread 3 — KernelBench-for-CPU (roofline-scored)
 
 kernelbench.com scores GPU kernels against hardware ceilings; no CPU

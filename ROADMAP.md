@@ -31,7 +31,14 @@ counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts 
 3. **gate(S1 mca-validation) → S2**: pick layer (numba IR vs llvmlite new-PM
    plugin) from evidence, ship one pass justified by measured cost deltas.
    gate(S1+S3) → benefit-per-ms pass pruning.
-4. **gate(corpus v2) → S4a scoping**. S4b runs weekly regardless.
+4. **S4a scoping — DONE 2026-07-23** (exp015, gate opened by corpus v2):
+   learned ridge on params+asm hits 0.975 global out-of-sample but a feature
+   information ceiling within-group (0.795/82% — identical for pointwise,
+   pairwise, all feature sets; missed groups have identical asm, 2-4% spread).
+   Regret: learned 1.011x geo / 1.194x max; probe 1.000/1.006. Design verdict:
+   hybrid learned-shortlist + probe-on-disagreement (costs 2.1us vs 5.5ms vs
+   25-100ms measured). Next S4a gate: >=3 kernel families in the corpus.
+   S4b runs weekly regardless.
 
 ## constraints (every session)
 
