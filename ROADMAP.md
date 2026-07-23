@@ -4,15 +4,21 @@ Four seeds evaluated. Verdict: phased single bet, S1 spine. Arc holds:
 counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts (S3)
 → corpus becomes training/eval substrate for learned heuristics (S4a).
 
-## scores
+## scores (re-scored 2026-07-23 evening audit; original in parens)
 
 | seed | score | basis |
 |------|-------|-------|
-| S1 counter-driven cost models | 8.5 | exp013: param-only Spearman 0.29 vs one-IPC-probe 0.994. Harness + PMU access exist. Gap vs Ithemal/uiCA: kernel-level, parfors context. |
-| S3 compile-time attack | 7.5 | fresh, cheap to start, measurable. Differentiator = benefit-per-ms pruning (needs S1 for "benefit"). |
-| S2 ship passes | 7.0 | exp009 proves the muscle (409.9 GFLOP/s patch). Gated: pass choice without cost model = guessing. Layer decision pending. |
-| S4b LLM agents on core | 6.0 | asm-diff pattern mining + bug repro credible today; superopt search speculative. Weekly side-thread. |
-| S4a learned JIT heuristics | 4.0 → rises | no training substrate until S1 corpus v2. Gate: corpus v2 landed + cost model validated. |
+| S1 counter-driven cost models | 8.5 (8.5) | v2 clean corpus confirms thesis: one-probe 0.988/0.977, params 0.52 + cliff FAIL. mca/TTI validation next. |
+| S3 compile-time attack | 8.0 (7.5) | exp014: 82% of simple-kernel cold start is fixed import+init overhead — tractable, high-impact target found day 1. BUT the S1-coupled pass-pruning sub-bet is demoted: LLVM is only 25-46% of compile, 18% ceiling for caching simple kernels. |
+| S2 ship passes | 7.0 (7.0) | unchanged; gate (mca validation) still closed. |
+| S4b LLM agents on core | 6.0 (6.0) | unexercised this week. |
+| S4a learned JIT heuristics | 5.5 (4.0) | exp015: measured design point exists (hybrid shortlist+probe, regret 1.011x, 2.1us inference). Still gated: single kernel family. |
+
+Arc status: demonstrated in miniature on day 1 — exp015 (S4a) trained and
+evaluated directly on exp013's (S1) corpus. One seeded coupling weakened:
+S3's benefit-per-ms pass pruning is capped by measurement (pipeline is a
+minority of simple-kernel cold start), so S3's main line is now import/init
+reduction, independent of S1.
 
 ## phases
 
