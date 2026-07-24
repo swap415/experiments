@@ -1,0 +1,8 @@
+stub,import_ms,std,saving_ms,njit_ok
+none,100.69,0.41,0.0,1
+numba.stencils.stencil,nan,0.0,nan,0
+numba.np.types.datetime,nan,0.0,nan,0
+numba.experimental.jitclass,nan,0.0,nan,0
+numba.misc.special,nan,0.0,nan,0
+floor:numpy,29.59,0.13,,
+floor:numpy+llvmlite,44.37,0.21,,

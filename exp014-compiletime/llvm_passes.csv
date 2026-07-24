@@ -1,0 +1,1509 @@
+kernel,phase,pass,ms
+arrayexpr,Module passes (full optimization),InstCombinePass,8.924
+arrayexpr,Finalize object,X86 DAG->DAG Instruction Selection #5,6.923
+arrayexpr,Finalize object,X86 DAG->DAG Instruction Selection #6,6.886
+arrayexpr,Module passes (full optimization),LoopVectorizePass,5.606
+arrayexpr,Module passes (full optimization),LoopUnrollPass,4.527
+arrayexpr,Finalize object,Loop Strength Reduction #2,3.756
+arrayexpr,Module passes (full optimization),SimplifyCFGPass,3.351
+arrayexpr,Module passes (full optimization),JumpThreadingPass,2.517
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,1.739
+arrayexpr,Module passes (full optimization),LoopLoadEliminationPass,1.471
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,1.471
+arrayexpr,Module passes (full optimization),EarlyCSEPass,1.308
+arrayexpr,Finalize object,Greedy Register Allocator #12,1.271
+arrayexpr,Finalize object,Greedy Register Allocator #9,1.271
+arrayexpr,Module passes (cheap optimization for refprune),InstCombinePass,1.192
+arrayexpr,Module passes (full optimization),GVNPass,1.144
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimpleLoopUnswitchPass,1.12
+arrayexpr,Module passes (full optimization),InlinerPass,1.111
+arrayexpr,Finalize object,Machine Instruction Scheduler #6,1.101
+arrayexpr,Finalize object,Machine Instruction Scheduler #5,1.096
+arrayexpr,Module passes (full optimization),CorrelatedValuePropagationPass,1.062
+arrayexpr,Finalize object,Greedy Register Allocator #11,0.958
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.896
+arrayexpr,Finalize object,CodeGen Prepare #6,0.855
+arrayexpr,Finalize object,CodeGen Prepare #5,0.849
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.761
+arrayexpr,Finalize object,Canonicalize Freeze Instructions in Loops,0.726
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.715
+arrayexpr,Finalize object,Canonicalize Freeze Instructions in Loops #2,0.714
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.676
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LICMPass,0.653
+arrayexpr,Module passes (full optimization),LICMPass,0.646
+arrayexpr,Module passes (cheap optimization for refprune),JumpThreadingPass,0.638
+arrayexpr,Module passes (full optimization),IndVarSimplifyPass,0.621
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.618
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.61
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.602
+arrayexpr,Module passes (full optimization),SROAPass,0.572
+arrayexpr,Finalize object,Induction Variable Users #2,0.572
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.562
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.514
+arrayexpr,Module passes (full optimization),IPSCCPPass,0.49
+arrayexpr,Module passes (full optimization),DSEPass,0.49
+arrayexpr,Module passes (full optimization),InstSimplifyPass,0.49
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.472
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',IndVarSimplifyPass,0.446
+arrayexpr,Finalize object,Early Machine Loop Invariant Code Motion #5,0.438
+arrayexpr,Finalize object,Early Machine Loop Invariant Code Motion #6,0.431
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.422
+arrayexpr,Module passes (full optimization),LoopDeletionPass,0.409
+arrayexpr,Module passes (full optimization),LoopIdiomRecognizePass,0.409
+arrayexpr,Module passes (full optimization),ConstraintEliminationPass,0.409
+arrayexpr,Module passes (full optimization),RefPrunePass,0.409
+arrayexpr,Module passes (full optimization),SCCPPass,0.409
+arrayexpr,Finalize object,Machine Common Subexpression Elimination #5,0.409
+arrayexpr,Finalize object,Machine Common Subexpression Elimination #6,0.393
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.39
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.371
+arrayexpr,Module passes (full optimization),PostOrderFunctionAttrsPass,0.343
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.343
+arrayexpr,Finalize object,Live Variable Analysis #5,0.327
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.324
+arrayexpr,Finalize object,Register Coalescer #6,0.318
+arrayexpr,Finalize object,Reaching Definitions Analysis #6,0.318
+arrayexpr,Finalize object,Reaching Definitions Analysis #5,0.317
+arrayexpr,Finalize object,Register Coalescer #5,0.317
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyCFGPass,0.307
+arrayexpr,Module passes (cheap optimization for refprune),RefPrunePass,0.303
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.294
+arrayexpr,Finalize object,Live Interval Analysis #5,0.277
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.269
+arrayexpr,Module passes (cheap optimization for refprune),LoopSimplifyPass,0.254
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.248
+arrayexpr,Module passes (full optimization),GlobalOptPass,0.245
+arrayexpr,Module passes (full optimization),ReassociatePass,0.245
+arrayexpr,Module passes (full optimization),LoopSimplifyPass,0.245
+arrayexpr,Module passes (full optimization),CalledValuePropagationPass,0.245
+arrayexpr,Module passes (full optimization),ADCEPass,0.245
+arrayexpr,Module passes (full optimization),MemCpyOptPass,0.245
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopIdiomRecognizePass,0.243
+arrayexpr,Finalize object,Module Verifier #11,0.236
+arrayexpr,Module passes (full optimization),LoopFullUnrollPass,0.229
+arrayexpr,Finalize object,X86 Assembly Printer #6,0.227
+arrayexpr,Finalize object,X86 Assembly Printer #5,0.227
+arrayexpr,Finalize object,Module Verifier #12,0.227
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.201
+arrayexpr,Finalize object,Machine code sinking #6,0.198
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.192
+arrayexpr,Finalize object,Module Verifier #10,0.187
+arrayexpr,Finalize object,Machine Copy Propagation Pass #10,0.182
+arrayexpr,Finalize object,Machine code sinking #5,0.182
+arrayexpr,Finalize object,Machine Copy Propagation Pass #9,0.182
+arrayexpr,Finalize object,Machine Copy Propagation Pass #11,0.164
+arrayexpr,Module passes (full optimization),InferAlignmentPass,0.163
+arrayexpr,Module passes (full optimization),VectorCombinePass,0.163
+arrayexpr,Module passes (full optimization),BDCEPass,0.163
+arrayexpr,Module passes (full optimization),TailCallElimPass,0.163
+arrayexpr,Module passes (full optimization),LoopInstSimplifyPass,0.163
+arrayexpr,Module passes (full optimization),LCSSAPass,0.163
+arrayexpr,Finalize object,Control Flow Optimizer #5,0.159
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopFullUnrollPass,0.159
+arrayexpr,Finalize object,Control Flow Optimizer #6,0.159
+arrayexpr,Finalize object,Machine Copy Propagation Pass #12,0.158
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopRotatePass,0.155
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.145
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.14
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopInstSimplifyPass,0.139
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.139
+arrayexpr,Finalize object,Branch Probability Basic Block Placement #6,0.136
+arrayexpr,Finalize object,Peephole Optimizations #6,0.136
+arrayexpr,Finalize object,Branch Probability Basic Block Placement #5,0.136
+arrayexpr,Finalize object,Peephole Optimizations #5,0.136
+arrayexpr,Finalize object,Virtual Register Rewriter #5,0.136
+arrayexpr,Finalize object,Branch Probability Analysis #7,0.128
+arrayexpr,Finalize object,Machine Module Information #6,0.127
+arrayexpr,Finalize object,Branch Probability Analysis #8,0.125
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.122
+arrayexpr,Finalize object,Virtual Register Rewriter #6,0.119
+arrayexpr,Finalize object,Dominator Tree Construction #12,0.114
+arrayexpr,Finalize object,Two-Address instruction pass #6,0.114
+arrayexpr,Finalize object,Branch Probability Analysis #9,0.114
+arrayexpr,Finalize object,Expand memcmp() to load/stores #4,0.114
+arrayexpr,Finalize object,Machine Late Instructions Cleanup Pass #6,0.113
+arrayexpr,Finalize object,Two-Address instruction pass #5,0.113
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.11
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.104
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.1
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.098
+arrayexpr,Finalize object,X86 Execution Dependency Fix #5,0.091
+arrayexpr,Finalize object,Prologue/Epilogue Insertion & Frame Finalization #6,0.091
+arrayexpr,Finalize object,Live Range Shrink #6,0.091
+arrayexpr,Finalize object,Constant Hoisting #6,0.091
+arrayexpr,Finalize object,Function Alias Analysis Results #17,0.091
+arrayexpr,Finalize object,Prologue/Epilogue Insertion & Frame Finalization #5,0.091
+arrayexpr,Finalize object,Remove dead machine instructions #9,0.091
+arrayexpr,Finalize object,X86 Execution Dependency Fix #4,0.091
+arrayexpr,Finalize object,Natural Loop Information #18,0.091
+arrayexpr,Finalize object,X86 Execution Dependency Fix #6,0.091
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #24,0.091
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.09
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.084
+arrayexpr,Module passes (full optimization),AggressiveInstCombinePass,0.082
+arrayexpr,Module passes (full optimization),LoopDistributePass,0.082
+arrayexpr,Module passes (full optimization),SimpleLoopUnswitchPass,0.082
+arrayexpr,Module passes (full optimization),LibCallsShrinkWrapPass,0.082
+arrayexpr,Module passes (full optimization),LoopSimplifyCFGPass,0.082
+arrayexpr,Module passes (full optimization),LoopRotatePass,0.082
+arrayexpr,Module passes (full optimization),"RequireAnalysisPass<llvm::GlobalsAA, llvm::Module>",0.082
+arrayexpr,Module passes (full optimization),RefNormalizePass,0.082
+arrayexpr,Module passes (full optimization),DropUnnecessaryAssumesPass,0.082
+arrayexpr,Module passes (full optimization),InferFunctionAttrsPass,0.082
+arrayexpr,Module passes (full optimization),Float2IntPass,0.082
+arrayexpr,Module passes (full optimization),WarnMissedTransformationsPass,0.082
+arrayexpr,Module passes (full optimization),ReversePostOrderFunctionAttrsPass,0.082
+arrayexpr,Module passes (full optimization),GlobalDCEPass,0.082
+arrayexpr,Module passes (full optimization),CGProfilePass,0.082
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.08
+arrayexpr,Finalize object,Dominator Tree Construction #11,0.079
+arrayexpr,Finalize object,Expand IR instructions #6,0.076
+arrayexpr,Finalize object,Remove dead machine instructions #10,0.076
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.074
+arrayexpr,Finalize object,Block Frequency Analysis #6,0.073
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.073
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #22,0.068
+arrayexpr,Finalize object,X86 Byte/Word Instruction Fixup #6,0.068
+arrayexpr,Finalize object,Eliminate PHI nodes for register allocation #6,0.068
+arrayexpr,Finalize object,Stack Slot Coloring #6,0.068
+arrayexpr,Finalize object,Dominator Tree Construction #10,0.068
+arrayexpr,Finalize object,Branch Probability Analysis #6,0.068
+arrayexpr,Finalize object,Scalar Evolution Analysis #4,0.068
+arrayexpr,Finalize object,Scalar Evolution Analysis #6,0.068
+arrayexpr,Finalize object,Expand IR instructions #5,0.068
+arrayexpr,Finalize object,Eliminate PHI nodes for register allocation #5,0.068
+arrayexpr,Finalize object,Remove dead machine instructions #11,0.062
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.062
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.062
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopDeletionPass,0.06
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.06
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.06
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.06
+arrayexpr,Finalize object,Natural Loop Information #21,0.057
+arrayexpr,Finalize object,Natural Loop Information #20,0.057
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.055
+arrayexpr,Module passes (cheap optimization for refprune),RefNormalizePass,0.052
+arrayexpr,Finalize object,Slot index numbering #10,0.05
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.05
+arrayexpr,Module passes (full optimization),RecomputeGlobalsAAPass,0.049
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.047
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.047
+arrayexpr,Finalize object,Scalar Evolution Analysis #5,0.045
+arrayexpr,Finalize object,Remove dead machine instructions #12,0.045
+arrayexpr,Finalize object,Shrink Wrapping analysis #6,0.045
+arrayexpr,Finalize object,Machine InstCombiner #3,0.045
+arrayexpr,Finalize object,Machine Dominance Frontier Construction #6,0.045
+arrayexpr,Module passes (cheap optimization for refprune),LCSSAPass,0.045
+arrayexpr,Finalize object,Live Range Shrink #5,0.045
+arrayexpr,Finalize object,X86 Partial Reduction #5,0.045
+arrayexpr,Finalize object,Shrink Wrapping analysis #5,0.045
+arrayexpr,Finalize object,Post-Dominator Tree Construction #5,0.045
+arrayexpr,Finalize object,Branch Probability Analysis #4,0.045
+arrayexpr,Finalize object,Dominator Tree Construction #9,0.045
+arrayexpr,Finalize object,Slot index numbering #9,0.041
+arrayexpr,Finalize object,Machine Natural Loop Construction #16,0.04
+arrayexpr,Finalize object,Natural Loop Information #24,0.04
+arrayexpr,Module passes (cheap optimization for refprune),LoopRotatePass,0.039
+arrayexpr,Finalize object,Post-Dominator Tree Construction #9,0.038
+arrayexpr,Finalize object,Machine Dominance Frontier Construction #5,0.038
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.038
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.037
+arrayexpr,Finalize object,Canonicalize natural loops #6,0.034
+arrayexpr,Finalize object,Machine Block Frequency Analysis #28,0.032
+arrayexpr,Module passes (cheap optimization for refprune),AnnotationRemarksPass,0.031
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.031
+arrayexpr,Finalize object,Post-Dominator Tree Construction #10,0.03
+arrayexpr,Finalize object,BreakFalseDeps #5,0.03
+arrayexpr,Finalize object,Machine Block Frequency Analysis #26,0.027
+arrayexpr,Finalize object,Machine Natural Loop Construction #14,0.027
+arrayexpr,Finalize object,Machine Natural Loop Construction #15,0.027
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.027
+arrayexpr,Module passes (cheap optimization for refprune),AlwaysInlinerPass,0.026
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.025
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.025
+arrayexpr,Finalize object,BreakFalseDeps #6,0.023
+arrayexpr,Finalize object,Machine Block Frequency Analysis #29,0.023
+arrayexpr,Finalize object,Machine Block Frequency Analysis #30,0.023
+arrayexpr,Finalize object,X86 LEA Optimize #5,0.023
+arrayexpr,Finalize object,Live Register Matrix #5,0.023
+arrayexpr,Finalize object,X86 vzeroupper inserter,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #37,0.023
+arrayexpr,Finalize object,Greedy Register Allocator #10,0.023
+arrayexpr,Finalize object,Init Undef Pass #6,0.023
+arrayexpr,Finalize object,X86 cmov Conversion #5,0.023
+arrayexpr,Finalize object,MachinePostDominator Tree Construction #11,0.023
+arrayexpr,Finalize object,MachinePostDominator Tree Construction #10,0.023
+arrayexpr,Finalize object,X86 Fixup SetCC #6,0.023
+arrayexpr,Finalize object,Machine Block Frequency Analysis #27,0.023
+arrayexpr,Finalize object,Natural Loop Information #22,0.023
+arrayexpr,Finalize object,Machine Natural Loop Construction #17,0.023
+arrayexpr,Finalize object,Finalize ISel and expand pseudo-instructions #6,0.023
+arrayexpr,Finalize object,Live DEBUG_VALUE analysis #6,0.023
+arrayexpr,Finalize object,Machine Loop Invariant Code Motion #6,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #38,0.023
+arrayexpr,Finalize object,Expand memcmp() to load/stores #6,0.023
+arrayexpr,Finalize object,MachinePostDominator Tree Construction #12,0.023
+arrayexpr,Finalize object,Remove unreachable blocks from the CFG #5,0.023
+arrayexpr,Finalize object,Early Tail Duplication #4,0.023
+arrayexpr,Finalize object,X86 Optimize Call Frame #6,0.023
+arrayexpr,Finalize object,PostRA Machine Sink #6,0.023
+arrayexpr,Finalize object,Post-RA pseudo instruction expansion pass #6,0.023
+arrayexpr,Finalize object,Machine Cycle Info Analysis #6,0.023
+arrayexpr,Finalize object,Remove unreachable machine basic blocks #5,0.023
+arrayexpr,Finalize object,Free MachineFunction #6,0.023
+arrayexpr,Finalize object,Natural Loop Information #25,0.023
+arrayexpr,Finalize object,Merge disjoint stack slots #6,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #39,0.023
+arrayexpr,Finalize object,X86 LEA Fixup #6,0.023
+arrayexpr,Finalize object,Lower AMX type for load/store #5,0.023
+arrayexpr,Finalize object,Natural Loop Information #23,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #34,0.023
+arrayexpr,Finalize object,X86 Fixup Inst Tuning #6,0.023
+arrayexpr,Finalize object,Tail Duplication #6,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #36,0.023
+arrayexpr,Finalize object,Interleaved Access Pass #6,0.023
+arrayexpr,Finalize object,X86 Avoid Store Forwarding Blocks #6,0.023
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #20,0.023
+arrayexpr,Finalize object,Post-Dominator Tree Construction #11,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #32,0.023
+arrayexpr,Finalize object,X86 LEA Optimize #6,0.023
+arrayexpr,Finalize object,X86 vzeroupper inserter #4,0.023
+arrayexpr,Finalize object,X86 cmov Conversion #6,0.023
+arrayexpr,Finalize object,Check CFA info and insert CFI instructions if needed #2,0.023
+arrayexpr,Finalize object,Machine Natural Loop Construction #13,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #28,0.023
+arrayexpr,Finalize object,Finalize ISel and expand pseudo-instructions #5,0.023
+arrayexpr,Finalize object,Machine Cycle Info Analysis #5,0.023
+arrayexpr,Finalize object,MachinePostDominator Tree Construction #13,0.023
+arrayexpr,Finalize object,Tail Duplication #4,0.023
+arrayexpr,Finalize object,Post-RA pseudo instruction expansion pass #5,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #29,0.023
+arrayexpr,Finalize object,Remove unreachable machine basic blocks #6,0.023
+arrayexpr,Finalize object,X86 Optimize Call Frame #4,0.023
+arrayexpr,Finalize object,X86 Fixup Vector Constants #6,0.023
+arrayexpr,Finalize object,X86 pseudo instruction expansion pass #6,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #31,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #30,0.023
+arrayexpr,Finalize object,Machine Block Frequency Analysis #24,0.023
+arrayexpr,Finalize object,Post-Dominator Tree Construction #6,0.023
+arrayexpr,Finalize object,Live Register Matrix #6,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #15,0.023
+arrayexpr,Finalize object,Greedy Register Allocator #8,0.023
+arrayexpr,Finalize object,Machine Block Frequency Analysis #25,0.023
+arrayexpr,Finalize object,Live DEBUG_VALUE analysis #5,0.023
+arrayexpr,Finalize object,Finalize ISel and expand pseudo-instructions #4,0.023
+arrayexpr,Finalize object,Early Tail Duplication #5,0.023
+arrayexpr,Finalize object,Expand memcmp() to load/stores #5,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #40,0.023
+arrayexpr,Finalize object,X86 Fixup Inst Tuning #5,0.023
+arrayexpr,Finalize object,Canonicalize natural loops #5,0.023
+arrayexpr,Finalize object,X86 Fixup SetCC #5,0.023
+arrayexpr,Finalize object,Natural Loop Information #19,0.023
+arrayexpr,Finalize object,Machine Loop Invariant Code Motion #5,0.023
+arrayexpr,Finalize object,Remove unreachable blocks from the CFG #6,0.023
+arrayexpr,Finalize object,Merge disjoint stack slots #5,0.023
+arrayexpr,Finalize object,X86 pseudo instruction expansion pass #5,0.023
+arrayexpr,Finalize object,Machine Natural Loop Construction #12,0.023
+arrayexpr,Finalize object,MachineDominator Tree Construction #21,0.023
+arrayexpr,Finalize object,Process Implicit Definitions #3,0.023
+arrayexpr,Finalize object,MachinePostDominator Tree Construction #14,0.023
+arrayexpr,Finalize object,Machine Loop Invariant Code Motion #4,0.023
+arrayexpr,Finalize object,MachinePostDominator Tree Construction #15,0.023
+arrayexpr,Finalize object,Natural Loop Information #27,0.023
+arrayexpr,Finalize object,Natural Loop Information #26,0.023
+arrayexpr,Finalize object,Natural Loop Information #28,0.023
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.02
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.02
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.02
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.02
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.02
+arrayexpr,Finalize object,Function Alias Analysis Results #16,0.018
+arrayexpr,Finalize object,MachineDominator Tree Construction #35,0.017
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.017
+arrayexpr,Finalize object,MachineDominator Tree Construction #33,0.015
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.015
+arrayexpr,Finalize object,Interleaved Access Pass #5,0.015
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.013
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.012
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.012
+arrayexpr,Finalize object,Expand Atomic instructions #5,0.011
+arrayexpr,Finalize object,Virtual Register Map #5,0.011
+arrayexpr,Finalize object,Machine Trace Metrics,0.011
+arrayexpr,Module passes (cheap optimization for refprune),EntryExitInstrumenterPass,0.01
+arrayexpr,Module passes (cheap optimization for refprune),AllocTokenPass,0.01
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.009
+arrayexpr,Finalize object,Machine Trace Metrics #2,0.008
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.008
+arrayexpr,Finalize object,Check CFA info and insert CFI instructions if needed,0.006
+arrayexpr,Finalize object,Exception handling preparation #6,0.006
+arrayexpr,Finalize object,Debug Variable Analysis #6,0.005
+arrayexpr,Finalize object,Bundle Machine CFG Edges #11,0.005
+arrayexpr,Module passes (cheap optimization for refprune),CoroConditionalWrapper,0.005
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.004
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.004
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.001
+arrayexpr,Module passes (full optimization),CallSiteSplittingPass,0.0
+arrayexpr,Module passes (full optimization),"RequireAnalysisPass<llvm::ShouldNotRunFunctionPassesAnalysis, llvm::Function>",0.0
+arrayexpr,Module passes (full optimization),DeadArgumentEliminationPass,0.0
+arrayexpr,Module passes (full optimization),AlwaysInlinerPass,0.0
+arrayexpr,Module passes (full optimization),LowerConstantIntrinsicsPass,0.0
+arrayexpr,Module passes (full optimization),CoroAnnotationElidePass,0.0
+arrayexpr,Module passes (full optimization),LowerExpectIntrinsicPass,0.0
+arrayexpr,Module passes (full optimization),AllocTokenPass,0.0
+arrayexpr,Module passes (full optimization),DivRemPairsPass,0.0
+arrayexpr,Module passes (full optimization),ControlHeightReductionPass,0.0
+arrayexpr,Module passes (full optimization),CoroSplitPass,0.0
+arrayexpr,Module passes (full optimization),MergedLoadStoreMotionPass,0.0
+arrayexpr,Module passes (full optimization),PromotePass,0.0
+arrayexpr,Module passes (full optimization),ArgumentPromotionPass,0.0
+arrayexpr,Module passes (full optimization),AlignmentFromAssumptionsPass,0.0
+arrayexpr,Module passes (full optimization),InjectTLIMappings,0.0
+arrayexpr,Module passes (full optimization),AnnotationRemarksPass,0.0
+arrayexpr,Module passes (full optimization),MoveAutoInitPass,0.0
+arrayexpr,Module passes (full optimization),CoroElidePass,0.0
+arrayexpr,Module passes (full optimization),InvalidateAnalysisPass<llvm::AAManager>,0.0
+arrayexpr,Module passes (full optimization),SpeculativeExecutionPass,0.0
+arrayexpr,Module passes (full optimization),OpenMPOptCGSCCPass,0.0
+arrayexpr,Module passes (full optimization),MemProfRemoveInfo,0.0
+arrayexpr,Module passes (full optimization),EntryExitInstrumenterPass,0.0
+arrayexpr,Module passes (full optimization),InvalidateAnalysisPass<llvm::ShouldNotRunFunctionPassesAnalysis>,0.0
+arrayexpr,Module passes (full optimization),LoopSinkPass,0.0
+arrayexpr,Module passes (full optimization),ConstantMergePass,0.0
+arrayexpr,Module passes (full optimization),OpenMPOptPass,0.0
+arrayexpr,Module passes (full optimization),CoroEarlyPass,0.0
+arrayexpr,Module passes (full optimization),CoroCleanupPass,0.0
+arrayexpr,Module passes (full optimization),RelLookupTableConverterPass,0.0
+arrayexpr,Module passes (full optimization),Annotation2MetadataPass,0.0
+arrayexpr,Module passes (full optimization),EliminateAvailableExternallyPass,0.0
+arrayexpr,Module passes (full optimization),ForceFunctionAttrsPass,0.0
+arrayexpr,Module passes (full optimization),"RequireAnalysisPass<llvm::ProfileSummaryAnalysis, llvm::Module>",0.0
+arrayexpr,Finalize object,Expand Atomic instructions #6,0.0
+arrayexpr,Finalize object,Partially inline calls to library functions #5,0.0
+arrayexpr,Finalize object,Bundle Machine CFG Edges #10,0.0
+arrayexpr,Finalize object,Optimize machine instruction PHIs #6,0.0
+arrayexpr,Finalize object,Scalarize Masked Memory Intrinsics #6,0.0
+arrayexpr,Finalize object,Process Implicit Definitions #6,0.0
+arrayexpr,Finalize object,Replace intrinsics with calls to vector library #5,0.0
+arrayexpr,Finalize object,Expand reduction intrinsics #6,0.0
+arrayexpr,Finalize object,X86 Partial Reduction #4,0.0
+arrayexpr,Finalize object,Merge contiguous icmps into a memcmp #6,0.0
+arrayexpr,Finalize object,Live Stack Slot Analysis #4,0.0
+arrayexpr,Finalize object,Lower AMX type for load/store #6,0.0
+arrayexpr,Finalize object,Local Dynamic TLS Access Clean-up #6,0.0
+arrayexpr,Finalize object,Spill Code Placement Analysis #3,0.0
+arrayexpr,Finalize object,Function Alias Analysis Results #15,0.0
+arrayexpr,Finalize object,Virtual Register Map #4,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #21,0.0
+arrayexpr,Finalize object,ObjC ARC contraction #6,0.0
+arrayexpr,Finalize object,Function Alias Analysis Results #14,0.0
+arrayexpr,Finalize object,X86 EFLAGS copy lowering #5,0.0
+arrayexpr,Finalize object,Pre-ISel Intrinsic Lowering #7,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #22,0.0
+arrayexpr,Finalize object,Post RA top-down list latency scheduler #5,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #55,0.0
+arrayexpr,Finalize object,X86 Domain Reassignment Pass #6,0.0
+arrayexpr,Finalize object,Lazy Branch Probability Analysis #18,0.0
+arrayexpr,Finalize object,Expand indirectbr instructions #4,0.0
+arrayexpr,Finalize object,Compressing EVEX instrs when possible #6,0.0
+arrayexpr,Finalize object,Insert stack protectors #4,0.0
+arrayexpr,Finalize object,Unpack machine instruction bundles #6,0.0
+arrayexpr,Finalize object,Assignment Tracking Analysis #5,0.0
+arrayexpr,Finalize object,Prepare callbr #5,0.0
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #21,0.0
+arrayexpr,Finalize object,Early If-Conversion #4,0.0
+arrayexpr,Finalize object,X86 Indirect Branch Tracking #6,0.0
+arrayexpr,Finalize object,Implement the 'patchable-function' attribute #6,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #49,0.0
+arrayexpr,Finalize object,X86 Speculative Execution Side Effect Suppression #6,0.0
+arrayexpr,Finalize object,Lazy Branch Probability Analysis #16,0.0
+arrayexpr,Finalize object,Remove Loads Into Fake Uses #6,0.0
+arrayexpr,Finalize object,Analyze Machine Code For Garbage Collection #6,0.0
+arrayexpr,Finalize object,Insert XRay ops #6,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #56,0.0
+arrayexpr,Finalize object,Stack Frame Layout Analysis #6,0.0
+arrayexpr,Finalize object,X86 insert wait instruction #6,0.0
+arrayexpr,Finalize object,Insert fentry calls #6,0.0
+arrayexpr,Finalize object,Lazy Block Frequency Analysis #18,0.0
+arrayexpr,Finalize object,X86 PIC Global Base Reg Initialization #6,0.0
+arrayexpr,Finalize object,Argument Stack Rebase #6,0.0
+arrayexpr,Finalize object,Local Stack Slot Allocation #6,0.0
+arrayexpr,Finalize object,X86 speculative load hardening #6,0.0
+arrayexpr,Finalize object,Detect Dead Lanes #5,0.0
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #19,0.0
+arrayexpr,Finalize object,X86 Lower Tile Copy #5,0.0
+arrayexpr,Finalize object,X86 FP Stackifier #6,0.0
+arrayexpr,Finalize object,X86 Suppress APX features for relocation #6,0.0
+arrayexpr,Finalize object,Lower Garbage Collection Instructions #6,0.0
+arrayexpr,Finalize object,Machine Sanitizer Binary Metadata #6,0.0
+arrayexpr,Finalize object,Shadow Stack GC Lowering #5,0.0
+arrayexpr,Finalize object,StackMap Liveness Analysis #6,0.0
+arrayexpr,Finalize object,Lazy Block Frequency Analysis #16,0.0
+arrayexpr,Finalize object,Contiguously Lay Out Funclets #6,0.0
+arrayexpr,Finalize object,Lazy Branch Probability Analysis #17,0.0
+arrayexpr,Finalize object,Optimization Remark Emitter #4,0.0
+arrayexpr,Finalize object,X86 Atom pad short functions #3,0.0
+arrayexpr,Finalize object,Remove Redundant DEBUG_VALUE analysis #6,0.0
+arrayexpr,Finalize object,Insert KCFI indirect call checks #5,0.0
+arrayexpr,Finalize object,Tile Register Configure #6,0.0
+arrayexpr,Finalize object,Register Allocation Pass Scoring #6,0.0
+arrayexpr,Finalize object,Tile Register Pre-configure #6,0.0
+arrayexpr,Finalize object,Pseudo Probe Inserter #6,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #50,0.0
+arrayexpr,Finalize object,X86 Return Thunks #5,0.0
+arrayexpr,Finalize object,Rename Disconnected Subregister Components #6,0.0
+arrayexpr,Finalize object,X86 DynAlloca Expander #5,0.0
+arrayexpr,Finalize object,Instrument function entry/exit with calls to e.g. mcount() (post inlining) #5,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #53,0.0
+arrayexpr,Finalize object,Safe Stack instrumentation pass #5,0.0
+arrayexpr,Finalize object,X86 Indirect Thunks #6,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #48,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #57,0.0
+arrayexpr,Finalize object,Lazy Block Frequency Analysis #17,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #24,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #52,0.0
+arrayexpr,Finalize object,Fixup Statepoint Caller Saved #6,0.0
+arrayexpr,Finalize object,X86 Load Value Injection (LVI) Load Hardening #6,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #51,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #54,0.0
+arrayexpr,Finalize object,Assumption Cache Tracker #7,0.0
+arrayexpr,Finalize object,Lower AMX intrinsics #5,0.0
+arrayexpr,Finalize object,X86 Load Value Injection (LVI) Ret-Hardening #6,0.0
+arrayexpr,Finalize object,Target Library Information #2,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #23,0.0
+arrayexpr,Finalize object,Create Garbage Collector Module Metadata #7,0.0
+arrayexpr,Finalize object,Library Function Lowering Analysis #7,0.0
+arrayexpr,Finalize object,Lower AMX intrinsics #4,0.0
+arrayexpr,Finalize object,Default Regalloc Priority Advisor #7,0.0
+arrayexpr,Finalize object,Profile summary info #7,0.0
+arrayexpr,Finalize object,Target Pass Configuration #7,0.0
+arrayexpr,Finalize object,Type-Based Alias Analysis #7,0.0
+arrayexpr,Finalize object,Machine Branch Probability Analysis #7,0.0
+arrayexpr,Finalize object,Default Regalloc Eviction Advisor #7,0.0
+arrayexpr,Finalize object,Target Transform Information #7,0.0
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.0
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.0
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+arrayexpr,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.0
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.0
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.0
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.0
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.0
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.0
+arrayexpr,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.0
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.0
+arrayexpr,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+arrayexpr,Finalize object,Replace intrinsics with calls to vector library #6,0.0
+arrayexpr,Finalize object,Bundle Machine CFG Edges #12,0.0
+arrayexpr,Finalize object,Merge contiguous icmps into a memcmp #5,0.0
+arrayexpr,Finalize object,Live Stack Slot Analysis #5,0.0
+arrayexpr,Finalize object,Spill Code Placement Analysis #2,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #20,0.0
+arrayexpr,Finalize object,Virtual Register Map #6,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #47,0.0
+arrayexpr,Finalize object,Expand indirectbr instructions #6,0.0
+arrayexpr,Finalize object,X86 Atom pad short functions,0.0
+arrayexpr,Finalize object,Insert stack protectors #3,0.0
+arrayexpr,Finalize object,X86 LEA Fixup #5,0.0
+arrayexpr,Finalize object,Create Garbage Collector Module Metadata #6,0.0
+arrayexpr,Finalize object,Branch Probability Analysis,0.0
+arrayexpr,Finalize object,Local Dynamic TLS Access Clean-up #5,0.0
+arrayexpr,Finalize object,X86 Suppress APX features for relocation #5,0.0
+arrayexpr,Finalize object,Detect Dead Lanes #6,0.0
+arrayexpr,Finalize object,X86 Indirect Thunks #5,0.0
+arrayexpr,Finalize object,Lazy Branch Probability Analysis #14,0.0
+arrayexpr,Finalize object,Assignment Tracking Analysis #4,0.0
+arrayexpr,Finalize object,Instrument function entry/exit with calls to e.g. mcount() (post inlining) #6,0.0
+arrayexpr,Finalize object,Tile Register Pre-configure #5,0.0
+arrayexpr,Finalize object,Optimization Remark Emitter #6,0.0
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #18,0.0
+arrayexpr,Finalize object,Lazy Branch Probability Analysis #15,0.0
+arrayexpr,Finalize object,Analyze Machine Code For Garbage Collection #5,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #46,0.0
+arrayexpr,Finalize object,X86 LEA Fixup #4,0.0
+arrayexpr,Finalize object,X86 DynAlloca Expander #6,0.0
+arrayexpr,Finalize object,Insert KCFI indirect call checks #6,0.0
+arrayexpr,Finalize object,Lower Garbage Collection Instructions #3,0.0
+arrayexpr,Finalize object,Machine Branch Probability Analysis #6,0.0
+arrayexpr,Finalize object,Scoped NoAlias Alias Analysis #6,0.0
+arrayexpr,Finalize object,X86 Avoid Store Forwarding Blocks #5,0.0
+arrayexpr,Finalize object,Partially inline calls to library functions #6,0.0
+arrayexpr,Finalize object,X86 Partial Reduction #6,0.0
+arrayexpr,Finalize object,Optimize machine instruction PHIs #5,0.0
+arrayexpr,Finalize object,X86 EFLAGS copy lowering #6,0.0
+arrayexpr,Finalize object,Post RA top-down list latency scheduler #6,0.0
+arrayexpr,Finalize object,Early If-Conversion #5,0.0
+arrayexpr,Finalize object,Prepare callbr #4,0.0
+arrayexpr,Finalize object,Assignment Tracking Analysis #6,0.0
+arrayexpr,Finalize object,X86 Return Thunks #6,0.0
+arrayexpr,Finalize object,Lower AMX intrinsics #6,0.0
+arrayexpr,Finalize object,Detect Dead Lanes #4,0.0
+arrayexpr,Finalize object,Remove Redundant DEBUG_VALUE analysis #5,0.0
+arrayexpr,Finalize object,Pseudo Probe Inserter #5,0.0
+arrayexpr,Finalize object,Shadow Stack GC Lowering #6,0.0
+arrayexpr,Finalize object,X86 speculative load hardening #4,0.0
+arrayexpr,Finalize object,X86 Indirect Branch Tracking #5,0.0
+arrayexpr,Finalize object,Remove unreachable blocks from the CFG #4,0.0
+arrayexpr,Finalize object,StackMap Liveness Analysis #5,0.0
+arrayexpr,Finalize object,Profile summary info #6,0.0
+arrayexpr,Finalize object,Type-Based Alias Analysis #6,0.0
+arrayexpr,Finalize object,Expand reduction intrinsics #5,0.0
+arrayexpr,Finalize object,ObjC ARC contraction #5,0.0
+arrayexpr,Finalize object,X86 Atom pad short functions #2,0.0
+arrayexpr,Finalize object,Argument Stack Rebase #5,0.0
+arrayexpr,Finalize object,Early If-Conversion #6,0.0
+arrayexpr,Finalize object,Compressing EVEX instrs when possible #4,0.0
+arrayexpr,Finalize object,Lazy Block Frequency Analysis #14,0.0
+arrayexpr,Finalize object,Lazy Branch Probability Analysis #13,0.0
+arrayexpr,Finalize object,X86 Lower Tile Copy #6,0.0
+arrayexpr,Finalize object,Remove Redundant DEBUG_VALUE analysis #4,0.0
+arrayexpr,Finalize object,X86 Load Value Injection (LVI) Load Hardening #5,0.0
+arrayexpr,Finalize object,X86 FP Stackifier #5,0.0
+arrayexpr,Finalize object,Register Allocation Pass Scoring #5,0.0
+arrayexpr,Finalize object,Tile Register Configure #5,0.0
+arrayexpr,Finalize object,Safe Stack instrumentation pass #6,0.0
+arrayexpr,Finalize object,Rename Disconnected Subregister Components #4,0.0
+arrayexpr,Finalize object,X86 insert wait instruction #5,0.0
+arrayexpr,Finalize object,Lazy Machine Block Frequency Analysis #58,0.0
+arrayexpr,Finalize object,X86 PIC Global Base Reg Initialization #5,0.0
+arrayexpr,Finalize object,Optimization Remark Emitter #5,0.0
+arrayexpr,Finalize object,Scalarize Masked Memory Intrinsics #5,0.0
+arrayexpr,Finalize object,Process Implicit Definitions #5,0.0
+arrayexpr,Finalize object,Exception handling preparation #5,0.0
+arrayexpr,Finalize object,Basic Alias Analysis (stateless AA impl) #23,0.0
+arrayexpr,Finalize object,Prepare callbr #6,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #18,0.0
+arrayexpr,Finalize object,Machine Optimization Remark Emitter #19,0.0
+arrayexpr,Finalize object,Register Allocation Pass Scoring #4,0.0
+arrayexpr,Finalize object,X86 Atom pad short functions #4,0.0
+arrayexpr,Finalize object,Rename Disconnected Subregister Components #5,0.0
+arrayexpr,Finalize object,Tail Duplication,0.0
+arrayexpr,Finalize object,Fixup Statepoint Caller Saved #5,0.0
+prange_saxpy,Module passes (full optimization),InstCombinePass,4.534
+prange_saxpy,Finalize object,X86 DAG->DAG Instruction Selection #5,3.048
+prange_saxpy,Module passes (full optimization),SimplifyCFGPass,1.613
+prange_saxpy,Module passes (full optimization),CorrelatedValuePropagationPass,1.007
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.967
+prange_saxpy,Module passes (full optimization),IndVarSimplifyPass,0.964
+prange_saxpy,Module passes (cheap optimization for refprune),InstCombinePass,0.96
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.871
+prange_saxpy,Module passes (full optimization),EarlyCSEPass,0.834
+prange_saxpy,Finalize object,Loop Strength Reduction #4,0.779
+prange_saxpy,Finalize object,Loop Strength Reduction #3,0.774
+prange_saxpy,Module passes (full optimization),LoopDeletionPass,0.652
+prange_saxpy,Module passes (full optimization),LoopUnrollPass,0.631
+prange_saxpy,Module passes (full optimization),LoopIdiomRecognizePass,0.623
+prange_saxpy,Module passes (full optimization),GVNPass,0.591
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.568
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.536
+prange_saxpy,Finalize object,Greedy Register Allocator #10,0.516
+prange_saxpy,Module passes (full optimization),JumpThreadingPass,0.515
+prange_saxpy,Finalize object,Machine Instruction Scheduler #4,0.492
+prange_saxpy,Finalize object,Machine Instruction Scheduler #5,0.487
+prange_saxpy,Module passes (full optimization),LoopLoadEliminationPass,0.464
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.403
+prange_saxpy,Module passes (full optimization),DSEPass,0.399
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.397
+prange_saxpy,Module passes (cheap optimization for refprune),JumpThreadingPass,0.377
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.375
+prange_saxpy,Module passes (full optimization),IPSCCPPass,0.362
+prange_saxpy,Finalize object,Machine Natural Loop Construction #9,0.333
+prange_saxpy,Finalize object,CodeGen Prepare #5,0.331
+prange_saxpy,Module passes (full optimization),LICMPass,0.326
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.302
+prange_saxpy,Module passes (full optimization),SCCPPass,0.29
+prange_saxpy,Module passes (full optimization),ConstraintEliminationPass,0.261
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.257
+prange_saxpy,Module passes (full optimization),PostOrderFunctionAttrsPass,0.254
+prange_saxpy,Module passes (full optimization),InlinerPass,0.254
+prange_saxpy,Finalize object,Live Variable Analysis #5,0.251
+prange_saxpy,Finalize object,Induction Variable Users #3,0.238
+prange_saxpy,Finalize object,Induction Variable Users #4,0.23
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.22
+prange_saxpy,Module passes (full optimization),LoopFullUnrollPass,0.203
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.198
+prange_saxpy,Module passes (full optimization),SROAPass,0.196
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.189
+prange_saxpy,Module passes (full optimization),RefPrunePass,0.181
+prange_saxpy,Module passes (full optimization),ReassociatePass,0.181
+prange_saxpy,Finalize object,Register Coalescer #5,0.179
+prange_saxpy,Module passes (cheap optimization for refprune),RefPrunePass,0.177
+prange_saxpy,Finalize object,Register Coalescer #4,0.176
+prange_saxpy,Module passes (full optimization),ADCEPass,0.174
+prange_saxpy,Module passes (full optimization),LoopSimplifyPass,0.174
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.174
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.173
+prange_saxpy,Finalize object,Rename Disconnected Subregister Components #4,0.173
+prange_saxpy,Finalize object,Module Verifier #8,0.17
+prange_saxpy,Finalize object,X86 Assembly Printer #5,0.161
+prange_saxpy,Finalize object,X86 Assembly Printer #4,0.157
+prange_saxpy,Module passes (cheap optimization for refprune),LoopSimplifyPass,0.155
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.154
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.154
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.152
+prange_saxpy,Finalize object,Machine Common Subexpression Elimination #5,0.149
+prange_saxpy,Finalize object,Machine Common Subexpression Elimination #4,0.147
+prange_saxpy,Finalize object,Reaching Definitions Analysis #5,0.146
+prange_saxpy,Module passes (full optimization),CalledValuePropagationPass,0.145
+prange_saxpy,Module passes (full optimization),GlobalOptPass,0.145
+prange_saxpy,Module passes (full optimization),BDCEPass,0.145
+prange_saxpy,Finalize object,Module Verifier #9,0.144
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.14
+prange_saxpy,Finalize object,Canonicalize Freeze Instructions in Loops #3,0.137
+prange_saxpy,Finalize object,Machine Copy Propagation Pass #7,0.137
+prange_saxpy,Finalize object,Machine Copy Propagation Pass #9,0.134
+prange_saxpy,Finalize object,Machine Module Information #4,0.129
+prange_saxpy,Finalize object,Machine Module Information #5,0.124
+prange_saxpy,Finalize object,Machine Copy Propagation Pass #8,0.12
+prange_saxpy,Finalize object,Module Verifier #10,0.118
+prange_saxpy,Finalize object,Greedy Register Allocator #9,0.118
+prange_saxpy,Finalize object,Canonicalize Freeze Instructions in Loops #4,0.112
+prange_saxpy,Finalize object,Live Interval Analysis #5,0.111
+prange_saxpy,Module passes (full optimization),MemCpyOptPass,0.109
+prange_saxpy,Module passes (full optimization),InferAlignmentPass,0.109
+prange_saxpy,Module passes (full optimization),LoopDistributePass,0.109
+prange_saxpy,Module passes (full optimization),InstSimplifyPass,0.109
+prange_saxpy,Module passes (full optimization),LoopInstSimplifyPass,0.109
+prange_saxpy,Module passes (full optimization),TailCallElimPass,0.109
+prange_saxpy,Module passes (full optimization),VectorCombinePass,0.109
+prange_saxpy,Finalize object,Live Interval Analysis #4,0.109
+prange_saxpy,Finalize object,Dominator Tree Construction #10,0.107
+prange_saxpy,Finalize object,Machine Copy Propagation Pass #10,0.098
+prange_saxpy,Finalize object,Machine code sinking #5,0.093
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.093
+prange_saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #20,0.092
+prange_saxpy,Finalize object,Function Alias Analysis Results #15,0.091
+prange_saxpy,Finalize object,Control Flow Optimizer #5,0.089
+prange_saxpy,Finalize object,Control Flow Optimizer #4,0.088
+prange_saxpy,Module passes (full optimization),InferFunctionAttrsPass,0.08
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.08
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.079
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.079
+prange_saxpy,Finalize object,Peephole Optimizations #5,0.079
+prange_saxpy,Finalize object,Peephole Optimizations #4,0.078
+prange_saxpy,Module passes (full optimization),LCSSAPass,0.076
+prange_saxpy,Finalize object,Remove dead machine instructions #8,0.075
+prange_saxpy,Finalize object,Prologue/Epilogue Insertion & Frame Finalization #5,0.073
+prange_saxpy,Module passes (full optimization),AggressiveInstCombinePass,0.072
+prange_saxpy,Module passes (full optimization),LoopRotatePass,0.072
+prange_saxpy,Module passes (full optimization),LibCallsShrinkWrapPass,0.072
+prange_saxpy,Module passes (full optimization),CGProfilePass,0.072
+prange_saxpy,Finalize object,Two-Address instruction pass #5,0.071
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.07
+prange_saxpy,Module passes (full optimization),RecomputeGlobalsAAPass,0.069
+prange_saxpy,Module passes (full optimization),"RequireAnalysisPass<llvm::GlobalsAA, llvm::Module>",0.069
+prange_saxpy,Finalize object,Branch Probability Basic Block Placement #5,0.069
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.067
+prange_saxpy,Finalize object,Virtual Register Rewriter #5,0.065
+prange_saxpy,Finalize object,Branch Probability Analysis #8,0.064
+prange_saxpy,Finalize object,Expand IR instructions #5,0.062
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.061
+prange_saxpy,Finalize object,Branch Probability Analysis #9,0.059
+prange_saxpy,Finalize object,Expand IR instructions #4,0.059
+prange_saxpy,Module passes (full optimization),SimpleLoopUnswitchPass,0.058
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.056
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.053
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.053
+prange_saxpy,Finalize object,Remove dead machine instructions #9,0.05
+prange_saxpy,Finalize object,Live Range Shrink #5,0.05
+prange_saxpy,Finalize object,Branch Probability Analysis #10,0.05
+prange_saxpy,Finalize object,Machine Late Instructions Cleanup Pass #5,0.05
+prange_saxpy,Finalize object,Machine Late Instructions Cleanup Pass #4,0.049
+prange_saxpy,Finalize object,Live Range Shrink #4,0.049
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.047
+prange_saxpy,Finalize object,X86 Byte/Word Instruction Fixup #5,0.044
+prange_saxpy,Finalize object,Natural Loop Information #19,0.044
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.044
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.044
+prange_saxpy,Module passes (full optimization),DropUnnecessaryAssumesPass,0.043
+prange_saxpy,Module passes (full optimization),GlobalDCEPass,0.043
+prange_saxpy,Finalize object,Natural Loop Information #20,0.043
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.041
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.041
+prange_saxpy,Module passes (full optimization),ReversePostOrderFunctionAttrsPass,0.04
+prange_saxpy,Finalize object,Constant Hoisting #5,0.04
+prange_saxpy,Finalize object,Shrink Wrapping analysis #5,0.04
+prange_saxpy,Finalize object,X86 Execution Dependency Fix #5,0.04
+prange_saxpy,Finalize object,Block Frequency Analysis #4,0.04
+prange_saxpy,Finalize object,Block Frequency Analysis #5,0.039
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.038
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.038
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.037
+prange_saxpy,Module passes (cheap optimization for refprune),RefNormalizePass,0.037
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.037
+prange_saxpy,Module passes (full optimization),Float2IntPass,0.036
+prange_saxpy,Module passes (full optimization),LoopSimplifyCFGPass,0.036
+prange_saxpy,Module passes (full optimization),RefNormalizePass,0.036
+prange_saxpy,Module passes (full optimization),DeadArgumentEliminationPass,0.036
+prange_saxpy,Module passes (full optimization),LoopVectorizePass,0.036
+prange_saxpy,Module passes (full optimization),LowerConstantIntrinsicsPass,0.036
+prange_saxpy,Module passes (full optimization),"RequireAnalysisPass<llvm::ShouldNotRunFunctionPassesAnalysis, llvm::Function>",0.036
+prange_saxpy,Module passes (cheap optimization for refprune),LoopRotatePass,0.035
+prange_saxpy,Finalize object,Live Register Matrix #5,0.035
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.034
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.032
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.031
+prange_saxpy,Finalize object,Remove dead machine instructions #10,0.031
+prange_saxpy,Finalize object,Eliminate PHI nodes for register allocation #4,0.031
+prange_saxpy,Finalize object,Early Machine Loop Invariant Code Motion #5,0.03
+prange_saxpy,Finalize object,Dominator Tree Construction #9,0.03
+prange_saxpy,Finalize object,Machine InstCombiner #3,0.03
+prange_saxpy,Finalize object,Scalar Evolution Analysis #5,0.03
+prange_saxpy,Finalize object,Merge disjoint stack slots #5,0.03
+prange_saxpy,Finalize object,Eliminate PHI nodes for register allocation #5,0.029
+prange_saxpy,Finalize object,Live Register Matrix #4,0.029
+prange_saxpy,Finalize object,Merge disjoint stack slots #4,0.029
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.029
+prange_saxpy,Finalize object,Slot index numbering #10,0.029
+prange_saxpy,Finalize object,Machine code sinking #4,0.029
+prange_saxpy,Finalize object,Natural Loop Information #21,0.028
+prange_saxpy,Finalize object,Slot index numbering #9,0.027
+prange_saxpy,Finalize object,Function Alias Analysis Results #14,0.024
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.024
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.023
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.023
+prange_saxpy,Finalize object,Slot index numbering #8,0.022
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.022
+prange_saxpy,Module passes (cheap optimization for refprune),LCSSAPass,0.022
+prange_saxpy,Module passes (cheap optimization for refprune),AnnotationRemarksPass,0.022
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.021
+prange_saxpy,Finalize object,Machine Natural Loop Construction #19,0.02
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #20,0.02
+prange_saxpy,Finalize object,BreakFalseDeps #5,0.02
+prange_saxpy,Finalize object,X86 LEA Optimize #5,0.02
+prange_saxpy,Finalize object,Finalize ISel and expand pseudo-instructions #5,0.02
+prange_saxpy,Finalize object,Machine Dominance Frontier Construction #5,0.02
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #23,0.02
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #10,0.02
+prange_saxpy,Finalize object,Live DEBUG_VALUE analysis #5,0.02
+prange_saxpy,Finalize object,Init Undef Pass #4,0.02
+prange_saxpy,Finalize object,Greedy Register Allocator #8,0.02
+prange_saxpy,Finalize object,Init Undef Pass #5,0.02
+prange_saxpy,Finalize object,Machine Natural Loop Construction #15,0.02
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #5,0.02
+prange_saxpy,Finalize object,Check CFA info and insert CFI instructions if needed #3,0.02
+prange_saxpy,Finalize object,Machine Natural Loop Construction #13,0.02
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #18,0.02
+prange_saxpy,Finalize object,Finalize ISel and expand pseudo-instructions #4,0.02
+prange_saxpy,Finalize object,Check CFA info and insert CFI instructions if needed #4,0.02
+prange_saxpy,Finalize object,Post-Dominator Tree Construction #8,0.02
+prange_saxpy,Module passes (cheap optimization for refprune),AlwaysInlinerPass,0.019
+prange_saxpy,Finalize object,Post-Dominator Tree Construction #9,0.018
+prange_saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #19,0.018
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.018
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.017
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #13,0.017
+prange_saxpy,Finalize object,Post-Dominator Tree Construction #10,0.016
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #21,0.016
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #12,0.016
+prange_saxpy,Finalize object,Machine Natural Loop Construction #18,0.016
+prange_saxpy,Finalize object,MachineDominator Tree Construction #32,0.016
+prange_saxpy,Finalize object,Machine Natural Loop Construction #17,0.015
+prange_saxpy,Finalize object,Check CFA info and insert CFI instructions if needed,0.015
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #24,0.015
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.015
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.015
+prange_saxpy,Finalize object,Machine Loop Invariant Code Motion #5,0.015
+prange_saxpy,Finalize object,Machine Natural Loop Construction #16,0.015
+prange_saxpy,Finalize object,Machine Natural Loop Construction #14,0.015
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #22,0.014
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.014
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.014
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.013
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.013
+prange_saxpy,Finalize object,MachineDominator Tree Construction #30,0.012
+prange_saxpy,Finalize object,X86 vzeroupper inserter #5,0.012
+prange_saxpy,Finalize object,PostRA Machine Sink #5,0.012
+prange_saxpy,Finalize object,MachineDominator Tree Construction #28,0.012
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #14,0.012
+prange_saxpy,Finalize object,MachineDominator Tree Construction #33,0.012
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #11,0.01
+prange_saxpy,Finalize object,Post-RA pseudo instruction expansion pass #5,0.01
+prange_saxpy,Finalize object,X86 Fixup SetCC #4,0.01
+prange_saxpy,Finalize object,X86 LEA Fixup #5,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #31,0.01
+prange_saxpy,Finalize object,X86 Optimize Call Frame #5,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #26,0.01
+prange_saxpy,Finalize object,Natural Loop Information #22,0.01
+prange_saxpy,Finalize object,Machine Loop Invariant Code Motion #4,0.01
+prange_saxpy,Finalize object,Machine Cycle Info Analysis #5,0.01
+prange_saxpy,Finalize object,Tail Duplication #4,0.01
+prange_saxpy,Finalize object,Canonicalize natural loops #5,0.01
+prange_saxpy,Finalize object,Machine Natural Loop Construction #20,0.01
+prange_saxpy,Finalize object,Remove unreachable blocks from the CFG #5,0.01
+prange_saxpy,Finalize object,Free MachineFunction #5,0.01
+prange_saxpy,Finalize object,Remove unreachable machine basic blocks #4,0.01
+prange_saxpy,Finalize object,Natural Loop Information #25,0.01
+prange_saxpy,Finalize object,Stack Slot Coloring #4,0.01
+prange_saxpy,Finalize object,X86 pseudo instruction expansion pass #5,0.01
+prange_saxpy,Finalize object,Natural Loop Information #23,0.01
+prange_saxpy,Finalize object,Early Tail Duplication #4,0.01
+prange_saxpy,Finalize object,Expand memcmp() to load/stores #5,0.01
+prange_saxpy,Finalize object,X86 cmov Conversion #5,0.01
+prange_saxpy,Finalize object,X86 Fixup Vector Constants #4,0.01
+prange_saxpy,Finalize object,X86 Fixup Inst Tuning #5,0.01
+prange_saxpy,Finalize object,Natural Loop Information #24,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #27,0.01
+prange_saxpy,Finalize object,Machine Trace Metrics #3,0.01
+prange_saxpy,Finalize object,Partially inline calls to library functions #5,0.01
+prange_saxpy,Finalize object,Interleaved Access Pass #5,0.01
+prange_saxpy,Finalize object,X86 Avoid Store Forwarding Blocks #5,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #29,0.01
+prange_saxpy,Finalize object,Merge contiguous icmps into a memcmp #5,0.01
+prange_saxpy,Finalize object,Bundle Machine CFG Edges #9,0.01
+prange_saxpy,Finalize object,Debug Variable Analysis #5,0.01
+prange_saxpy,Finalize object,Process Implicit Definitions #4,0.01
+prange_saxpy,Finalize object,Live Stack Slot Analysis #5,0.01
+prange_saxpy,Finalize object,Scalarize Masked Memory Intrinsics #5,0.01
+prange_saxpy,Finalize object,Replace intrinsics with calls to vector library #5,0.01
+prange_saxpy,Finalize object,ObjC ARC contraction #5,0.01
+prange_saxpy,Finalize object,Exception handling preparation #5,0.01
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.01
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #25,0.01
+prange_saxpy,Finalize object,X86 Fixup SetCC #5,0.01
+prange_saxpy,Finalize object,X86 Optimize Call Frame #4,0.01
+prange_saxpy,Finalize object,Remove unreachable blocks from the CFG #4,0.01
+prange_saxpy,Finalize object,MachinePostDominator Tree Construction #15,0.01
+prange_saxpy,Finalize object,Stack Slot Coloring #5,0.01
+prange_saxpy,Finalize object,Remove unreachable machine basic blocks #5,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #34,0.01
+prange_saxpy,Finalize object,Tail Duplication #5,0.01
+prange_saxpy,Finalize object,X86 Fixup Vector Constants #5,0.01
+prange_saxpy,Finalize object,Machine Trace Metrics #4,0.01
+prange_saxpy,Finalize object,Process Implicit Definitions #5,0.01
+prange_saxpy,Finalize object,Bundle Machine CFG Edges #8,0.01
+prange_saxpy,Finalize object,Optimize machine instruction PHIs #4,0.01
+prange_saxpy,Finalize object,Slot index numbering #7,0.01
+prange_saxpy,Finalize object,X86 cmov Conversion #4,0.01
+prange_saxpy,Finalize object,Early Tail Duplication #5,0.01
+prange_saxpy,Finalize object,X86 Fixup Inst Tuning #4,0.01
+prange_saxpy,Finalize object,Check CFA info and insert CFI instructions if needed #2,0.01
+prange_saxpy,Finalize object,Scalarize Masked Memory Intrinsics #4,0.01
+prange_saxpy,Finalize object,Expand reduction intrinsics #4,0.01
+prange_saxpy,Finalize object,Machine Block Frequency Analysis #19,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #35,0.01
+prange_saxpy,Finalize object,Machine Natural Loop Construction #8,0.01
+prange_saxpy,Finalize object,MachineDominator Tree Construction #22,0.01
+prange_saxpy,Finalize object,X86 vzeroupper inserter #4,0.01
+prange_saxpy,Finalize object,Function Alias Analysis Results #12,0.01
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.009
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.009
+prange_saxpy,Finalize object,Spill Code Placement Analysis #5,0.008
+prange_saxpy,Finalize object,Expand Atomic instructions #5,0.008
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.008
+prange_saxpy,Module passes (full optimization),AlwaysInlinerPass,0.007
+prange_saxpy,Finalize object,Optimize machine instruction PHIs #5,0.007
+prange_saxpy,Finalize object,Expand reduction intrinsics #5,0.007
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.007
+prange_saxpy,Module passes (cheap optimization for refprune),AllocTokenPass,0.007
+prange_saxpy,Module passes (cheap optimization for refprune),EntryExitInstrumenterPass,0.007
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.007
+prange_saxpy,Finalize object,Function Alias Analysis Results #13,0.006
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.006
+prange_saxpy,Module passes (full optimization),WarnMissedTransformationsPass,0.004
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.004
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.004
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.004
+prange_saxpy,Module passes (cheap optimization for refprune),CoroConditionalWrapper,0.004
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.004
+prange_saxpy,Finalize object,Bundle Machine CFG Edges #10,0.003
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.003
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.003
+prange_saxpy,Finalize object,Lazy Block Frequency Analysis #15,0.002
+prange_saxpy,Finalize object,Pseudo Probe Inserter #5,0.002
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.002
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.002
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.002
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.001
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.001
+prange_saxpy,Module passes (full optimization),ControlHeightReductionPass,0.0
+prange_saxpy,Module passes (full optimization),CallSiteSplittingPass,0.0
+prange_saxpy,Module passes (full optimization),MergedLoadStoreMotionPass,0.0
+prange_saxpy,Module passes (full optimization),InjectTLIMappings,0.0
+prange_saxpy,Module passes (full optimization),AlignmentFromAssumptionsPass,0.0
+prange_saxpy,Module passes (full optimization),CoroAnnotationElidePass,0.0
+prange_saxpy,Module passes (full optimization),LowerExpectIntrinsicPass,0.0
+prange_saxpy,Module passes (full optimization),CoroSplitPass,0.0
+prange_saxpy,Module passes (full optimization),PromotePass,0.0
+prange_saxpy,Module passes (full optimization),AllocTokenPass,0.0
+prange_saxpy,Module passes (full optimization),DivRemPairsPass,0.0
+prange_saxpy,Module passes (full optimization),MoveAutoInitPass,0.0
+prange_saxpy,Module passes (full optimization),MemProfRemoveInfo,0.0
+prange_saxpy,Module passes (full optimization),ArgumentPromotionPass,0.0
+prange_saxpy,Module passes (full optimization),CoroElidePass,0.0
+prange_saxpy,Module passes (full optimization),InvalidateAnalysisPass<llvm::ShouldNotRunFunctionPassesAnalysis>,0.0
+prange_saxpy,Module passes (full optimization),InvalidateAnalysisPass<llvm::AAManager>,0.0
+prange_saxpy,Module passes (full optimization),OpenMPOptCGSCCPass,0.0
+prange_saxpy,Module passes (full optimization),SpeculativeExecutionPass,0.0
+prange_saxpy,Module passes (full optimization),EntryExitInstrumenterPass,0.0
+prange_saxpy,Module passes (full optimization),AnnotationRemarksPass,0.0
+prange_saxpy,Module passes (full optimization),LoopSinkPass,0.0
+prange_saxpy,Module passes (full optimization),ConstantMergePass,0.0
+prange_saxpy,Module passes (full optimization),CoroCleanupPass,0.0
+prange_saxpy,Module passes (full optimization),EliminateAvailableExternallyPass,0.0
+prange_saxpy,Module passes (full optimization),Annotation2MetadataPass,0.0
+prange_saxpy,Module passes (full optimization),ForceFunctionAttrsPass,0.0
+prange_saxpy,Module passes (full optimization),OpenMPOptPass,0.0
+prange_saxpy,Module passes (full optimization),CoroEarlyPass,0.0
+prange_saxpy,Module passes (full optimization),RelLookupTableConverterPass,0.0
+prange_saxpy,Module passes (full optimization),"RequireAnalysisPass<llvm::ProfileSummaryAnalysis, llvm::Module>",0.0
+prange_saxpy,Finalize object,Machine Optimization Remark Emitter #17,0.0
+prange_saxpy,Finalize object,Virtual Register Map #5,0.0
+prange_saxpy,Finalize object,Lower AMX type for load/store #5,0.0
+prange_saxpy,Finalize object,X86 Partial Reduction #5,0.0
+prange_saxpy,Finalize object,Pre-ISel Intrinsic Lowering #6,0.0
+prange_saxpy,Finalize object,Post RA top-down list latency scheduler #5,0.0
+prange_saxpy,Finalize object,Assignment Tracking Analysis #5,0.0
+prange_saxpy,Finalize object,Local Dynamic TLS Access Clean-up #5,0.0
+prange_saxpy,Finalize object,Expand indirectbr instructions #4,0.0
+prange_saxpy,Finalize object,Insert XRay ops #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #43,0.0
+prange_saxpy,Finalize object,X86 FP Stackifier #5,0.0
+prange_saxpy,Finalize object,X86 EFLAGS copy lowering #5,0.0
+prange_saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #17,0.0
+prange_saxpy,Finalize object,Early If-Conversion #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #47,0.0
+prange_saxpy,Finalize object,Machine Optimization Remark Emitter #18,0.0
+prange_saxpy,Finalize object,Insert fentry calls #5,0.0
+prange_saxpy,Finalize object,Instrument function entry/exit with calls to e.g. mcount() (post inlining) #5,0.0
+prange_saxpy,Finalize object,Lazy Branch Probability Analysis #12,0.0
+prange_saxpy,Finalize object,X86 insert wait instruction #5,0.0
+prange_saxpy,Finalize object,Stack Frame Layout Analysis #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #41,0.0
+prange_saxpy,Finalize object,Lower AMX intrinsics #5,0.0
+prange_saxpy,Finalize object,Analyze Machine Code For Garbage Collection #5,0.0
+prange_saxpy,Finalize object,Insert stack protectors #3,0.0
+prange_saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #18,0.0
+prange_saxpy,Finalize object,Tile Register Pre-configure #4,0.0
+prange_saxpy,Finalize object,X86 PIC Global Base Reg Initialization #5,0.0
+prange_saxpy,Finalize object,Register Allocation Pass Scoring #5,0.0
+prange_saxpy,Finalize object,X86 Load Value Injection (LVI) Load Hardening #5,0.0
+prange_saxpy,Finalize object,Remove Redundant DEBUG_VALUE analysis #5,0.0
+prange_saxpy,Finalize object,Fixup Statepoint Caller Saved #5,0.0
+prange_saxpy,Finalize object,Lower Garbage Collection Instructions #5,0.0
+prange_saxpy,Finalize object,Lazy Block Frequency Analysis #13,0.0
+prange_saxpy,Finalize object,X86 speculative load hardening #5,0.0
+prange_saxpy,Finalize object,Machine Optimization Remark Emitter #19,0.0
+prange_saxpy,Finalize object,Machine Sanitizer Binary Metadata #5,0.0
+prange_saxpy,Finalize object,X86 Speculative Execution Side Effect Suppression #5,0.0
+prange_saxpy,Finalize object,X86 Domain Reassignment Pass #5,0.0
+prange_saxpy,Finalize object,Remove Loads Into Fake Uses #5,0.0
+prange_saxpy,Finalize object,X86 Indirect Thunks #5,0.0
+prange_saxpy,Finalize object,Local Stack Slot Allocation #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #40,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #42,0.0
+prange_saxpy,Finalize object,X86 Atom pad short functions #3,0.0
+prange_saxpy,Finalize object,Prepare callbr #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #46,0.0
+prange_saxpy,Finalize object,Lazy Branch Probability Analysis #10,0.0
+prange_saxpy,Finalize object,Insert KCFI indirect call checks #5,0.0
+prange_saxpy,Finalize object,X86 Lower Tile Copy #5,0.0
+prange_saxpy,Finalize object,X86 Load Value Injection (LVI) Ret-Hardening #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #45,0.0
+prange_saxpy,Finalize object,X86 Indirect Branch Tracking #5,0.0
+prange_saxpy,Finalize object,Implement the 'patchable-function' attribute #5,0.0
+prange_saxpy,Finalize object,Argument Stack Rebase #5,0.0
+prange_saxpy,Finalize object,X86 Return Thunks #5,0.0
+prange_saxpy,Finalize object,Lazy Block Frequency Analysis #14,0.0
+prange_saxpy,Finalize object,Tile Register Configure #5,0.0
+prange_saxpy,Finalize object,Lazy Branch Probability Analysis #11,0.0
+prange_saxpy,Finalize object,StackMap Liveness Analysis #5,0.0
+prange_saxpy,Finalize object,Unpack machine instruction bundles #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #49,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #44,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #48,0.0
+prange_saxpy,Finalize object,Contiguously Lay Out Funclets #5,0.0
+prange_saxpy,Finalize object,Compressing EVEX instrs when possible #5,0.0
+prange_saxpy,Finalize object,Rename Disconnected Subregister Components #5,0.0
+prange_saxpy,Finalize object,X86 Suppress APX features for relocation #5,0.0
+prange_saxpy,Finalize object,Optimization Remark Emitter #5,0.0
+prange_saxpy,Finalize object,Detect Dead Lanes #5,0.0
+prange_saxpy,Finalize object,Shadow Stack GC Lowering #5,0.0
+prange_saxpy,Finalize object,X86 DynAlloca Expander #5,0.0
+prange_saxpy,Finalize object,Machine Optimization Remark Emitter #20,0.0
+prange_saxpy,Finalize object,Create Garbage Collector Module Metadata #6,0.0
+prange_saxpy,Finalize object,Safe Stack instrumentation pass #5,0.0
+prange_saxpy,Finalize object,Assumption Cache Tracker #6,0.0
+prange_saxpy,Finalize object,Target Library Information #5,0.0
+prange_saxpy,Finalize object,Type-Based Alias Analysis #6,0.0
+prange_saxpy,Finalize object,Scoped NoAlias Alias Analysis #6,0.0
+prange_saxpy,Finalize object,Target Pass Configuration #5,0.0
+prange_saxpy,Finalize object,Default Regalloc Priority Advisor #5,0.0
+prange_saxpy,Finalize object,Library Function Lowering Analysis #6,0.0
+prange_saxpy,Finalize object,Target Transform Information #6,0.0
+prange_saxpy,Finalize object,Machine Branch Probability Analysis #6,0.0
+prange_saxpy,Finalize object,Profile summary info #6,0.0
+prange_saxpy,Finalize object,Default Regalloc Eviction Advisor #6,0.0
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.0
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.0
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+prange_saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.0
+prange_saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.0
+prange_saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B90c8tJTC_2fWQAliW1xhDEoY6EEMEUOEMISPGsAQMVj4QniQ4IXKQEMXwoMGLoQDDVsQR1NHAS2hQ9XgStYwm4ogLE0AE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+prange_saxpy,Finalize object,Virtual Register Map #4,0.0
+prange_saxpy,Finalize object,Local Stack Slot Allocation #4,0.0
+prange_saxpy,Finalize object,X86 EFLAGS copy lowering #4,0.0
+prange_saxpy,Finalize object,Expand indirectbr instructions #5,0.0
+prange_saxpy,Finalize object,Live Stack Slot Analysis #3,0.0
+prange_saxpy,Finalize object,Tile Register Pre-configure #5,0.0
+prange_saxpy,Finalize object,Lazy Branch Probability Analysis #13,0.0
+prange_saxpy,Finalize object,Shadow Stack GC Lowering #4,0.0
+prange_saxpy,Finalize object,Lazy Branch Probability Analysis #14,0.0
+prange_saxpy,Finalize object,X86 Atom pad short functions #4,0.0
+prange_saxpy,Finalize object,Lazy Branch Probability Analysis #15,0.0
+prange_saxpy,Finalize object,Create Garbage Collector Module Metadata #5,0.0
+prange_saxpy,Finalize object,Target Library Information #4,0.0
+prange_saxpy,Finalize object,Target Pass Configuration #6,0.0
+prange_saxpy,Finalize object,Default Regalloc Priority Advisor #6,0.0
+prange_saxpy,Finalize object,Assignment Tracking Analysis #4,0.0
+prange_saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #16,0.0
+prange_saxpy,Finalize object,X86 DynAlloca Expander #4,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #39,0.0
+prange_saxpy,Finalize object,Default Regalloc Eviction Advisor #5,0.0
+prange_saxpy,Finalize object,Insert stack protectors #4,0.0
+prange_saxpy,Finalize object,Fixup Statepoint Caller Saved #3,0.0
+prange_saxpy,Finalize object,X86 FP Stackifier #4,0.0
+prange_saxpy,Finalize object,Machine Branch Probability Analysis #5,0.0
+prange_saxpy,Finalize object,Lazy Machine Block Frequency Analysis #50,0.0
+prange_saxpy,Finalize object,Scoped NoAlias Alias Analysis #5,0.0
+saxpy,Module passes (full optimization),InstCombinePass,2.042
+saxpy,Finalize object,X86 DAG->DAG Instruction Selection #2,1.98
+saxpy,Module passes (full optimization),LoopVectorizePass,1.507
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,1.337
+saxpy,Finalize object,Peephole Optimizations,1.127
+saxpy,Finalize object,Loop Strength Reduction,1.124
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.997
+saxpy,Module passes (full optimization),LoopUnrollPass,0.938
+saxpy,Module passes (full optimization),SimplifyCFGPass,0.821
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.69
+saxpy,Module passes (full optimization),LoopLoadEliminationPass,0.648
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.608
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.562
+saxpy,Module passes (cheap optimization for refprune),InstCombinePass,0.436
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.41
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',InstCombinePass,0.389
+saxpy,Module passes (full optimization),EarlyCSEPass,0.38
+saxpy,Finalize object,Machine Instruction Scheduler #2,0.322
+saxpy,Finalize object,Machine Instruction Scheduler,0.322
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.321
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.29
+saxpy,Finalize object,CodeGen Prepare #2,0.287
+saxpy,Finalize object,CodeGen Prepare,0.287
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.286
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',IndVarSimplifyPass,0.282
+saxpy,Module passes (full optimization),GVNPass,0.247
+saxpy,Module passes (full optimization),IPSCCPPass,0.243
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.221
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.213
+saxpy,Module passes (full optimization),PostOrderFunctionAttrsPass,0.195
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',JumpThreadingPass,0.191
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',EarlyCSEPass,0.182
+saxpy,Finalize object,Induction Variable Users,0.175
+saxpy,Finalize object,Canonicalize Freeze Instructions in Loops,0.169
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.166
+saxpy,Module passes (full optimization),CorrelatedValuePropagationPass,0.163
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.162
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopIdiomRecognizePass,0.159
+saxpy,Module passes (cheap optimization for refprune),JumpThreadingPass,0.152
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimplifyCFGPass,0.151
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.151
+saxpy,Module passes (full optimization),SROAPass,0.147
+saxpy,Module passes (full optimization),JumpThreadingPass,0.147
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.139
+saxpy,Module passes (full optimization),ConstraintEliminationPass,0.135
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CorrelatedValuePropagationPass,0.126
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LICMPass,0.123
+saxpy,Module passes (full optimization),MemCpyOptPass,0.121
+saxpy,Finalize object,Greedy Register Allocator #4,0.121
+saxpy,Module passes (full optimization),DSEPass,0.119
+saxpy,Module passes (full optimization),RefPrunePass,0.119
+saxpy,Finalize object,Create Garbage Collector Module Metadata,0.119
+saxpy,Module passes (cheap optimization for refprune),RefPrunePass,0.119
+saxpy,Finalize object,Live Variable Analysis #2,0.108
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopRotatePass,0.107
+saxpy,Module passes (cheap optimization for refprune),LoopSimplifyPass,0.106
+saxpy,Finalize object,Machine Module Information #3,0.102
+saxpy,Finalize object,X86 Assembly Printer #2,0.102
+saxpy,Module passes (full optimization),LoopSimplifyPass,0.101
+saxpy,Module passes (full optimization),LoopIdiomRecognizePass,0.099
+saxpy,Module passes (full optimization),SCCPPass,0.099
+saxpy,Module passes (full optimization),LoopDeletionPass,0.099
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.098
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.098
+saxpy,Finalize object,Machine Module Information #2,0.098
+saxpy,Finalize object,Module Verifier #3,0.094
+saxpy,Finalize object,Register Coalescer #2,0.094
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',GVNPass,0.092
+saxpy,Module passes (full optimization),LoopDistributePass,0.085
+saxpy,Finalize object,Reaching Definitions Analysis #2,0.084
+saxpy,Finalize object,Dominator Tree Construction #4,0.083
+saxpy,Module passes (full optimization),CalledValuePropagationPass,0.08
+saxpy,Module passes (full optimization),InstSimplifyPass,0.08
+saxpy,Module passes (full optimization),LICMPass,0.08
+saxpy,Module passes (full optimization),ADCEPass,0.08
+saxpy,Module passes (full optimization),InferAlignmentPass,0.08
+saxpy,Finalize object,Machine Common Subexpression Elimination #2,0.077
+saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #8,0.074
+saxpy,Finalize object,Module Verifier #4,0.073
+saxpy,Finalize object,Machine code sinking #2,0.072
+saxpy,Finalize object,Machine code sinking,0.07
+saxpy,Finalize object,Function Alias Analysis Results #6,0.07
+saxpy,Module passes (full optimization),ReassociatePass,0.068
+saxpy,Module passes (full optimization),GlobalOptPass,0.064
+saxpy,Finalize object,Branch Probability Basic Block Placement #2,0.064
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.064
+saxpy,Finalize object,Branch Probability Analysis #2,0.063
+saxpy,Finalize object,Live Interval Analysis #2,0.062
+saxpy,Module passes (full optimization),VectorCombinePass,0.06
+saxpy,Module passes (full optimization),IndVarSimplifyPass,0.06
+saxpy,Module passes (full optimization),TailCallElimPass,0.06
+saxpy,Module passes (full optimization),BDCEPass,0.06
+saxpy,Finalize object,Machine Copy Propagation Pass #3,0.059
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.059
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.058
+saxpy,Finalize object,Expand IR instructions #2,0.057
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.057
+saxpy,Finalize object,Peephole Optimizations #2,0.055
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ConstraintEliminationPass,0.054
+saxpy,Finalize object,Control Flow Optimizer #2,0.05
+saxpy,Finalize object,Prologue/Epilogue Insertion & Frame Finalization #2,0.05
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopFullUnrollPass,0.049
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.048
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.048
+saxpy,Module passes (full optimization),InferFunctionAttrsPass,0.046
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SCCPPass,0.046
+saxpy,Finalize object,Branch Probability Analysis #3,0.043
+saxpy,Finalize object,Machine Copy Propagation Pass #4,0.042
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.041
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.041
+saxpy,Module passes (full optimization),DropUnnecessaryAssumesPass,0.04
+saxpy,Module passes (full optimization),LCSSAPass,0.04
+saxpy,Module passes (full optimization),InlinerPass,0.04
+saxpy,Module passes (full optimization),"RequireAnalysisPass<llvm::GlobalsAA, llvm::Module>",0.04
+saxpy,Finalize object,Two-Address instruction pass #2,0.038
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.037
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefPrunePass,0.037
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.037
+saxpy,Module passes (full optimization),AggressiveInstCombinePass,0.036
+saxpy,Finalize object,Constant Hoisting #2,0.035
+saxpy,Finalize object,Virtual Register Rewriter #2,0.035
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SROAPass,0.035
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.034
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.033
+saxpy,Finalize object,Remove dead machine instructions #3,0.032
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.031
+saxpy,Module passes (full optimization),CGProfilePass,0.028
+saxpy,Module passes (full optimization),Float2IntPass,0.028
+saxpy,Finalize object,Branch Probability Analysis #4,0.028
+saxpy,Finalize object,Machine Late Instructions Cleanup Pass #2,0.028
+saxpy,Finalize object,Natural Loop Information #5,0.028
+saxpy,Finalize object,Block Frequency Analysis #2,0.028
+saxpy,Finalize object,Scalar Evolution Analysis,0.028
+saxpy,Finalize object,X86 Execution Dependency Fix #2,0.028
+saxpy,Finalize object,Live Range Shrink #2,0.028
+saxpy,Finalize object,Canonicalize natural loops,0.028
+saxpy,Finalize object,Scalar Evolution Analysis #2,0.028
+saxpy,Finalize object,Machine Late Instructions Cleanup Pass,0.028
+saxpy,Finalize object,Type-Based Alias Analysis #2,0.028
+saxpy,Finalize object,Live Range Shrink,0.028
+saxpy,Finalize object,Natural Loop Information #6,0.025
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ADCEPass,0.025
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',DSEPass,0.025
+saxpy,Module passes (full optimization),RecomputeGlobalsAAPass,0.024
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.024
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.024
+saxpy,Module passes (cheap optimization for refprune),RefNormalizePass,0.023
+saxpy,Module passes (full optimization),ReversePostOrderFunctionAttrsPass,0.022
+saxpy,Finalize object,Eliminate PHI nodes for register allocation #2,0.022
+saxpy,Finalize object,Dominator Tree Construction #3,0.022
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.022
+saxpy,Finalize object,Live Register Matrix #2,0.021
+saxpy,Finalize object,Shrink Wrapping analysis #2,0.021
+saxpy,Finalize object,X86 Byte/Word Instruction Fixup #2,0.021
+saxpy,Finalize object,Early Machine Loop Invariant Code Motion #2,0.021
+saxpy,Finalize object,Machine Natural Loop Construction #7,0.021
+saxpy,Finalize object,Machine InstCombiner #2,0.021
+saxpy,Finalize object,Virtual Register Map,0.021
+saxpy,Module passes (full optimization),LoopFullUnrollPass,0.02
+saxpy,Module passes (full optimization),LibCallsShrinkWrapPass,0.02
+saxpy,Module passes (full optimization),GlobalDCEPass,0.02
+saxpy,Module passes (full optimization),DeadArgumentEliminationPass,0.02
+saxpy,Module passes (full optimization),RefNormalizePass,0.02
+saxpy,Module passes (full optimization),WarnMissedTransformationsPass,0.02
+saxpy,Module passes (full optimization),"RequireAnalysisPass<llvm::ShouldNotRunFunctionPassesAnalysis, llvm::Function>",0.02
+saxpy,Module passes (full optimization),ControlHeightReductionPass,0.02
+saxpy,Module passes (full optimization),PromotePass,0.02
+saxpy,Module passes (full optimization),AlignmentFromAssumptionsPass,0.02
+saxpy,Module passes (full optimization),CallSiteSplittingPass,0.02
+saxpy,Module passes (full optimization),LowerConstantIntrinsicsPass,0.02
+saxpy,Finalize object,Greedy Register Allocator #3,0.02
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MemCpyOptPass,0.02
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',ReassociatePass,0.02
+saxpy,Module passes (cheap optimization for refprune),AnnotationRemarksPass,0.02
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopInstSimplifyPass,0.018
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopDeletionPass,0.016
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',BDCEPass,0.016
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SimpleLoopUnswitchPass,0.016
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.016
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.016
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.016
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.016
+saxpy,Module passes (cheap optimization for refprune),AlwaysInlinerPass,0.016
+saxpy,Finalize object,Machine Block Frequency Analysis #6,0.015
+saxpy,Finalize object,Post-Dominator Tree Construction #3,0.015
+saxpy,Finalize object,MachineDominator Tree Construction #12,0.015
+saxpy,Finalize object,Remove dead machine instructions #4,0.015
+saxpy,Finalize object,Machine Block Frequency Analysis #8,0.014
+saxpy,Finalize object,Machine Natural Loop Construction #5,0.014
+saxpy,Finalize object,Slot index numbering #4,0.014
+saxpy,Finalize object,BreakFalseDeps #2,0.014
+saxpy,Finalize object,Canonicalize natural loops #2,0.014
+saxpy,Finalize object,X86 LEA Optimize #2,0.014
+saxpy,Finalize object,MachineDominator Tree Construction #8,0.014
+saxpy,Finalize object,Finalize ISel and expand pseudo-instructions #2,0.014
+saxpy,Finalize object,Live DEBUG_VALUE analysis #2,0.014
+saxpy,Finalize object,Machine Dominance Frontier Construction #2,0.014
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',AggressiveInstCombinePass,0.014
+saxpy,Finalize object,MachinePostDominator Tree Construction #3,0.014
+saxpy,Finalize object,MachinePostDominator Tree Construction #4,0.013
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.013
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.011
+saxpy,Finalize object,Machine Cycle Info Analysis #2,0.009
+saxpy,Finalize object,Machine Block Frequency Analysis #10,0.009
+saxpy,Finalize object,Machine Natural Loop Construction #6,0.008
+saxpy,Finalize object,Check CFA info and insert CFI instructions if needed,0.008
+saxpy,Finalize object,Merge disjoint stack slots #2,0.008
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',TailCallElimPass,0.008
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyCFGPass,0.008
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LibCallsShrinkWrapPass,0.008
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.008
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.008
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.008
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',RefNormalizePass,0.008
+saxpy,Finalize object,Machine Block Frequency Analysis #9,0.007
+saxpy,Finalize object,Post-Dominator Tree Construction #4,0.007
+saxpy,Finalize object,Tail Duplication #2,0.007
+saxpy,Finalize object,MachinePostDominator Tree Construction #5,0.007
+saxpy,Finalize object,Slot index numbering #3,0.007
+saxpy,Finalize object,Post-RA pseudo instruction expansion pass #2,0.007
+saxpy,Finalize object,Free MachineFunction #2,0.007
+saxpy,Finalize object,Machine Loop Invariant Code Motion #2,0.007
+saxpy,Finalize object,Remove unreachable machine basic blocks #2,0.007
+saxpy,Finalize object,Init Undef Pass #2,0.007
+saxpy,Finalize object,MachineDominator Tree Construction #13,0.007
+saxpy,Finalize object,X86 LEA Fixup #2,0.007
+saxpy,Finalize object,Machine Block Frequency Analysis #7,0.007
+saxpy,Finalize object,Machine Natural Loop Construction #8,0.007
+saxpy,Finalize object,Lazy Branch Probability Analysis #2,0.007
+saxpy,Finalize object,X86 vzeroupper inserter #2,0.007
+saxpy,Finalize object,X86 Optimize Call Frame #2,0.007
+saxpy,Finalize object,Natural Loop Information #7,0.007
+saxpy,Finalize object,Remove unreachable blocks from the CFG #2,0.007
+saxpy,Finalize object,X86 Fixup SetCC #2,0.007
+saxpy,Finalize object,PostRA Machine Sink #2,0.007
+saxpy,Finalize object,X86 pseudo instruction expansion pass #2,0.007
+saxpy,Finalize object,Natural Loop Information #8,0.007
+saxpy,Finalize object,Early Tail Duplication #2,0.007
+saxpy,Finalize object,X86 cmov Conversion #2,0.007
+saxpy,Finalize object,MachinePostDominator Tree Construction #6,0.007
+saxpy,Finalize object,Expand memcmp() to load/stores #2,0.007
+saxpy,Finalize object,MachineDominator Tree Construction #14,0.007
+saxpy,Finalize object,Process Implicit Definitions #2,0.007
+saxpy,Finalize object,Merge contiguous icmps into a memcmp #2,0.007
+saxpy,Finalize object,Debug Variable Analysis #2,0.007
+saxpy,Finalize object,X86 Partial Reduction,0.007
+saxpy,Finalize object,Machine Trace Metrics #2,0.007
+saxpy,Finalize object,X86 Fixup Vector Constants #2,0.007
+saxpy,Finalize object,Interleaved Access Pass #2,0.007
+saxpy,Finalize object,Live Stack Slot Analysis #2,0.007
+saxpy,Finalize object,ObjC ARC contraction #2,0.007
+saxpy,Finalize object,Remove dead machine instructions,0.007
+saxpy,Finalize object,MachineDominator Tree Construction #9,0.007
+saxpy,Finalize object,Bundle Machine CFG Edges #3,0.007
+saxpy,Finalize object,Partially inline calls to library functions #2,0.007
+saxpy,Finalize object,Expand Atomic instructions #2,0.007
+saxpy,Finalize object,Spill Code Placement Analysis,0.007
+saxpy,Finalize object,MachineDominator Tree Construction #11,0.007
+saxpy,Finalize object,Scalarize Masked Memory Intrinsics #2,0.007
+saxpy,Finalize object,X86 Avoid Store Forwarding Blocks #2,0.007
+saxpy,Finalize object,Exception handling preparation #2,0.007
+saxpy,Finalize object,Function Alias Analysis Results #4,0.007
+saxpy,Finalize object,Virtual Register Map #2,0.007
+saxpy,Finalize object,MachineDominator Tree Construction #10,0.007
+saxpy,Finalize object,Bundle Machine CFG Edges #4,0.007
+saxpy,Finalize object,Replace intrinsics with calls to vector library #2,0.007
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.007
+saxpy,Module passes (cheap optimization for refprune),LCSSAPass,0.007
+saxpy,Finalize object,StackMap Liveness Analysis,0.007
+saxpy,Finalize object,Natural Loop Information #10,0.007
+saxpy,Finalize object,Machine Trace Metrics,0.007
+saxpy,Finalize object,Scoped NoAlias Alias Analysis,0.007
+saxpy,Finalize object,Natural Loop Information #9,0.007
+saxpy,Finalize object,X86 Fixup Inst Tuning #2,0.007
+saxpy,Finalize object,Profile summary info,0.007
+saxpy,Finalize object,Spill Code Placement Analysis #2,0.007
+saxpy,Finalize object,X86 Optimize Call Frame,0.007
+saxpy,Finalize object,Machine Loop Invariant Code Motion,0.007
+saxpy,Finalize object,Exception handling preparation,0.007
+saxpy,Finalize object,Target Pass Configuration,0.007
+saxpy,Finalize object,Analyze Machine Code For Garbage Collection,0.007
+saxpy,Finalize object,Function Alias Analysis Results #5,0.006
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',VectorCombinePass,0.006
+saxpy,Module passes (cheap optimization for refprune),LoopRotatePass,0.006
+saxpy,Finalize object,Expand reduction intrinsics #2,0.005
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LoopSimplifyPass,0.005
+saxpy,Module passes (cheap optimization for refprune),EntryExitInstrumenterPass,0.005
+saxpy,Module passes (cheap optimization for refprune),AllocTokenPass,0.005
+saxpy,Module passes (full optimization),CoroAnnotationElidePass,0.004
+saxpy,Module passes (full optimization),LoopInstSimplifyPass,0.004
+saxpy,Module passes (full optimization),LowerExpectIntrinsicPass,0.004
+saxpy,Module passes (cheap optimization for refprune),CoroConditionalWrapper,0.004
+saxpy,Finalize object,X86 Partial Reduction #2,0.003
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.003
+saxpy,Module passes (full optimization),AllocTokenPass,0.002
+saxpy,Module passes (full optimization),AlwaysInlinerPass,0.002
+saxpy,Module passes (full optimization),MergedLoadStoreMotionPass,0.002
+saxpy,Module passes (full optimization),AnnotationRemarksPass,0.002
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',LCSSAPass,0.002
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.002
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.002
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.002
+saxpy,Finalize object,Stack Slot Coloring #2,0.001
+saxpy,Finalize object,Optimize machine instruction PHIs #2,0.001
+saxpy,Finalize object,Machine Optimization Remark Emitter #5,0.001
+saxpy,Finalize object,Local Dynamic TLS Access Clean-up #2,0.001
+saxpy,Finalize object,Instrument function entry/exit with calls to e.g. mcount() (post inlining) #2,0.001
+saxpy,Function passes on 'cfunc._ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.001
+saxpy,Module passes (full optimization),LoopRotatePass,0.0
+saxpy,Module passes (full optimization),DivRemPairsPass,0.0
+saxpy,Module passes (full optimization),SimpleLoopUnswitchPass,0.0
+saxpy,Module passes (full optimization),InjectTLIMappings,0.0
+saxpy,Module passes (full optimization),MemProfRemoveInfo,0.0
+saxpy,Module passes (full optimization),InvalidateAnalysisPass<llvm::ShouldNotRunFunctionPassesAnalysis>,0.0
+saxpy,Module passes (full optimization),MoveAutoInitPass,0.0
+saxpy,Module passes (full optimization),CoroSplitPass,0.0
+saxpy,Module passes (full optimization),LoopSimplifyCFGPass,0.0
+saxpy,Module passes (full optimization),CoroElidePass,0.0
+saxpy,Module passes (full optimization),InvalidateAnalysisPass<llvm::AAManager>,0.0
+saxpy,Module passes (full optimization),LoopSinkPass,0.0
+saxpy,Module passes (full optimization),ArgumentPromotionPass,0.0
+saxpy,Module passes (full optimization),OpenMPOptCGSCCPass,0.0
+saxpy,Module passes (full optimization),SpeculativeExecutionPass,0.0
+saxpy,Module passes (full optimization),EntryExitInstrumenterPass,0.0
+saxpy,Module passes (full optimization),ConstantMergePass,0.0
+saxpy,Module passes (full optimization),OpenMPOptPass,0.0
+saxpy,Module passes (full optimization),CoroCleanupPass,0.0
+saxpy,Module passes (full optimization),CoroEarlyPass,0.0
+saxpy,Module passes (full optimization),RelLookupTableConverterPass,0.0
+saxpy,Module passes (full optimization),Annotation2MetadataPass,0.0
+saxpy,Module passes (full optimization),ForceFunctionAttrsPass,0.0
+saxpy,Module passes (full optimization),EliminateAvailableExternallyPass,0.0
+saxpy,Module passes (full optimization),"RequireAnalysisPass<llvm::ProfileSummaryAnalysis, llvm::Module>",0.0
+saxpy,Finalize object,Lower AMX type for load/store #2,0.0
+saxpy,Finalize object,Pre-ISel Intrinsic Lowering #3,0.0
+saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #7,0.0
+saxpy,Finalize object,X86 Domain Reassignment Pass #2,0.0
+saxpy,Finalize object,Insert stack protectors #2,0.0
+saxpy,Finalize object,Early If-Conversion #2,0.0
+saxpy,Finalize object,X86 Atom pad short functions #2,0.0
+saxpy,Finalize object,X86 EFLAGS copy lowering #2,0.0
+saxpy,Finalize object,X86 insert wait instruction #2,0.0
+saxpy,Finalize object,Post RA top-down list latency scheduler #2,0.0
+saxpy,Finalize object,Lazy Branch Probability Analysis #4,0.0
+saxpy,Finalize object,Machine Optimization Remark Emitter #6,0.0
+saxpy,Finalize object,Tile Register Configure #2,0.0
+saxpy,Finalize object,Remove Loads Into Fake Uses #2,0.0
+saxpy,Finalize object,Lazy Branch Probability Analysis #6,0.0
+saxpy,Finalize object,Detect Dead Lanes #2,0.0
+saxpy,Finalize object,Insert XRay ops #2,0.0
+saxpy,Finalize object,X86 PIC Global Base Reg Initialization #2,0.0
+saxpy,Finalize object,Safe Stack instrumentation pass #2,0.0
+saxpy,Finalize object,Module Verifier,0.0
+saxpy,Finalize object,Rename Disconnected Subregister Components,0.0
+saxpy,Finalize object,Machine Block Frequency Analysis #3,0.0
+saxpy,Finalize object,Shadow Stack GC Lowering #2,0.0
+saxpy,Finalize object,X86 Suppress APX features for relocation #2,0.0
+saxpy,Finalize object,Assignment Tracking Analysis #2,0.0
+saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #6,0.0
+saxpy,Finalize object,Unpack machine instruction bundles #2,0.0
+saxpy,Finalize object,Expand indirectbr instructions #2,0.0
+saxpy,Finalize object,X86 Lower Tile Copy #2,0.0
+saxpy,Finalize object,Prepare callbr #2,0.0
+saxpy,Finalize object,StackMap Liveness Analysis #2,0.0
+saxpy,Finalize object,Pseudo Probe Inserter #2,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #17,0.0
+saxpy,Finalize object,Contiguously Lay Out Funclets #2,0.0
+saxpy,Finalize object,X86 Indirect Branch Tracking #2,0.0
+saxpy,Finalize object,X86 Indirect Thunks #2,0.0
+saxpy,Finalize object,X86 Return Thunks #2,0.0
+saxpy,Finalize object,Implement the 'patchable-function' attribute #2,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #13,0.0
+saxpy,Finalize object,Machine Natural Loop Construction #2,0.0
+saxpy,Finalize object,Optimization Remark Emitter #2,0.0
+saxpy,Finalize object,Fixup Statepoint Caller Saved #2,0.0
+saxpy,Finalize object,Lower AMX intrinsics #2,0.0
+saxpy,Finalize object,X86 FP Stackifier #2,0.0
+saxpy,Finalize object,Basic Alias Analysis (stateless AA impl) #5,0.0
+saxpy,Finalize object,X86 DynAlloca Expander #2,0.0
+saxpy,Finalize object,X86 speculative load hardening #2,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #12,0.0
+saxpy,Finalize object,Lazy Block Frequency Analysis #6,0.0
+saxpy,Finalize object,Argument Stack Rebase #2,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #11,0.0
+saxpy,Finalize object,Stack Frame Layout Analysis #2,0.0
+saxpy,Finalize object,Lazy Block Frequency Analysis #4,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #16,0.0
+saxpy,Finalize object,X86 Load Value Injection (LVI) Load Hardening #2,0.0
+saxpy,Finalize object,Machine Optimization Remark Emitter #8,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #14,0.0
+saxpy,Finalize object,Analyze Machine Code For Garbage Collection #2,0.0
+saxpy,Finalize object,Insert KCFI indirect call checks #2,0.0
+saxpy,Finalize object,Lazy Branch Probability Analysis #5,0.0
+saxpy,Finalize object,X86 Load Value Injection (LVI) Ret-Hardening #2,0.0
+saxpy,Finalize object,Machine Optimization Remark Emitter #7,0.0
+saxpy,Finalize object,Lazy Block Frequency Analysis #5,0.0
+saxpy,Finalize object,Machine Sanitizer Binary Metadata #2,0.0
+saxpy,Finalize object,Insert fentry calls #2,0.0
+saxpy,Finalize object,Remove Redundant DEBUG_VALUE analysis #2,0.0
+saxpy,Finalize object,Rename Disconnected Subregister Components #2,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #15,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #18,0.0
+saxpy,Finalize object,Register Allocation Pass Scoring #2,0.0
+saxpy,Finalize object,Target Library Information #2,0.0
+saxpy,Finalize object,X86 Speculative Execution Side Effect Suppression #2,0.0
+saxpy,Finalize object,Local Stack Slot Allocation #2,0.0
+saxpy,Finalize object,Create Garbage Collector Module Metadata #3,0.0
+saxpy,Finalize object,Tail Duplication,0.0
+saxpy,Finalize object,Assumption Cache Tracker #3,0.0
+saxpy,Finalize object,Default Regalloc Priority Advisor #3,0.0
+saxpy,Finalize object,Target Pass Configuration #3,0.0
+saxpy,Finalize object,Library Function Lowering Analysis #3,0.0
+saxpy,Finalize object,Target Transform Information #3,0.0
+saxpy,Finalize object,Default Regalloc Eviction Advisor #3,0.0
+saxpy,Finalize object,Machine Branch Probability Analysis #3,0.0
+saxpy,Finalize object,Type-Based Alias Analysis #3,0.0
+saxpy,Finalize object,Scoped NoAlias Alias Analysis #3,0.0
+saxpy,Finalize object,Profile summary info #3,0.0
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.0
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.0
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.0
+saxpy,Function passes on '_ZN13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MergedLoadStoreMotionPass,0.0
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',SpeculativeExecutionPass,0.0
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',MoveAutoInitPass,0.0
+saxpy,Function passes on '_ZN7cpython13_3cdynamic_3e1fB2v1B38c8tJTIeFIjxB2IKSgI4CrvQClQZ6FczSBAA_3dE5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedE',CoroElidePass,0.0
+saxpy,Finalize object,X86 PIC Global Base Reg Initialization,0.0
+saxpy,Finalize object,Tile Register Pre-configure #2,0.0
+saxpy,Finalize object,Machine Block Frequency Analysis #2,0.0
+saxpy,Finalize object,Machine Natural Loop Construction,0.0
+saxpy,Finalize object,Compressing EVEX instrs when possible #2,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #19,0.0
+saxpy,Finalize object,Lower Garbage Collection Instructions #2,0.0
+saxpy,Finalize object,Assignment Tracking Analysis,0.0
+saxpy,Finalize object,Lazy Machine Block Frequency Analysis #20,0.0
+saxpy,Finalize object,X86 Atom pad short functions,0.0
+saxpy,Finalize object,MachineDominator Tree Construction #4,0.0
+saxpy,Finalize object,Natural Loop Information #3,0.0
+saxpy,Finalize object,Debug Variable Analysis,0.0
+saxpy,Finalize object,Basic Alias Analysis (stateless AA impl),0.0
+saxpy,Finalize object,X86 Return Thunks,0.0

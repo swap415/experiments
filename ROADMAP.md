@@ -35,8 +35,14 @@ reduction, independent of S1.
    one-time init 64ms + pipeline (35ms simple → 130ms arrayexpr/parfors).
    82% of simple-kernel cold start is fixed overhead; typing is 3.6% of
    pipeline (folk theory false); LLVM 25-46%. Caching ceiling for simple
-   kernels is 18%. **now**: import-time profile, decompose the 64ms init,
-   NUMBA_LLVM_PASS_TIMINGS per-pass table for the big kernels.
+   kernels is 18%. **phase 2 DONE 2026-07-24**: the fixed tax is ~150ms of
+   imports+registries (import graph flat across 468 modules AND entangled —
+   all spot-stubs break it; init = 58ms of deferred imports inside
+   target_context.refresh, collapses to 4.4ms once forced). Floor
+   numpy+llvmlite 44.4ms. LLVM lock: full-opt 33-43%, finalize 31-37%;
+   prange has 40ms untracked. **now**: measure fork-server/warm-daemon
+   floor vs structural lazification; close the parfors tracking gap;
+   phase 3 pruning stays gated on S1.
 3. **S2 gate OPEN (2026-07-24)**: pick layer (numba IR vs llvmlite new-PM
    plugin) from evidence, ship one pass justified by measured cost deltas.
    Evidence so far: selection signal lives in dependency modeling (exp016),
