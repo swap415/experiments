@@ -1,0 +1,313 @@
+{
+  "map-d1-f64-strict": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d1-f64-strict.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 15000,
+      "total_cycles": 4363,
+      "total_uops": 26000,
+      "ipc": 3.44,
+      "uops_per_cycle": 5.96,
+      "block_rthroughput": 4.3,
+      "label": ".LBB0_5",
+      "instruction_count": 15,
+      "work_score": 164,
+      "selected": false
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d1-f64-strict.block1.s"
+      ],
+      "iterations": 1000,
+      "instructions": 6000,
+      "total_cycles": 1364,
+      "total_uops": 8000,
+      "ipc": 4.4,
+      "uops_per_cycle": 5.87,
+      "block_rthroughput": 1.3,
+      "label": ".LBB0_8",
+      "instruction_count": 6,
+      "work_score": 47,
+      "selected": false
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d1-f64-strict.block2.s"
+      ],
+      "iterations": 1000,
+      "instructions": 6000,
+      "total_cycles": 1362,
+      "total_uops": 7000,
+      "ipc": 4.41,
+      "uops_per_cycle": 5.14,
+      "block_rthroughput": 1.2,
+      "label": ".LBB0_12",
+      "instruction_count": 6,
+      "work_score": 42,
+      "selected": false
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d1-f64-strict.block3.s"
+      ],
+      "iterations": 1000,
+      "instructions": 27000,
+      "total_cycles": 8362,
+      "total_uops": 50000,
+      "ipc": 3.23,
+      "uops_per_cycle": 5.98,
+      "block_rthroughput": 8.3,
+      "label": ".LBB0_14",
+      "instruction_count": 27,
+      "work_score": 320,
+      "selected": true
+    }
+  ],
+  "map-d16-f64-fast": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d16-f64-fast.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 22000,
+      "total_cycles": 8049,
+      "total_uops": 22000,
+      "ipc": 2.73,
+      "uops_per_cycle": 2.73,
+      "block_rthroughput": 8.0,
+      "label": ".LBB0_5",
+      "instruction_count": 22,
+      "work_score": 265,
+      "selected": true
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d16-f64-fast.block1.s"
+      ],
+      "iterations": 1000,
+      "instructions": 22000,
+      "total_cycles": 8048,
+      "total_uops": 22000,
+      "ipc": 2.73,
+      "uops_per_cycle": 2.73,
+      "block_rthroughput": 8.0,
+      "label": ".LBB0_7",
+      "instruction_count": 22,
+      "work_score": 260,
+      "selected": false
+    }
+  ],
+  "map-d8-f32-fast": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d8-f32-fast.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 14000,
+      "total_cycles": 4040,
+      "total_uops": 14000,
+      "ipc": 3.47,
+      "uops_per_cycle": 3.47,
+      "block_rthroughput": 4.0,
+      "label": ".LBB0_5",
+      "instruction_count": 14,
+      "work_score": 153,
+      "selected": false
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/map-d8-f32-fast.block1.s"
+      ],
+      "iterations": 1000,
+      "instructions": 25000,
+      "total_cycles": 8038,
+      "total_uops": 26000,
+      "ipc": 3.11,
+      "uops_per_cycle": 3.23,
+      "block_rthroughput": 8.0,
+      "label": ".LBB0_10",
+      "instruction_count": 25,
+      "work_score": 298,
+      "selected": true
+    }
+  ],
+  "reduction-d4-f64-strict": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/reduction-d4-f64-strict.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 39000,
+      "total_cycles": 112006,
+      "total_uops": 38000,
+      "ipc": 0.35,
+      "uops_per_cycle": 0.34,
+      "block_rthroughput": 8.0,
+      "label": ".LBB0_3",
+      "instruction_count": 39,
+      "work_score": 500,
+      "selected": true
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/reduction-d4-f64-strict.block1.s"
+      ],
+      "iterations": 1000,
+      "instructions": 12000,
+      "total_cycles": 28006,
+      "total_uops": 11000,
+      "ipc": 0.43,
+      "uops_per_cycle": 0.39,
+      "block_rthroughput": 2.0,
+      "label": ".LBB0_6",
+      "instruction_count": 12,
+      "work_score": 126,
+      "selected": false
+    }
+  ],
+  "reduction-d16-f64-fast": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/reduction-d16-f64-fast.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 37000,
+      "total_cycles": 128010,
+      "total_uops": 36000,
+      "ipc": 0.29,
+      "uops_per_cycle": 0.28,
+      "block_rthroughput": 16.0,
+      "label": ".LBB0_3",
+      "instruction_count": 37,
+      "work_score": 478,
+      "selected": true
+    }
+  ],
+  "gather-d4-f64-fast": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/gather-d4-f64-fast.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 47000,
+      "total_cycles": 10445,
+      "total_uops": 50000,
+      "ipc": 4.5,
+      "uops_per_cycle": 4.79,
+      "block_rthroughput": 8.3,
+      "label": ".LBB0_3",
+      "instruction_count": 47,
+      "work_score": 396,
+      "selected": true
+    },
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v1/mca/gather-d4-f64-fast.block1.s"
+      ],
+      "iterations": 1000,
+      "instructions": 14000,
+      "total_cycles": 2653,
+      "total_uops": 14000,
+      "ipc": 5.28,
+      "uops_per_cycle": 5.28,
+      "block_rthroughput": 2.3,
+      "label": ".LBB0_6",
+      "instruction_count": 14,
+      "work_score": 100,
+      "selected": false
+    }
+  ]
+}

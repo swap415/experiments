@@ -1,0 +1,141 @@
+
+[0] Code Region - gather-d4-f64-fast.block0
+
+Iterations:        1000
+Instructions:      47000
+Total Cycles:      10445
+Total uOps:        50000
+
+Dispatch Width:    6
+uOps Per Cycle:    4.79
+IPC:               4.50
+Block RThroughput: 8.3
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 1      5     0.33    *                   movq	(%rdx,%r8,8), %r14
+ 1      1     1.00                        leaq	(%r9,%r14,8), %r15
+ 1      1     0.50                        sarq	$63, %r14
+ 1      2     0.20                        andq	%rsi, %r14
+ 1      7     0.33    *                   vmovsd	(%r15,%r14,8), %xmm1
+ 1      7     0.33    *                   vmovsd	(%rax,%r8,8), %xmm2
+ 1      4     0.50                        vfmadd132sd	%xmm0, %xmm1, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, (%rax,%r8,8)
+ 1      5     0.33    *                   movq	8(%rdx,%r8,8), %r14
+ 1      1     1.00                        leaq	(%r9,%r14,8), %r15
+ 1      1     0.50                        sarq	$63, %r14
+ 1      2     0.20                        andq	%rsi, %r14
+ 1      7     0.33    *                   vmovsd	(%r15,%r14,8), %xmm1
+ 1      7     0.33    *                   vmovsd	8(%rax,%r8,8), %xmm2
+ 1      4     0.50                        vfmadd132sd	%xmm0, %xmm1, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 8(%rax,%r8,8)
+ 1      5     0.33    *                   movq	16(%rdx,%r8,8), %r14
+ 1      1     1.00                        leaq	(%r9,%r14,8), %r15
+ 1      1     0.50                        sarq	$63, %r14
+ 1      2     0.20                        andq	%rsi, %r14
+ 1      7     0.33    *                   vmovsd	(%r15,%r14,8), %xmm1
+ 1      7     0.33    *                   vmovsd	16(%rax,%r8,8), %xmm2
+ 1      4     0.50                        vfmadd132sd	%xmm0, %xmm1, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 16(%rax,%r8,8)
+ 1      5     0.33    *                   movq	24(%rdx,%r8,8), %r14
+ 1      1     1.00                        leaq	(%r9,%r14,8), %r15
+ 1      1     0.50                        sarq	$63, %r14
+ 1      2     0.20                        andq	%rsi, %r14
+ 1      7     0.33    *                   vmovsd	(%r15,%r14,8), %xmm1
+ 1      7     0.33    *                   vmovsd	24(%rax,%r8,8), %xmm2
+ 1      4     0.50                        vfmadd132sd	%xmm0, %xmm1, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 24(%rax,%r8,8)
+ 0      1     0.00                        addq	$4, %r8
+ 1      1     0.20                        cmpq	%r8, %rbx
+ 1      1     0.50                        jne	.LBB0_3
+
+
+Resources:
+[0]   - ADLPPort00
+[1]   - ADLPPort01
+[2]   - ADLPPort02
+[3]   - ADLPPort03
+[4]   - ADLPPort04
+[5]   - ADLPPort05
+[6]   - ADLPPort06
+[7]   - ADLPPort07
+[8]   - ADLPPort08
+[9]   - ADLPPort09
+[10]  - ADLPPort10
+[11]  - ADLPPort11
+[12]  - ADLPPortInvalid
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   
+9.59   10.41  4.00   4.00   2.00   2.50   5.00   2.00   2.00   2.00   4.00   2.50    -     
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   Instructions:
+ -      -     0.40   0.20    -      -      -      -      -      -     0.40    -      -     movq	(%rdx,%r8,8), %r14
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     leaq	(%r9,%r14,8), %r15
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     sarq	$63, %r14
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     andq	%rsi, %r14
+ -      -     0.60   0.20    -      -      -      -      -      -     0.20    -      -     vmovsd	(%r15,%r14,8), %xmm1
+ -      -     0.20   0.21    -      -      -      -      -      -     0.59    -      -     vmovsd	(%rax,%r8,8), %xmm2
+0.21   0.79    -      -      -      -      -      -      -      -      -      -      -     vfmadd132sd	%xmm0, %xmm1, %xmm2
+0.61   0.39    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.61   0.39    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovsd	%xmm2, (%rax,%r8,8)
+ -      -     0.40   0.59    -      -      -      -      -      -     0.01    -      -     movq	8(%rdx,%r8,8), %r14
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     leaq	(%r9,%r14,8), %r15
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     sarq	$63, %r14
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     andq	%rsi, %r14
+ -      -     0.40   0.20    -      -      -      -      -      -     0.40    -      -     vmovsd	(%r15,%r14,8), %xmm1
+ -      -     0.21   0.01    -      -      -      -      -      -     0.79    -      -     vmovsd	8(%rax,%r8,8), %xmm2
+0.20   0.80    -      -      -      -      -      -      -      -      -      -      -     vfmadd132sd	%xmm0, %xmm1, %xmm2
+0.59   0.41    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.59   0.41    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.99   0.01    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovsd	%xmm2, 8(%rax,%r8,8)
+ -      -     0.20   0.40    -      -      -      -      -      -     0.40    -      -     movq	16(%rdx,%r8,8), %r14
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     leaq	(%r9,%r14,8), %r15
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     sarq	$63, %r14
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     andq	%rsi, %r14
+ -      -     0.59   0.40    -      -      -      -      -      -     0.01    -      -     vmovsd	(%r15,%r14,8), %xmm1
+ -      -     0.59   0.40    -      -      -      -      -      -      -      -      -     vmovsd	16(%rax,%r8,8), %xmm2
+0.21   0.79    -      -      -      -      -      -      -      -      -      -      -     vfmadd132sd	%xmm0, %xmm1, %xmm2
+0.60   0.40    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.60   0.40    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovsd	%xmm2, 16(%rax,%r8,8)
+ -      -     0.20   0.39    -      -      -      -      -      -     0.41    -      -     movq	24(%rdx,%r8,8), %r14
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     leaq	(%r9,%r14,8), %r15
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     sarq	$63, %r14
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     andq	%rsi, %r14
+ -      -     0.01   0.59    -      -      -      -      -      -     0.40    -      -     vmovsd	(%r15,%r14,8), %xmm1
+ -      -     0.20   0.41    -      -      -      -      -      -     0.39    -      -     vmovsd	24(%rax,%r8,8), %xmm2
+0.20   0.80    -      -      -      -      -      -      -      -      -      -      -     vfmadd132sd	%xmm0, %xmm1, %xmm2
+0.59   0.41    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.60   0.41    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.99   0.01    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovsd	%xmm2, 24(%rax,%r8,8)
+ -      -      -      -      -      -      -      -      -      -      -      -      -     addq	$4, %r8
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     cmpq	%r8, %rbx
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     jne	.LBB0_3

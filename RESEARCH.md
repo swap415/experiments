@@ -73,7 +73,14 @@ directly (local checkouts: ~/dev/numba, ~/dev/numbacc).
   accs-dependent (96/112/128 for accs 1/2/4) — no static threshold fits.
   Two elision mechanisms documented: shared-base linear-recurrence CSE
   (exact 0.5 ratio) and constant-fold absorption (deficit = accs-1).
-  Next: llvm-mca/TTI predictions vs this corpus.
+- exp016 DONE (2026-07-24): llvm-mca-18 raptorlake vs measured f/cyc on
+  all 66 blocks. Dep mode: best static ranker measured (regret 1.001x,
+  top1 86%) but 1.68x geo absolute error — over 1.43x on ALL 46 mid/large
+  vectorized rows, 3.1x over on chain=8 (loop overhead), 2.25x UNDER on
+  scalar-nested (block sim can't see outer-loop ILP through OOO window).
+  RThroughput/TTI-style dep-blind: top1 14%, regret 1.48x — selection
+  signal is entirely in latency/dependency modeling. S1 phase complete;
+  S2 gate open.
 
 ## thread 5 — compile-time attack (S3, ACTIVE)
 

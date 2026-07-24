@@ -1,0 +1,32 @@
+{
+  "map-d1-f64-strict": [
+    {
+      "status": "ok",
+      "returncode": 0,
+      "version_mismatch": true,
+      "command": [
+        "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+        "-mtriple=x86_64-unknown-linux-gnu",
+        "-mcpu=raptorlake",
+        "-iterations=1000",
+        "runs/smoke-v0/mca/map-d1-f64-strict.block0.s"
+      ],
+      "iterations": 1000,
+      "instructions": 6000,
+      "total_cycles": 1362,
+      "total_uops": 7000,
+      "ipc": 4.41,
+      "uops_per_cycle": 5.14,
+      "block_rthroughput": 1.2,
+      "label": ".LBB0_12",
+      "instruction_count": 6,
+      "work_score": 42,
+      "selected": true
+    }
+  ],
+  "map-d16-f64-fast": [],
+  "map-d8-f32-fast": [],
+  "reduction-d4-f64-strict": [],
+  "reduction-d16-f64-fast": [],
+  "gather-d4-f64-fast": []
+}

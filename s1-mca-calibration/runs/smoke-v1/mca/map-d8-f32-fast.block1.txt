@@ -1,0 +1,97 @@
+
+[0] Code Region - map-d8-f32-fast.block1
+
+Iterations:        1000
+Instructions:      25000
+Total Cycles:      8038
+Total uOps:        26000
+
+Dispatch Width:    6
+uOps Per Cycle:    3.23
+IPC:               3.11
+Block RThroughput: 8.0
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 1      7     0.33    *                   vmovss	(%rdx,%r10,4), %xmm2
+ 1      7     0.33    *                   vmovss	(%rax,%r10,4), %xmm3
+ 1      4     0.50                        vfmadd132ss	%xmm0, %xmm2, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 2      12    0.50           *            vmovss	%xmm3, (%rax,%r10,4)
+ 1      7     0.33    *                   vmovss	4(%rdx,%r10,4), %xmm2
+ 1      7     0.33    *                   vmovss	4(%rax,%r10,4), %xmm3
+ 1      4     0.50                        vfmadd132ss	%xmm0, %xmm2, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 1      4     0.50                        vfmadd213ss	%xmm2, %xmm0, %xmm3
+ 2      12    0.50           *            vmovss	%xmm3, 4(%rax,%r10,4)
+ 0      1     0.00                        addq	$2, %r10
+ 1      1     0.20                        cmpq	%r10, %r8
+ 1      1     0.50                        jne	.LBB0_10
+
+
+Resources:
+[0]   - ADLPPort00
+[1]   - ADLPPort01
+[2]   - ADLPPort02
+[3]   - ADLPPort03
+[4]   - ADLPPort04
+[5]   - ADLPPort05
+[6]   - ADLPPort06
+[7]   - ADLPPort07
+[8]   - ADLPPort08
+[9]   - ADLPPort09
+[10]  - ADLPPort10
+[11]  - ADLPPort11
+[12]  - ADLPPortInvalid
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   
+8.00   8.00   1.33   1.33   1.00   0.50   1.00   1.00   1.00   1.00   1.33   0.50    -     
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   Instructions:
+ -      -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmovss	(%rdx,%r10,4), %xmm2
+ -      -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmovss	(%rax,%r10,4), %xmm3
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd132ss	%xmm0, %xmm2, %xmm3
+0.25   0.75    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.25   0.75    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.25   0.75    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.50   0.50    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.50   0.50    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.50   0.50    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovss	%xmm3, (%rax,%r10,4)
+ -      -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmovss	4(%rdx,%r10,4), %xmm2
+ -      -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmovss	4(%rax,%r10,4), %xmm3
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd132ss	%xmm0, %xmm2, %xmm3
+0.50   0.50    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.50   0.50    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.50   0.50    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.75   0.25    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.75   0.25    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+0.75   0.25    -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213ss	%xmm2, %xmm0, %xmm3
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovss	%xmm3, 4(%rax,%r10,4)
+ -      -      -      -      -      -      -      -      -      -      -      -      -     addq	$2, %r10
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     cmpq	%r10, %r8
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     jne	.LBB0_10

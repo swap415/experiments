@@ -1,0 +1,101 @@
+
+[0] Code Region - map-d1-f64-strict.block3
+
+Iterations:        1000
+Instructions:      27000
+Total Cycles:      8362
+Total uOps:        50000
+
+Dispatch Width:    6
+uOps Per Cycle:    5.98
+IPC:               3.23
+Block RThroughput: 8.3
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 2      11    0.50    *                   vmulsd	(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, (%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	8(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	8(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 8(%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	16(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	16(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 16(%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	24(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	24(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 24(%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	32(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	32(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 32(%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	40(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	40(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 40(%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	48(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	48(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 48(%rax,%r11,8)
+ 2      11    0.50    *                   vmulsd	56(%rax,%r11,8), %xmm0, %xmm2
+ 2      10    0.50    *                   vaddsd	56(%rdx,%r11,8), %xmm2, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, 56(%rax,%r11,8)
+ 0      1     0.00                        addq	$8, %r11
+ 1      1     0.20                        cmpq	%r11, %r8
+ 1      1     0.50                        jne	.LBB0_14
+
+
+Resources:
+[0]   - ADLPPort00
+[1]   - ADLPPort01
+[2]   - ADLPPort02
+[3]   - ADLPPort03
+[4]   - ADLPPort04
+[5]   - ADLPPort05
+[6]   - ADLPPort06
+[7]   - ADLPPort07
+[8]   - ADLPPort08
+[9]   - ADLPPort09
+[10]  - ADLPPort10
+[11]  - ADLPPort11
+[12]  - ADLPPortInvalid
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   
+5.33   5.34   5.33   5.33   4.00   5.33   1.00   4.00   4.00   4.00   5.33   1.00    -     
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   Instructions:
+1.00    -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmulsd	(%rax,%r11,8), %xmm0, %xmm2
+ -      -     0.67   0.33    -     1.00    -      -      -      -      -      -      -     vaddsd	(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovsd	%xmm2, (%rax,%r11,8)
+0.33   0.67   0.67   0.33    -      -      -      -      -      -      -      -      -     vmulsd	8(%rax,%r11,8), %xmm0, %xmm2
+ -     0.33   0.33   0.67    -     0.67    -      -      -      -      -      -      -     vaddsd	8(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovsd	%xmm2, 8(%rax,%r11,8)
+0.67   0.33   0.33   0.67    -      -      -      -      -      -      -      -      -     vmulsd	16(%rax,%r11,8), %xmm0, %xmm2
+ -     0.33   0.33   0.33    -     0.67    -      -      -      -     0.33    -      -     vaddsd	16(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovsd	%xmm2, 16(%rax,%r11,8)
+1.00    -      -     0.33    -      -      -      -      -      -     0.67    -      -     vmulsd	24(%rax,%r11,8), %xmm0, %xmm2
+ -     0.33   0.33   0.33    -     0.67    -      -      -      -     0.33    -      -     vaddsd	24(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovsd	%xmm2, 24(%rax,%r11,8)
+0.33   0.67   0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmulsd	32(%rax,%r11,8), %xmm0, %xmm2
+ -     0.67   0.33   0.33    -     0.33    -      -      -      -     0.33    -      -     vaddsd	32(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovsd	%xmm2, 32(%rax,%r11,8)
+0.67   0.33    -     0.33    -      -      -      -      -      -     0.67    -      -     vmulsd	40(%rax,%r11,8), %xmm0, %xmm2
+ -      -      -     0.33    -     1.00    -      -      -      -     0.67    -      -     vaddsd	40(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovsd	%xmm2, 40(%rax,%r11,8)
+0.67   0.33   0.33    -      -      -      -      -      -      -     0.67    -      -     vmulsd	48(%rax,%r11,8), %xmm0, %xmm2
+ -     0.33   0.33    -      -     0.67    -      -      -      -     0.67    -      -     vaddsd	48(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovsd	%xmm2, 48(%rax,%r11,8)
+0.67   0.33   0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmulsd	56(%rax,%r11,8), %xmm0, %xmm2
+ -     0.67   0.67   0.33    -     0.33    -      -      -      -      -      -      -     vaddsd	56(%rdx,%r11,8), %xmm2, %xmm2
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovsd	%xmm2, 56(%rax,%r11,8)
+ -      -      -      -      -      -      -      -      -      -      -      -      -     addq	$8, %r11
+ -      -      -      -      -      -      -      -      -      -      -     1.00    -     cmpq	%r11, %r8
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     jne	.LBB0_14

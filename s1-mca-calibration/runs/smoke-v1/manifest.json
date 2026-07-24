@@ -1,0 +1,67 @@
+{
+  "created_utc": "20260724T010111Z",
+  "argv": [
+    "bench.py",
+    "--suite",
+    "smoke",
+    "--cpu",
+    "2",
+    "--target-updates",
+    "500000",
+    "--reps",
+    "3",
+    "--llvm-mca",
+    "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+    "--allow-version-mismatch",
+    "--output",
+    "runs/smoke-v1"
+  ],
+  "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "numba_version": "0.66.0",
+  "numba_file": "/home/claude/dev/experiments/.venv/lib/python3.12/site-packages/numba/__init__.py",
+  "llvmlite_version": "0.48.0",
+  "llvm_version": [
+    22,
+    1,
+    0
+  ],
+  "host_cpu_name": "raptorlake",
+  "host_cpu_features": "+64bit,+adx,+aes,-amx-avx512,-amx-bf16,-amx-complex,-amx-fp16,-amx-fp8,-amx-int8,-amx-movrs,-amx-tf32,-amx-tile,+avx,-avx10.1,-avx10.2,+avx2,-avx512bf16,-avx512bitalg,-avx512bw,-avx512cd,-avx512dq,-avx512f,-avx512fp16,-avx512ifma,-avx512vbmi,-avx512vbmi2,-avx512vl,-avx512vnni,-avx512vp2intersect,-avx512vpopcntdq,-avxifma,-avxneconvert,+avxvnni,-avxvnniint16,-avxvnniint8,+bmi,+bmi2,-ccmp,-cf,-cldemote,+clflushopt,+clwb,-clzero,+cmov,-cmpccxadd,+crc32,+cx16,+cx8,-egpr,-enqcmd,+f16c,+fma,-fma4,+fsgsbase,+fxsr,+gfni,+hreset,+invpcid,+kl,-lwp,+lzcnt,+mmx,+movbe,+movdir64b,+movdiri,-movrs,-mwaitx,-ndd,-nf,+pclmul,+pconfig,+pku,+popcnt,-ppx,-prefetchi,+prfchw,+ptwrite,-push2pop2,-raoint,+rdpid,-rdpru,+rdrnd,+rdseed,-rtm,+sahf,+serialize,-sgx,+sha,-sha512,+shstk,-sm3,-sm4,+sse,+sse2,+sse3,+sse4.1,+sse4.2,-sse4a,+ssse3,-tbm,-tsxldtrk,-uintr,-usermsr,+vaes,+vpclmulqdq,+waitpkg,-wbnoinvd,+widekl,-xop,+xsave,+xsavec,+xsaveopt,+xsaves,-zu",
+  "requested_mcpu": "raptorlake",
+  "cpu": 2,
+  "pmu": "cpu_core",
+  "affinity": [
+    2
+  ],
+  "sysfs": {
+    "governor": "powersave",
+    "epp": "balance_performance",
+    "thread_siblings": "2-3"
+  },
+  "mca": {
+    "status": "ok",
+    "path": "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+    "sha256": "e6aaa422b4d681e281fbde275d113304bd1426204072fbc22e1b1df607dadd24",
+    "version": [
+      21,
+      1,
+      3
+    ],
+    "version_output": "LLVM (http://llvm.org/):\n  LLVM version 21.1.3\n  Optimized build with assertions.\n  Default target: x86_64-unknown-linux-gnu\n  Host CPU: raptorlake\n\n  Registered Targets:\n    aarch64     - AArch64 (little endian)\n    aarch64_32  - AArch64 (little endian ILP32)\n    aarch64_be  - AArch64 (big endian)\n    amdgcn      - AMD GCN GPUs\n    arm         - ARM\n    arm64       - ARM64 (little endian)\n    arm64_32    - ARM64 (little endian ILP32)\n    armeb       - ARM (big endian)\n    avr         - Atmel AVR Microcontroller\n    bpf         - BPF (host endian)\n    bpfeb       - BPF (big endian)\n    bpfel       - BPF (little endian)\n    hexagon     - Hexagon\n    lanai       - Lanai\n    loongarch32 - 32-bit LoongArch\n    loongarch64 - 64-bit LoongArch\n    mips        - MIPS (32-bit big endian)\n    mips64      - MIPS (64-bit big endian)\n    mips64el    - MIPS (64-bit little endian)\n    mipsel      - MIPS (32-bit little endian)\n    msp430      - MSP430 [experimental]\n    nvptx       - NVIDIA PTX 32-bit\n    nvptx64     - NVIDIA PTX 64-bit\n    ppc32       - PowerPC 32\n    ppc32le     - PowerPC 32 LE\n    ppc64       - PowerPC 64\n    ppc64le     - PowerPC 64 LE\n    r600        - AMD GPUs HD2XXX-HD6XXX\n    riscv32     - 32-bit RISC-V\n    riscv64     - 64-bit RISC-V\n    sparc       - Sparc\n    sparcel     - Sparc LE\n    sparcv9     - Sparc V9\n    spirv       - SPIR-V Logical\n    spirv32     - SPIR-V 32-bit\n    spirv64     - SPIR-V 64-bit\n    systemz     - SystemZ\n    thumb       - Thumb\n    thumbeb     - Thumb (big endian)\n    ve          - VE\n    wasm32      - WebAssembly 32-bit\n    wasm64      - WebAssembly 64-bit\n    x86         - 32-bit X86: Pentium-Pro and above\n    x86-64      - 64-bit X86: EM64T and AMD64\n    xcore       - XCore\n"
+  },
+  "arguments": {
+    "suite": "smoke",
+    "cpu": 2,
+    "n": 1024,
+    "target_updates": 500000,
+    "reps": 3,
+    "seed": 20260723,
+    "llvm_mca": "/home/claude/dev/numbacc/envs/dev/bin/llvm-mca",
+    "mcpu": null,
+    "allow_version_mismatch": true,
+    "allow_atom": false,
+    "output": "runs/smoke-v1"
+  },
+  "methodology_warning": "Static self-loop selection has not been LBR-validated. cycles/branch comparisons are provisional."
+}

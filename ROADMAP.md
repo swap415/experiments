@@ -26,17 +26,23 @@ reduction, independent of S1.
    rows counter-verified within 5% executed-vs-nominal; one-probe 0.988/0.977
    grp/95% top1; params 0.52 + cliff-FAIL. Distinct constants were NOT enough
    (shared-base recurrence CSE, exact 0.5 ratio) — distinct multipliers fixed
-   it. **now**: llvm-mca / TTI predictions vs measured for numba-emitted code
-   shapes — quantify where static assumptions break (cliff rows first).
+   it. **mca validation DONE 2026-07-24** (exp016): mca-dep ranks nearly as
+   well as the probe (regret 1.001x, top1 86%) but is 1.68x geo off absolute
+   (over 1.4x vectorized, UNDER 2.7x scalar-nested — block sim can't see
+   outer-loop ILP); dependency-blind rt/TTI-style is worthless for selection
+   (top1 14%, regret 1.48x). S1 phase complete.
 2. **S3 phase 1 — DONE 2026-07-23** (exp014): cold start = import 94ms +
    one-time init 64ms + pipeline (35ms simple → 130ms arrayexpr/parfors).
    82% of simple-kernel cold start is fixed overhead; typing is 3.6% of
    pipeline (folk theory false); LLVM 25-46%. Caching ceiling for simple
    kernels is 18%. **now**: import-time profile, decompose the 64ms init,
    NUMBA_LLVM_PASS_TIMINGS per-pass table for the big kernels.
-3. **gate(S1 mca-validation) → S2**: pick layer (numba IR vs llvmlite new-PM
+3. **S2 gate OPEN (2026-07-24)**: pick layer (numba IR vs llvmlite new-PM
    plugin) from evidence, ship one pass justified by measured cost deltas.
-   gate(S1+S3) → benefit-per-ms pass pruning.
+   Evidence so far: selection signal lives in dependency modeling (exp016),
+   accs-dependent unroll cliff is the concrete measured miss (exp013) —
+   candidate: an unroll/interleave decision fix at whichever layer controls
+   it. gate(S1+S3) → benefit-per-ms pass pruning (demoted, see S3 note).
 4. **S4a scoping — DONE 2026-07-23** (exp015, gate opened by corpus v2):
    learned ridge on params+asm hits 0.975 global out-of-sample but a feature
    information ceiling within-group (0.795/82% — identical for pointwise,

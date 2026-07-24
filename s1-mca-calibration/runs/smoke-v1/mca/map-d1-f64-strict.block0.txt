@@ -1,0 +1,77 @@
+
+[0] Code Region - map-d1-f64-strict.block0
+
+Iterations:        1000
+Instructions:      15000
+Total Cycles:      4363
+Total uOps:        26000
+
+Dispatch Width:    6
+uOps Per Cycle:    5.96
+IPC:               3.44
+Block RThroughput: 4.3
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 2      12    0.50    *                   vmulpd	(%rax,%r11,8), %ymm1, %ymm2
+ 2      12    0.50    *                   vmulpd	32(%rax,%r11,8), %ymm1, %ymm3
+ 2      12    0.50    *                   vmulpd	64(%rax,%r11,8), %ymm1, %ymm4
+ 2      12    0.50    *                   vmulpd	96(%rax,%r11,8), %ymm1, %ymm5
+ 2      11    0.50    *                   vaddpd	(%rdx,%r11,8), %ymm2, %ymm2
+ 2      11    0.50    *                   vaddpd	32(%rdx,%r11,8), %ymm3, %ymm3
+ 2      11    0.50    *                   vaddpd	64(%rdx,%r11,8), %ymm4, %ymm4
+ 2      11    0.50    *                   vaddpd	96(%rdx,%r11,8), %ymm5, %ymm5
+ 2      12    0.50           *            vmovupd	%ymm2, (%rax,%r11,8)
+ 2      12    0.50           *            vmovupd	%ymm3, 32(%rax,%r11,8)
+ 2      12    0.50           *            vmovupd	%ymm4, 64(%rax,%r11,8)
+ 2      12    0.50           *            vmovupd	%ymm5, 96(%rax,%r11,8)
+ 0      1     0.00                        addq	$16, %r11
+ 1      1     0.20                        cmpq	%r11, %r10
+ 1      1     0.50                        jne	.LBB0_5
+
+
+Resources:
+[0]   - ADLPPort00
+[1]   - ADLPPort01
+[2]   - ADLPPort02
+[3]   - ADLPPort03
+[4]   - ADLPPort04
+[5]   - ADLPPort05
+[6]   - ADLPPort06
+[7]   - ADLPPort07
+[8]   - ADLPPort08
+[9]   - ADLPPort09
+[10]  - ADLPPort10
+[11]  - ADLPPort11
+[12]  - ADLPPortInvalid
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   
+2.33   3.50   2.67   2.67   2.00   2.17   1.00   2.00   2.00   2.00   2.67   1.00    -     
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   Instructions:
+1.00    -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmulpd	(%rax,%r11,8), %ymm1, %ymm2
+0.17   0.83   0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmulpd	32(%rax,%r11,8), %ymm1, %ymm3
+0.83   0.17   0.50   0.50    -      -      -      -      -      -      -      -      -     vmulpd	64(%rax,%r11,8), %ymm1, %ymm4
+0.34   0.66   0.50   0.17    -      -      -      -      -      -     0.33    -      -     vmulpd	96(%rax,%r11,8), %ymm1, %ymm5
+ -      -     0.17   0.33    -     1.00    -      -      -      -     0.50    -      -     vaddpd	(%rdx,%r11,8), %ymm2, %ymm2
+ -     0.83   0.33   0.33    -     0.17    -      -      -      -     0.33    -      -     vaddpd	32(%rdx,%r11,8), %ymm3, %ymm3
+ -     0.17   0.33   0.17    -     0.83    -      -      -      -     0.50    -      -     vaddpd	64(%rdx,%r11,8), %ymm4, %ymm4
+ -     0.83   0.17   0.50    -     0.17    -      -      -      -     0.33    -      -     vaddpd	96(%rdx,%r11,8), %ymm5, %ymm5
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovupd	%ymm2, (%rax,%r11,8)
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovupd	%ymm3, 32(%rax,%r11,8)
+ -      -      -      -      -      -      -      -     1.00   1.00    -      -      -     vmovupd	%ymm4, 64(%rax,%r11,8)
+ -      -      -      -     1.00    -      -     1.00    -      -      -      -      -     vmovupd	%ymm5, 96(%rax,%r11,8)
+ -      -      -      -      -      -      -      -      -      -      -      -      -     addq	$16, %r11
+ -      -      -      -      -      -      -      -      -      -      -     1.00    -     cmpq	%r11, %r10
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     jne	.LBB0_5

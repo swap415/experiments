@@ -1,0 +1,75 @@
+
+[0] Code Region - gather-d4-f64-fast.block1
+
+Iterations:        1000
+Instructions:      14000
+Total Cycles:      2653
+Total uOps:        14000
+
+Dispatch Width:    6
+uOps Per Cycle:    5.28
+IPC:               5.28
+Block RThroughput: 2.3
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 1      5     0.33    *                   movq	(%r14,%r15,8), %r12
+ 1      1     1.00                        leaq	(%r9,%r12,8), %r13
+ 1      1     0.50                        sarq	$63, %r12
+ 1      2     0.20                        andq	%rsi, %r12
+ 1      7     0.33    *                   vmovsd	(%r13,%r12,8), %xmm1
+ 1      7     0.33    *                   vmovsd	(%r8,%r15,8), %xmm2
+ 1      4     0.50                        vfmadd132sd	%xmm0, %xmm1, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm1, %xmm0, %xmm2
+ 2      12    0.50           *            vmovsd	%xmm2, (%r8,%r15,8)
+ 0      1     0.00                        incq	%r15
+ 1      1     0.20                        cmpq	%r15, %r11
+ 1      1     0.50                        jne	.LBB0_6
+
+
+Resources:
+[0]   - ADLPPort00
+[1]   - ADLPPort01
+[2]   - ADLPPort02
+[3]   - ADLPPort03
+[4]   - ADLPPort04
+[5]   - ADLPPort05
+[6]   - ADLPPort06
+[7]   - ADLPPort07
+[8]   - ADLPPort08
+[9]   - ADLPPort09
+[10]  - ADLPPort10
+[11]  - ADLPPort11
+[12]  - ADLPPortInvalid
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   
+2.45   2.61   1.00   1.00   0.50   1.00   1.94   0.50   0.50   0.50   1.00   1.00    -     
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   Instructions:
+ -      -     0.35   0.25    -      -      -      -      -      -     0.40    -      -     movq	(%r14,%r15,8), %r12
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     leaq	(%r9,%r12,8), %r13
+0.01    -      -      -      -      -     0.99    -      -      -      -      -      -     sarq	$63, %r12
+ -      -      -      -      -     0.18    -      -      -      -      -     0.82    -     andq	%rsi, %r12
+ -      -     0.31   0.48    -      -      -      -      -      -     0.21    -      -     vmovsd	(%r13,%r12,8), %xmm1
+ -      -     0.34   0.27    -      -      -      -      -      -     0.39    -      -     vmovsd	(%r8,%r15,8), %xmm2
+0.21   0.79    -      -      -      -      -      -      -      -      -      -      -     vfmadd132sd	%xmm0, %xmm1, %xmm2
+0.60   0.40    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.60   0.41    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+0.99   0.01    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm1, %xmm0, %xmm2
+ -      -      -      -     0.50    -      -     0.50   0.50   0.50    -      -      -     vmovsd	%xmm2, (%r8,%r15,8)
+ -      -      -      -      -      -      -      -      -      -      -      -      -     incq	%r15
+ -      -      -      -      -     0.82    -      -      -      -      -     0.18    -     cmpq	%r15, %r11
+0.05    -      -      -      -      -     0.95    -      -      -      -      -      -     jne	.LBB0_6

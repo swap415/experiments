@@ -1,0 +1,121 @@
+
+[0] Code Region - reduction-d16-f64-fast.block0
+
+Iterations:        1000
+Instructions:      37000
+Total Cycles:      128010
+Total uOps:        36000
+
+Dispatch Width:    6
+uOps Per Cycle:    0.28
+IPC:               0.29
+Block RThroughput: 16.0
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 1      7     0.33    *                   vmovsd	(%rsi,%r9,8), %xmm3
+ 1      7     0.33    *                   vmovsd	8(%rsi,%r9,8), %xmm2
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm3, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 1      4     0.50                        vfmadd213sd	%xmm2, %xmm0, %xmm1
+ 0      1     0.00                        addq	$2, %r9
+ 1      1     0.20                        cmpq	%r9, %r8
+ 1      1     0.50                        jne	.LBB0_3
+
+
+Resources:
+[0]   - ADLPPort00
+[1]   - ADLPPort01
+[2]   - ADLPPort02
+[3]   - ADLPPort03
+[4]   - ADLPPort04
+[5]   - ADLPPort05
+[6]   - ADLPPort06
+[7]   - ADLPPort07
+[8]   - ADLPPort08
+[9]   - ADLPPort09
+[10]  - ADLPPort10
+[11]  - ADLPPort11
+[12]  - ADLPPortInvalid
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   
+16.00  16.00  0.67   0.67    -     0.50   1.00    -      -      -     0.67   0.50    -     
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    [8]    [9]    [10]   [11]   [12]   Instructions:
+ -      -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmovsd	(%rsi,%r9,8), %xmm3
+ -      -     0.33   0.33    -      -      -      -      -      -     0.33    -      -     vmovsd	8(%rsi,%r9,8), %xmm2
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm3, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -     1.00    -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+1.00    -      -      -      -      -      -      -      -      -      -      -      -     vfmadd213sd	%xmm2, %xmm0, %xmm1
+ -      -      -      -      -      -      -      -      -      -      -      -      -     addq	$2, %r9
+ -      -      -      -      -     0.50    -      -      -      -      -     0.50    -     cmpq	%r9, %r8
+ -      -      -      -      -      -     1.00    -      -      -      -      -      -     jne	.LBB0_3
