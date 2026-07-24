@@ -81,6 +81,13 @@ directly (local checkouts: ~/dev/numba, ~/dev/numbacc).
   RThroughput/TTI-style dep-blind: top1 14%, regret 1.48x — selection
   signal is entirely in latency/dependency modeling. S1 phase complete;
   S2 gate open.
+- NOTE 2026-07-24: s1-mca-calibration/ (committed in 77a7573) is a
+  PARALLEL session's in-progress mca-calibration workspace (overnight,
+  numbacc toolchain, map/reduction/gather families — relevant to the S4a
+  multi-family gate; bench.py referenced in its manifest is absent).
+  Swept into the exp016 commit by a careless `git add -A` — do not build
+  on it until reconciled with exp016; audit should compare summary.csv
+  against exp016 mca.csv where kernels overlap.
 
 ## thread 5 — compile-time attack (S3, ACTIVE)
 
