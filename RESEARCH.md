@@ -98,6 +98,15 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   cold start is fixed overhead — import/init beats pass-pruning as the
   lever; typing only 3.6% of pipeline; LLVM 25-46%; parfor lowering
   105.6ms is the biggest single pass after native_lowering.
+- exp014 phase 2 DONE (2026-07-24): the fixed tax is ~150ms of imports.
+  Import profile flat (468 modules, max 2.8ms self) and entangled (all 4
+  spot-stubs break import — no local fix); the 64ms init is 91% deferred
+  imports (target_context.refresh -> load_additional_registries, ~31
+  modules, 54/58ms in importlib; collapses to 4.4ms once forced). Floor
+  numpy+llvmlite 44.4ms. LLVM lock: module full-opt 33-43% / finalize
+  31-37% / InstCombine+ISel top passes; prange records only half its
+  lock (parallel wrapper untracked). Levers ranked: warm process >>
+  structural lazification > pass pruning (<=10ms saxpy-class).
 
 ## thread 6 — learned cost models / S4a (SCOPED)
 
