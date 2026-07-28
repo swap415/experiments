@@ -71,5 +71,13 @@ tracked pipeline (untracked 40ms, worth its own look).
 4. prange's untracked 40ms of llvm_lock (parallel wrapper path) is a
    measurement gap to close before pruning parfors pipelines.
 
+## phase 3a addendum (2026-07-28): fork-server floor, measured
+
+fork_floor.py (n=10 forks, warm parent): fork + cached-kernel call
+0.66±0.24ms (293x below the 193ms cold start); fork + NEW kernel
+compile 34.5±0.3ms (5.6x below cold — pipeline only, import+init
+amortized by the parent). Confirms claim 2's ranking with numbers: a
+warm-process strategy dominates everything else measured on this thread.
+
 Repro: `.venv/bin/python exp014-compiletime/import_profile.py`,
-`init_decompose.py`, `llvm_passes.py`.
+`init_decompose.py`, `llvm_passes.py`, `fork_floor.py`.

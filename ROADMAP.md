@@ -10,7 +10,7 @@ counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts 
 |------|-------|-------|
 | S1 counter-driven cost models | 8.5 (8.5) | v2 clean corpus confirms thesis: one-probe 0.988/0.977, params 0.52 + cliff FAIL. mca/TTI validation next. |
 | S3 compile-time attack | 8.0 (7.5) | exp014: 82% of simple-kernel cold start is fixed import+init overhead — tractable, high-impact target found day 1. BUT the S1-coupled pass-pruning sub-bet is demoted: LLVM is only 25-46% of compile, 18% ceiling for caching simple kernels. |
-| S2 ship passes | 7.0 (7.0) | unchanged; gate (mca validation) still closed. |
+| S2 ship passes | 8.0 (7.0) | exp017 shipped: cliff fix, zero-regression policy, layer decided (2026-07-28 audit). |
 | S4b LLM agents on core | 6.0 (6.0) | unexercised this week. |
 | S4a learned JIT heuristics | 5.5 (4.0) | exp015: measured design point exists (hybrid shortlist+probe, regret 1.011x, 2.1us inference). Still gated: single kernel family. |
 
@@ -43,12 +43,16 @@ reduction, independent of S1.
    prange has 40ms untracked. **now**: measure fork-server/warm-daemon
    floor vs structural lazification; close the parfors tracking gap;
    phase 3 pruning stays gated on S1.
-3. **S2 gate OPEN (2026-07-24)**: pick layer (numba IR vs llvmlite new-PM
-   plugin) from evidence, ship one pass justified by measured cost deltas.
-   Evidence so far: selection signal lives in dependency modeling (exp016),
-   accs-dependent unroll cliff is the concrete measured miss (exp013) —
-   candidate: an unroll/interleave decision fix at whichever layer controls
-   it. gate(S1+S3) → benefit-per-ms pass pruning (demoted, see S3 note).
+3. **S2 first result SHIPPED 2026-07-28** (exp017): unroll cliff fixed at
+   the llvmlite cl-opt layer (set_option toggles mid-process, verified) —
+   3.2-3.9x on all cliff rows at NEGATIVE compile cost (-40-50%);
+   corpus-wide geo 1.418x but 12 regressions, fixed by the exp013 asm-rule
+   (recompile-on-collapsed): geo 1.427x of 1.452x oracle, zero regressions.
+   Layer decision recorded: cl-opt wins; numba-IR pass only if NPM breaks
+   cl-opts or sub-function granularity needed. **next**: retry_compile()
+   utility, multi-family generalization (shared gate with S4a corpus v3,
+   adopt s1-mca-calibration families), in-repo RFC update.
+   gate(S1+S3) → benefit-per-ms pass pruning (demoted, see S3 note).
 4. **S4a scoping — DONE 2026-07-23** (exp015, gate opened by corpus v2):
    learned ridge on params+asm hits 0.975 global out-of-sample but a feature
    information ceiling within-group (0.795/82% — identical for pointwise,

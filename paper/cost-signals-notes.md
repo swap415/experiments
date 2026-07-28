@@ -32,6 +32,14 @@ information ceiling between them. Evidence-first, all numbers rerunnable.
    producing plausible-looking timings. fp_arith_inst_retired
    verification is 6 counters + one rep.
 
+6. Constructive exhibit (exp017): the arc ends in a shipped fix — the
+   cliff exp013 measured is repaired at the llvmlite layer (3.2-3.9x on
+   cliff rows, compile time -40-50%), and the exp013 asm features supply
+   a zero-regression deployment policy (geo 1.427x of 1.452x oracle,
+   worst 1.000x, 14/66 switches). Static-model-guided global knob would
+   have shipped 12 regressions up to -22%; the measured-signal policy
+   ships none. This is the thesis operationalized.
+
 ## gaps before draftable
 
 - Single kernel family (poly chains). Need >=3 families (stencil,

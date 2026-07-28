@@ -108,6 +108,17 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   lock (parallel wrapper untracked). Levers ranked: warm process >>
   structural lazification > pass pruning (<=10ms saxpy-class).
 
+## thread 7 — S2 shipped passes (ACTIVE)
+
+- exp017 DONE (2026-07-28): unroll cliff fixed via llvmlite set_option
+  --unroll-threshold=2000 (toggles mid-process, verified both ways):
+  3.2-3.9x all cliff rows, compile time -40-50% on fixed rows, corpus
+  geo 1.418x with 12 regressions -> asm-rule policy (recompile only when
+  default collapsed): 1.427x geo, zero regressions, 14/66 switches.
+  Layer decision: cl-opt wins over numba-IR pass for this class.
+- exp014 phase 3a (same session): fork-server floor 0.66±0.24ms cached /
+  34.5±0.3ms new-kernel-in-warm-fork vs 193ms cold (n=10).
+
 ## thread 6 — learned cost models / S4a (SCOPED)
 
 - exp015 DONE (2026-07-23): ridge + LOGO-CV on exp013 v2 corpus. Learned
