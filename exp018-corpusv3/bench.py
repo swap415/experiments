@@ -114,6 +114,8 @@ def child(params):
                 f(*args)
             g.close()
             ratio = g.flops() / nominal
+            cyc = g.counts["cpu_core/cycles"]
+            ins = g.counts["cpu_core/instructions"]
             times = []
             for _ in range(REPS):
                 t0 = time.perf_counter()
@@ -125,7 +127,11 @@ def child(params):
                         "time_ms": round(times.mean() * 1e3, 3),
                         "time_std_ms": round(times.std() * 1e3, 3),
                         "gflops": round(useful / times.mean() / 1e9, 2),
-                        "flops_ratio": round(ratio, 4), **feat})
+                        "flops_ratio": round(ratio, 4),
+                        "ipc": round(ins / cyc, 3) if cyc else 0.0,
+                        "ginsn": round(ins / 1e9, 4),
+                        "probe_fpc": round(useful / cyc, 4) if cyc else 0.0,
+                        **feat})
     print(json.dumps(out))
 
 

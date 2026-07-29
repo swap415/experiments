@@ -134,6 +134,12 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   groups statically indistinguishable, 2-4% spread); regret 1.011x geo vs
   probe 1.000x. Verdict: hybrid learned-shortlist + probe-on-disagreement.
   Gate to proceed: corpus with >=3 kernel families.
+- exp019 DONE (2026-07-29, LOFO on corpus v3): NEGATIVE — learned models
+  fail family transfer (held-out rho 0.25/0.40 on reduction/stencil;
+  config-selection regret 1.243x geo on stencil, worst 1.569x, picking
+  exactly the -83% variants; hand rule and probe 1.000x). Cause visible
+  in data: packed-fma-count gradient inverts on stencil. S4a demoted:
+  supported niche is within-family interpolation only.
 
 ## thread 3 — KernelBench-for-CPU (roofline-scored)
 

@@ -12,7 +12,7 @@ counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts 
 | S3 compile-time attack | 8.0 (7.5) | exp014: 82% of simple-kernel cold start is fixed import+init overhead — tractable, high-impact target found day 1. BUT the S1-coupled pass-pruning sub-bet is demoted: LLVM is only 25-46% of compile, 18% ceiling for caching simple kernels. |
 | S2 ship passes | 8.0 (7.0) | exp017 shipped: cliff fix, zero-regression policy, layer decided (2026-07-28 audit). |
 | S4b LLM agents on core | 6.0 (6.0) | unexercised this week. |
-| S4a learned JIT heuristics | 5.5 (4.0) | exp015: measured design point exists (hybrid shortlist+probe, regret 1.011x, 2.1us inference). Still gated: single kernel family. |
+| S4a learned JIT heuristics | 4.0 (5.5→demoted 2026-07-29) | exp019 LOFO: learned models FAIL family transfer (regret 1.24x on held-out stencil, prefer the catastrophic variants; hand rule 1.000x). Niche = within-family only. |
 
 Arc status: demonstrated in miniature on day 1 — exp015 (S4a) trained and
 evaluated directly on exp013's (S1) corpus. One seeded coupling weakened:
@@ -62,11 +62,13 @@ reduction, independent of S1.
    pairwise, all feature sets; missed groups have identical asm, 2-4% spread).
    Regret: learned 1.011x geo / 1.194x max; probe 1.000/1.006. Design verdict:
    hybrid learned-shortlist + probe-on-disagreement (costs 2.1us vs 5.5ms vs
-   25-100ms measured). **S4a gate OPEN 2026-07-29**: corpus v3 has 3
-   clean counter-verified families (map/reduction/stencil, exp018);
-   gather pending v3.1 fix. Next S4a session: retrain exp015 models with
-   leave-one-FAMILY-out — the honest generalization test.
-   S4b runs weekly regardless.
+   25-100ms measured). **S4a LOFO test DONE 2026-07-29 (exp019) —
+   NEGATIVE**: learned models fail family transfer (held-out rho
+   0.25-0.43; regret 1.243x on stencil where the hand rule = 1.000x —
+   they prefer the catastrophic variants). S4a demoted to within-family
+   niche; deployment selector remains causal-structural check +
+   probe-on-disagreement. Revisit only with deployment-scale family
+   diversity. S4b runs weekly regardless.
 
 ## constraints (every session)
 

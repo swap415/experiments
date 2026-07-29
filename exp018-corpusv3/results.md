@@ -28,9 +28,12 @@ reduction 7, stencil 5, gather 4).
 
 | selector | geo | worst | regressions>3% |
 |---|---:|---:|---:|
-| raw knob (global thresh2k) | 1.515x | 0.168x | 7 |
+| raw knob (global thresh2k) | 1.506x | 0.162x | 7 |
 | asm rule (exp017)          | 1.775x | 1.000x | 0 |
-| oracle best-of-two         | 1.777x | 1.000x | 0 |
+| oracle best-of-two         | 1.776x | 1.000x | 0 |
+
+(numbers from the 2026-07-29 rerun, which added ipc/ginsn/probe_fpc
+columns for exp019; first run measured 1.515/1.777 — 0.6% run drift.)
 
 The rule fired on exactly the 7 genuine cliff rows (3 map + 4 reduction)
 and skipped all 7 rows the knob regresses. On this corpus the
