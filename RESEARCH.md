@@ -118,6 +118,13 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   Layer decision: cl-opt wins over numba-IR pass for this class.
 - exp014 phase 3a (same session): fork-server floor 0.66±0.24ms cached /
   34.5±0.3ms new-kernel-in-warm-fork vs 193ms cold (n=10).
+- exp018 DONE (2026-07-29, corpus v3): rule generalizes = oracle-0.1%
+  (geo 1.775x vs 1.777x, zero regressions, 21 variants, 4 families;
+  87 cumulative with exp017). Reduction cliff real (6.8-8.3x fixed);
+  stencil raw knob catastrophic (-83% at d=128) but rule never fires
+  (default keeps packed fmas); gather corpus flaw counter-caught
+  (factorable constant -> reassociation elision, v3.1 fix queued).
+  S4a gate open: 3 clean families.
 
 ## thread 6 — learned cost models / S4a (SCOPED)
 

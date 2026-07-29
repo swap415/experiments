@@ -49,9 +49,12 @@ reduction, independent of S1.
    corpus-wide geo 1.418x but 12 regressions, fixed by the exp013 asm-rule
    (recompile-on-collapsed): geo 1.427x of 1.452x oracle, zero regressions.
    Layer decision recorded: cl-opt wins; numba-IR pass only if NPM breaks
-   cl-opts or sub-function granularity needed. **next**: retry_compile()
-   utility, multi-family generalization (shared gate with S4a corpus v3,
-   adopt s1-mca-calibration families), in-repo RFC update.
+   cl-opts or sub-function granularity needed. **generalized 2026-07-29**
+   (exp018, corpus v3): rule = oracle-0.1% across 4 families (geo 1.775x,
+   zero regressions on 21 variants; 87 total with exp017); reduction cliff
+   6.8-8.3x fixed; stencil shows raw knob catastrophic (-83%) but rule
+   never fires there. **next**: retry_compile() utility + in-repo RFC;
+   gather v3.1 fix (per-tap multiplier).
    gate(S1+S3) → benefit-per-ms pass pruning (demoted, see S3 note).
 4. **S4a scoping — DONE 2026-07-23** (exp015, gate opened by corpus v2):
    learned ridge on params+asm hits 0.975 global out-of-sample but a feature
@@ -59,7 +62,10 @@ reduction, independent of S1.
    pairwise, all feature sets; missed groups have identical asm, 2-4% spread).
    Regret: learned 1.011x geo / 1.194x max; probe 1.000/1.006. Design verdict:
    hybrid learned-shortlist + probe-on-disagreement (costs 2.1us vs 5.5ms vs
-   25-100ms measured). Next S4a gate: >=3 kernel families in the corpus.
+   25-100ms measured). **S4a gate OPEN 2026-07-29**: corpus v3 has 3
+   clean counter-verified families (map/reduction/stencil, exp018);
+   gather pending v3.1 fix. Next S4a session: retrain exp015 models with
+   leave-one-FAMILY-out — the honest generalization test.
    S4b runs weekly regardless.
 
 ## constraints (every session)
