@@ -40,6 +40,13 @@ information ceiling between them. Evidence-first, all numbers rerunnable.
    have shipped 12 regressions up to -22%; the measured-signal policy
    ships none. This is the thesis operationalized.
 
+7. Transfer exhibit (exp019, LOFO on corpus v3): learned models fail
+   family transfer outright — held-out rho 0.25-0.43, selection regret
+   1.243x geo on stencil (they prefer the -83% variants; packed-count
+   gradient inverts across families). The causal one-bit check and the
+   probe both hold 1.000x. Strongest form of the thesis: measurement
+   transfers, learned correlations don't.
+
 ## gaps before draftable
 
 - Single kernel family (poly chains). Need >=3 families (stencil,
