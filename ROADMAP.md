@@ -40,9 +40,13 @@ reduction, independent of S1.
    all spot-stubs break it; init = 58ms of deferred imports inside
    target_context.refresh, collapses to 4.4ms once forced). Floor
    numpy+llvmlite 44.4ms. LLVM lock: full-opt 33-43%, finalize 31-37%;
-   prange has 40ms untracked. **now**: measure fork-server/warm-daemon
-   floor vs structural lazification; close the parfors tracking gap;
-   phase 3 pruning stays gated on S1.
+   prange has 40ms untracked. Fork floor measured 2026-07-28: 0.66ms
+   cached / 34.5ms warm-compile vs 193ms cold. **phase 3 CLOSED NEGATIVE
+   2026-07-30** (exp020): O3->O2 saves 1.3ms mean but risks 5.6x runtime;
+   O0 is 100x slower AND compiles 1.9-17.5x LONGER — the whole optimizer
+   axis is bounded by ~1-9ms against the 158ms import tax. Wrinkle: O2
+   beats O3 on stencil d=64 (+15%, candidate for retry_compile()).
+   **now**: parfors tracking gap; structural import surgery scoping.
 3. **S2 first result SHIPPED 2026-07-28** (exp017): unroll cliff fixed at
    the llvmlite cl-opt layer (set_option toggles mid-process, verified) —
    3.2-3.9x on all cliff rows at NEGATIVE compile cost (-40-50%);

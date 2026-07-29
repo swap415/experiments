@@ -107,6 +107,11 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   31-37% / InstCombine+ISel top passes; prange records only half its
   lock (parallel wrapper untracked). Levers ranked: warm process >>
   structural lazification > pass pruning (<=10ms saxpy-class).
+- exp020 DONE (2026-07-30): opt-level pruning dead — O3->O2 saves 1.3ms
+  mean, risks 5.6x runtime (reduction d=64: 56.6->10.1); O0 doubly
+  pathological (100x slower, compile 1.9-17.5x LONGER, stencil d=128
+  882ms vs 50ms). O2>O3 on stencil d=64 by 15% (per-kernel knob
+  candidate). Phase 3 closed negative; optimizer axis bounded ~1-9ms.
 
 ## thread 7 — S2 shipped passes (ACTIVE)
 
