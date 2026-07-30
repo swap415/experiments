@@ -57,8 +57,12 @@ reduction, independent of S1.
    (exp018, corpus v3): rule = oracle-0.1% across 4 families (geo 1.775x,
    zero regressions on 21 variants; 87 total with exp017); reduction cliff
    6.8-8.3x fixed; stencil shows raw knob catastrophic (-83%) but rule
-   never fires there. **next**: retry_compile() utility + in-repo RFC;
-   gather v3.1 fix (per-tap multiplier).
+   never fires there. **retry_compile() SHIPPED 2026-07-30** (exp021,
+   retrycompile.py): live single-process validation — 7 cliff rows fire
+   3.85-8.49x, non-cliff 1.00-1.02x, +3-7ms silent overhead, no state
+   leak. Found+fixed a restore bug (LLVM O3 effective threshold is 300,
+   not the documented base 150) via cross-experiment consistency.
+   **next**: in-repo RFC; gather v3.1 fix; optional O2-stencil extension.
    gate(S1+S3) → benefit-per-ms pass pruning (demoted, see S3 note).
 4. **S4a scoping — DONE 2026-07-23** (exp015, gate opened by corpus v2):
    learned ridge on params+asm hits 0.975 global out-of-sample but a feature

@@ -123,6 +123,12 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   Layer decision: cl-opt wins over numba-IR pass for this class.
 - exp014 phase 3a (same session): fork-server floor 0.66±0.24ms cached /
   34.5±0.3ms new-kernel-in-warm-fork vs 193ms cold (n=10).
+- exp021 DONE (2026-07-30): retry_compile() shipped (retrycompile.py)
+  and validated live in one process: 7 cliff rows 3.85-8.49x, others
+  1.00-1.02x, +3-7ms silent overhead, threshold-sensitive leak check
+  clean. Caught restore bug: LLVM O3 EFFECTIVE unroll threshold is 300
+  (base 150 + O3 boost); restore=150 silently broke 150<t<=300 kernels —
+  found via cross-experiment contradiction (d=96 fired vs exp018 clean).
 - exp018 DONE (2026-07-29, corpus v3): rule generalizes = oracle-0.1%
   (geo 1.775x vs 1.777x, zero regressions, 21 variants, 4 families;
   87 cumulative with exp017). Reduction cliff real (6.8-8.3x fixed);
