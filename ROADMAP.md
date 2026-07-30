@@ -46,7 +46,13 @@ reduction, independent of S1.
    O0 is 100x slower AND compiles 1.9-17.5x LONGER — the whole optimizer
    axis is bounded by ~1-9ms against the 158ms import tax. Wrinkle: O2
    beats O3 on stencil d=64 (+15%, candidate for retry_compile()).
-   **now**: parfors tracking gap; structural import surgery scoping.
+   **parfors gap CLOSED 2026-07-30** (phase 3b): the untracked half is
+   extra-module compilation (gufunc+launcher) outside the pass-timing
+   context — parfors premium is module-count (finalize 2.4x, final-opt
+   4.0x saxpy), not pass cost; lock is chatty (1502-3388 holds/compile)
+   but cheap (~28us). S3 measurement infra complete: every cold-start ms
+   has a named owner. **now**: structural import surgery scoping (56ms
+   budget) — dedicated design session.
 3. **S2 first result SHIPPED 2026-07-28** (exp017): unroll cliff fixed at
    the llvmlite cl-opt layer (set_option toggles mid-process, verified) —
    3.2-3.9x on all cliff rows at NEGATIVE compile cost (-40-50%);

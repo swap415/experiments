@@ -112,6 +112,12 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   pathological (100x slower, compile 1.9-17.5x LONGER, stencil d=128
   882ms vs 50ms). O2>O3 on stencil d=64 by 15% (per-kernel knob
   candidate). Phase 3 closed negative; optimizer axis bounded ~1-9ms.
+- exp014 phase 3b DONE (2026-07-30): parfors gap closed via per-hold
+  lock attribution (event system + stack walk) — untracked half is
+  extra-module compiles (gufunc+launcher) outside the pass-timing
+  context; parfors premium = module count (final-opt 4.0x, finalize
+  2.4x saxpy), not passes. 1502-3388 lock holds/compile @ ~28us.
+  S3 measurement infrastructure complete.
 
 ## thread 7 — S2 shipped passes (ACTIVE)
 
