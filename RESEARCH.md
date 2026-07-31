@@ -118,6 +118,11 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   context; parfors premium = module count (final-opt 4.0x, finalize
   2.4x saxpy), not passes. 1502-3388 lock holds/compile @ ~28us.
   S3 measurement infrastructure complete.
+- exp014 phase 3c DONE (2026-07-31): cache=True measured — ceiling
+  confirmed (saxpy 18.4% vs predicted 18%); hit floor uniform ~161ms =
+  import 95 + init 64 + load ~2 (deserialization nearly free); parfors
+  caches fully (40.8% saved, best case); miss overhead 0.5-4ms.
+  Full ladder: cold 197-276 / hit 161 / fork-compile 34.5 / fork 0.66ms.
 
 ## thread 7 — S2 shipped passes (ACTIVE)
 

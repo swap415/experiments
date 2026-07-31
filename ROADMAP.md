@@ -51,8 +51,13 @@ reduction, independent of S1.
    context — parfors premium is module-count (finalize 2.4x, final-opt
    4.0x saxpy), not pass cost; lock is chatty (1502-3388 holds/compile)
    but cheap (~28us). S3 measurement infra complete: every cold-start ms
-   has a named owner. **now**: structural import surgery scoping (56ms
-   budget) — dedicated design session.
+   has a named owner. **cache=True measured 2026-07-31** (phase 3c):
+   ceiling prediction confirmed (saxpy hit saves 18.4%, predicted 18%);
+   hit floor uniform at import+init (~161ms, load itself ~2ms); parfors
+   caches fully, saves 40.8%; miss overhead 0.5-4ms. Strategy ladder
+   complete: cold 197-276 / hit ~161 / warm-fork-compile 34.5 /
+   warm-fork-cached 0.66ms. **now**: structural import surgery scoping
+   (56ms budget) — dedicated design session.
 3. **S2 first result SHIPPED 2026-07-28** (exp017): unroll cliff fixed at
    the llvmlite cl-opt layer (set_option toggles mid-process, verified) —
    3.2-3.9x on all cliff rows at NEGATIVE compile cost (-40-50%);
