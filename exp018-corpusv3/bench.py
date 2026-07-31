@@ -89,16 +89,19 @@ def child(params):
             return (njit(fastmath=True)(ns["f"]), (np.zeros(N), B, W),
                     useful, useful)
         if family == "gather":
-            src = (f"def f(a, b, idx):\n"
+            # v3.1: per-tap multiplier w[k] — a single shared constant let
+            # reassociation factor sum(b*C)=C*sum(b), eliding the multiplies
+            # (counter-caught in v3; third elision mechanism documented).
+            src = (f"def f(a, b, idx, w):\n"
                    f"    for i in range(a.size):\n"
                    f"        acc = 0.0\n"
                    f"        for k in range({d}):\n"
-                   f"            acc = acc + b[idx[k] + (i & 7)] * 1.0001\n"
+                   f"            acc = acc + b[idx[k] + (i & 7)] * w[k]\n"
                    f"        a[i] = acc\n")
             ns = {}
             exec(src, ns)
             useful = 2 * d * N
-            return (njit(fastmath=True)(ns["f"]), (np.zeros(N), B, IDX),
+            return (njit(fastmath=True)(ns["f"]), (np.zeros(N), B, IDX, W),
                     useful, useful)
 
     out = []

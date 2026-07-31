@@ -47,4 +47,18 @@ Three families clean and counter-verified (map, reduction, stencil);
 gather needs the v3.1 multiplier fix before its flop labels are usable.
 S4a gate (>=3 families) is OPEN on the clean subset.
 
+## v3.1 (2026-07-31): gather fixed, corpus complete at 4 clean families
+
+Per-tap multiplier w[k] defeats the reassociation factoring; zero
+elision flags across all 42 rows. New gather facts: default LLVM
+VECTORIZES gather at d>=64 (15-31 packed fma; d=16 stays scalar both
+configs); thresh2k full-unrolls it to scalar and loses 35-49% (d=64:
+7.80 -> 4.22 GF/s) — same pathology as stencil, third family where the
+raw knob backfires. The rule stays silent (thresh2k never vectorizes
+what default didn't) — zero regressions again.
+
+Full clean scorecard (21 variants, 4 families, from results.csv):
+raw knob geo 1.430x (worst 0.168x, 8 regressions) / asm rule geo
+1.782x (worst 1.000x, ZERO regressions, 98.6% of oracle 1.807x).
+
 Repro: `.venv/bin/python exp018-corpusv3/bench.py` then `analyze.py`.

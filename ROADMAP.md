@@ -68,7 +68,12 @@ reduction, independent of S1.
    3.85-8.49x, non-cliff 1.00-1.02x, +3-7ms silent overhead, no state
    leak. Found+fixed a restore bug (LLVM O3 effective threshold is 300,
    not the documented base 150) via cross-experiment consistency.
-   **next**: in-repo RFC; gather v3.1 fix; optional O2-stencil extension.
+   **gather v3.1 DONE 2026-07-31**: corpus v3 complete, 4 clean families,
+   42 rows zero elision. Gather: default vectorizes at d>=64, knob
+   full-unrolls to scalar (-35-49%) — third knob-backfire family, rule
+   still zero-regression (geo 1.782x, 98.6% of oracle 1.807x).
+   **next**: in-repo RFC; optional O2-stencil extension; exp019 LOFO
+   rerun with 4th family now possible.
    gate(S1+S3) → benefit-per-ms pass pruning (demoted, see S3 note).
 4. **S4a scoping — DONE 2026-07-23** (exp015, gate opened by corpus v2):
    learned ridge on params+asm hits 0.975 global out-of-sample but a feature

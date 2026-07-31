@@ -129,6 +129,10 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   Layer decision: cl-opt wins over numba-IR pass for this class.
 - exp014 phase 3a (same session): fork-server floor 0.66±0.24ms cached /
   34.5±0.3ms new-kernel-in-warm-fork vs 193ms cold (n=10).
+- exp018 v3.1 DONE (2026-07-31): gather fixed (per-tap w[k] multiplier),
+  corpus v3 complete — 4 clean families, 42 rows, zero elision. Gather:
+  default vectorizes d>=64; knob full-unrolls to scalar (-35-49%), third
+  backfire family; rule zero-regression, geo 1.782x = 98.6% of oracle.
 - exp021 DONE (2026-07-30): retry_compile() shipped (retrycompile.py)
   and validated live in one process: 7 cliff rows 3.85-8.49x, others
   1.00-1.02x, +3-7ms silent overhead, threshold-sensitive leak check
