@@ -38,9 +38,10 @@ def depth(r):
 
 
 def load():
+    path = Path(sys.argv[1]) if len(sys.argv) > 1 else \
+        HERE.parent / "exp018-corpusv3" / "results.csv"
     rows = []
-    with open(HERE.parent / "exp018-corpusv3" / "results.csv",
-              newline="") as fh:
+    with open(path, newline="") as fh:
         for r in csv.DictReader(fh):
             if r["family"] not in CLEAN:
                 continue

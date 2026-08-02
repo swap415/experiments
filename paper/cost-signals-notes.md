@@ -47,6 +47,21 @@ information ceiling between them. Evidence-first, all numbers rerunnable.
    probe both hold 1.000x. Strongest form of the thesis: measurement
    transfers, learned correlations don't.
 
+8. Knob-backfire triad (exp018 v3.1, exp020): the same intervention that
+   fixes map/reduction cliffs (3.9-8.5x) is catastrophic where default
+   codegen already vectorized — stencil -83%, gather -46%; and O0
+   "skip optimization" compiles up to 17.5x SLOWER. Less optimizer work
+   is never a free lunch on any measured axis; only a measured signal
+   knows which regime a kernel is in.
+9. The S3 ladder (exp014 complete): cold 197-276ms / cache-hit 161ms
+   (ceiling confirmed 18.4% measured vs 18% predicted from
+   decomposition) / warm-fork compile 34.5ms / warm-fork cached 0.66ms.
+   Cost-model rigor applied to compile time itself.
+10. Noise floor (2026-08-02 audit): identical emitted asm can differ
+   24.6% run-to-run (stencil d=16, placement/alignment) — the measured
+   bound on what any static feature policy can resolve, and the floor
+   under the information-ceiling result (4).
+
 ## gaps before draftable
 
 - Single kernel family (poly chains). Need >=3 families (stencil,

@@ -11,12 +11,15 @@ vs 82ms); shares and deltas are the robust readings.
 
 | call site | saxpy | prange | delta |
 |---|---:|---:|---:|
-| executionengine:finalize_object (codegen+link) | 15.7 | 37.9 | +22.2 |
-| newpassmanagers:run <- _optimize_final_module  |  8.8 | 35.5 | +26.7 |
-| newpassmanagers:run <- _optimize_functions     |  7.8 | 15.5 |  +7.7 |
-| everything else (11 sites < 5ms each)          |  9.8 | 23.5 | |
-| TOTAL holds                                    | 42.1 | 112.4 | +70.3 |
-| recorded by NUMBA_LLVM_PASS_TIMINGS            | 28.0 | 37.8 | |
+| executionengine:finalize_object (codegen+link) | 15.8 | 38.2 | +22.5 |
+| newpassmanagers:run <- _optimize_final_module  |  8.8 | 35.6 | +26.8 |
+| newpassmanagers:run <- _optimize_functions     |  7.8 | 15.6 |  +7.8 |
+| everything else (11 sites < 5ms each)          |  9.8 | 23.6 | |
+| TOTAL holds                                    | 42.2 | 113.0 | +70.8 |
+| recorded by NUMBA_LLVM_PASS_TIMINGS            | 28.1 | 38.0 | |
+
+(2026-08-02 audit: table synced to parfors_gap.csv — the original prose
+quoted a pre-CSV console run, 0.1-0.6ms drift.)
 
 ## claims (recomputed from parfors_gap.csv)
 

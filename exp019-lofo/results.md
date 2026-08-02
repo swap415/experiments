@@ -48,4 +48,17 @@ untested here, but the packed-count inversion is a feature-information
 problem, not a model-capacity problem: no function of these features
 separates stencil's regime without stencil-like training data.
 
+## evidence versioning (2026-08-02 audit)
+
+The exp018 CSV this experiment ran on was overwritten by the v3.1 rerun
+(gather fix). The original is archived as data-2026-07-29.csv and
+reproduces the table above exactly:
+`learn.py exp019-lofo/data-2026-07-29.csv`. On the CURRENT v3.1 CSV the
+conclusion is unchanged and slightly stronger in contrast: learned
+1.086x/1.594x vs hand rule 1.017x/1.246x vs probe 1.001x/1.010x. The
+hand rule's new 1.246x entry is stencil d=16 — IDENTICAL asm both
+configs (15p/15s), 24.6% run-to-run placement/alignment variance: the
+statically-indistinguishable case exp015's information ceiling already
+covers (only measurement can see it; the probe does, 1.010x).
+
 Repro: `taskset -c 2 .venv/bin/python exp019-lofo/learn.py`
