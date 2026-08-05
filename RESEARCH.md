@@ -152,6 +152,17 @@ Cold-start latency with runtime-grade rigor; ROADMAP.md phase 2.
   (factorable constant -> reassociation elision, v3.1 fix queued).
   S4a gate open: 3 clean families.
 
+## thread 8 — S4b: asm-diff pattern mining (ACTIVE)
+
+- exp022 DONE (2026-08-05): numba vs clang-18 -O3, 6 mirrored kernels,
+  both measured. Parity 5/6 (0.99-1.01x — JIT codegen equals AOT on
+  this corpus; poly112 cliff is generic LLVM, clang collapses
+  identically). FIND: negative-index wraparound tax on gathered loads —
+  128 of 188 hot-block insns are index manipulation (vpcmpgtq guard
+  per element); fully-unsigned indexing removes it: 1.44-1.63x, 95% of
+  clang. Sharp edge: uint64 idx with int64 offset re-poisons via
+  promotion. Upstream candidate: range analysis could prove i&7>=0.
+
 ## thread 6 — learned cost models / S4a (SCOPED)
 
 - exp015 DONE (2026-07-23): ridge + LOGO-CV on exp013 v2 corpus. Learned

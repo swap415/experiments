@@ -1,0 +1,7 @@
+kernel,numba_gflops,clang_gflops,clang_over_numba,numba_packed,clang_packed,numba_scalar,clang_scalar,numba_ratio,clang_ratio
+saxpy,7.65,7.7,1.007,5,4,9,9,1.0,1.0
+poly96,30.15,30.13,0.999,96,96,96,96,1.0,1.0
+poly112,7.09,7.08,0.999,0,0,16,16,1.0,1.0
+reduction64,61.69,62.08,1.006,320,256,64,64,1.0,1.0
+stencil64,37.32,36.97,0.991,15,15,0,0,0.992,0.992
+gather64,8.71,13.4,1.538,15,15,0,0,0.992,0.992

@@ -11,7 +11,7 @@ counters → cost model → justifies passes (S2) + benefit-per-ms compile cuts 
 | S1 counter-driven cost models | 8.5 (8.5) | v2 clean corpus confirms thesis: one-probe 0.988/0.977, params 0.52 + cliff FAIL. mca/TTI validation next. |
 | S3 compile-time attack | 8.0 (7.5) | exp014: 82% of simple-kernel cold start is fixed import+init overhead — tractable, high-impact target found day 1. BUT the S1-coupled pass-pruning sub-bet is demoted: LLVM is only 25-46% of compile, 18% ceiling for caching simple kernels. |
 | S2 ship passes | 8.5 (8.0) | complete arc: policy generalized 4 families (98.6% of oracle), retry_compile() shipped + live-validated (2026-08-02 audit). |
-| S4b LLM agents on core | 6.0 (6.0) | unexercised this week. |
+| S4b LLM agents on core | 6.5 (6.0) | exp022 first exercise: clang parity 5/6 + wraparound-tax find (1.4-1.6x on gathers, user-fixable today, upstream RFC candidate). |
 | S4a learned JIT heuristics | 4.0 (5.5→demoted 2026-07-29) | exp019 LOFO: learned models FAIL family transfer (regret 1.24x on held-out stencil, prefer the catastrophic variants; hand rule 1.000x). Niche = within-family only. |
 
 Arc status: demonstrated in miniature on day 1 — exp015 (S4a) trained and
